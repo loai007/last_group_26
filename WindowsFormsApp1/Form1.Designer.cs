@@ -1,5 +1,6 @@
 ﻿namespace WindowsFormsApp1
-{//kjkjj
+{// tshimsssss
+{
     partial class Form1
     {
         /// <summary>
