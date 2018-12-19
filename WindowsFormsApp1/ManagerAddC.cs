@@ -33,6 +33,29 @@ namespace WindowsFormsApp1
             sw.WriteLine(line);
             sw.Close();
         }
+        private bool ifID(string i)
+        {
+            StreamReader sr = new StreamReader("instructor.txt");
+
+            string line = sr.ReadLine();
+            string[] details = line.Split(' ');
+            while (line != null)
+            {
+                if (i == details[0])
+                {
+                    sr.Close();
+                    return false;
+                }
+                line = sr.ReadLine();
+                if (line!=""  && line!=null)
+                {
+                    details = line.Split(' ');
+                }
+              
+            }
+            sr.Close();
+            return true; 
+        }
         private void addbut_Click(object sender, EventArgs e)
         {
             int flag = 1;
@@ -51,6 +74,9 @@ namespace WindowsFormsApp1
             string dep = depbox.Text;
             if (dep == "")
                 flag = 0;
+            string phn = txtphn.Text;
+            if (phn == "")
+                flag = 0;
             string cname = cnamebox.Text;
             if (cname == "")
                 flag = 0;
@@ -60,10 +86,13 @@ namespace WindowsFormsApp1
             string time = timebox.Text;
             if (time == "")
                 flag = 0;
+
+
             char s = ' ';
-            if (flag != 0)
+            if (flag != 0 && ifID(id)==true)
             {
-                string line = (id + s + pass + s + name + s + last + s + dep + s + cname + s + day + s + time);
+                string line = (id + s + pass + s + name + s + last + s + dep + s + phn + s + cname + s + day + s + time);
+
                 writeToFile(line);
                 lblero.Text = "added ☺";
             }
