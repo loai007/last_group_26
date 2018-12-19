@@ -146,10 +146,6 @@
     <EmbeddedResource Include="studentMain.resx">
       <DependentUpon>studentMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="D:\StudentAdd.resx">
-      <DependentUpon>StudentAdd.cs</DependentUpon>
-      <Link>StudentAdd.resx</Link>
-    </EmbeddedResource>
     <None Include="collegeDataSet.xsc">
       <DependentUpon>collegeDataSet.xsd</DependentUpon>
     </None>
