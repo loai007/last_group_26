@@ -67,7 +67,7 @@ namespace WindowsFormsApp1
                 path = "student.txt";
                 if (FindUser(un, ps, path)) { st.Show(); flag = 1; this.Hide(); }
                 path = "instructor.txt";
-                if (FindUser(un, ps, path)) { ins.Show(); flag = 1; }
+                if (FindUser(un, ps, path)) { ins.Show(); flag = 1; this.Hide(); }
                 path = "manager.txt";
                 if (FindUser(un, ps, path)) { ma.Show(); flag = 1; this.Hide(); }
                 if (flag == 0)
