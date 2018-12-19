@@ -203,5 +203,10 @@ namespace WindowsFormsApp1
             studentMain f3 = new studentMain();
             f3.Show();
         }
+
+        private void Schedule_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
