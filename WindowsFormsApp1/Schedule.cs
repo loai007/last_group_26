@@ -200,7 +200,7 @@ namespace WindowsFormsApp1
         {
             
             this.Hide();
-            InstructorMain f3 = new InstructorMain();
+            studentMain f3 = new studentMain();
             f3.Show();
         }
     }
