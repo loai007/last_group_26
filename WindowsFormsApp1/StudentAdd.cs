@@ -21,5 +21,18 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            studentMain f6 = new studentMain();
+            f6.Show();
+
+        }
+
+        private void Add_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
