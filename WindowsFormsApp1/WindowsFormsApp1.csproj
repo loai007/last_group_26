@@ -116,17 +116,17 @@
     <Compile Include="Schedule.Designer.cs">
       <DependentUpon>Schedule.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentAddCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentAddCourse.Designer.cs">
+      <DependentUpon>StudentAddCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="studentMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="studentMain.Designer.cs">
       <DependentUpon>studentMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="StudentAdd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StudentAdd.Designer.cs">
-      <DependentUpon>StudentAdd.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -160,6 +160,9 @@
     </Compile>
     <EmbeddedResource Include="Schedule.resx">
       <DependentUpon>Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentAddCourse.resx">
+      <DependentUpon>StudentAddCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="studentMain.resx">
       <DependentUpon>studentMain.cs</DependentUpon>

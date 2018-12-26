@@ -34,9 +34,14 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            StudentAdd f5 = new StudentAdd();
+            StudentAddCourse f5 = new StudentAddCourse();
             f5.Show();
             
+        }
+
+        private void AddCourse_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
