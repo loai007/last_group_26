@@ -51,7 +51,7 @@
             // textcourse
             // 
             this.textcourse.Location = new System.Drawing.Point(237, 192);
-            this.textcourse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textcourse.Margin = new System.Windows.Forms.Padding(2);
             this.textcourse.Multiline = true;
             this.textcourse.Name = "textcourse";
             this.textcourse.Size = new System.Drawing.Size(93, 35);
@@ -60,7 +60,7 @@
             // RemoveCourse
             // 
             this.RemoveCourse.Location = new System.Drawing.Point(249, 266);
-            this.RemoveCourse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RemoveCourse.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveCourse.Name = "RemoveCourse";
             this.RemoveCourse.Size = new System.Drawing.Size(67, 26);
             this.RemoveCourse.TabIndex = 3;
@@ -71,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(269, 209);
+            this.label2.Location = new System.Drawing.Point(274, 229);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 17);
@@ -80,7 +80,7 @@
             // back
             // 
             this.back.Location = new System.Drawing.Point(558, 0);
-            this.back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.back.Margin = new System.Windows.Forms.Padding(2);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(89, 47);
             this.back.TabIndex = 5;
@@ -108,7 +108,7 @@
             this.Controls.Add(this.RemoveCourse);
             this.Controls.Add(this.textcourse);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StudentRemoveCourse";
             this.Text = "RemoveCourseStudent";
             this.Load += new System.EventHandler(this.StudentRemoveCourse_Load);

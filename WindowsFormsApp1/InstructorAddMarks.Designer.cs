@@ -36,6 +36,7 @@
             this.markTb = new System.Windows.Forms.TextBox();
             this.UpdateMarkBtn = new System.Windows.Forms.Button();
             this.dataGridViewMarks = new System.Windows.Forms.DataGridView();
+            this.messagelbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarks)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,7 +95,7 @@
             // 
             // UpdateMarkBtn
             // 
-            this.UpdateMarkBtn.Location = new System.Drawing.Point(361, 316);
+            this.UpdateMarkBtn.Location = new System.Drawing.Point(300, 332);
             this.UpdateMarkBtn.Name = "UpdateMarkBtn";
             this.UpdateMarkBtn.Size = new System.Drawing.Size(75, 23);
             this.UpdateMarkBtn.TabIndex = 7;
@@ -111,11 +112,20 @@
             this.dataGridViewMarks.Size = new System.Drawing.Size(240, 150);
             this.dataGridViewMarks.TabIndex = 8;
             // 
+            // messagelbl
+            // 
+            this.messagelbl.AutoSize = true;
+            this.messagelbl.Location = new System.Drawing.Point(297, 371);
+            this.messagelbl.Name = "messagelbl";
+            this.messagelbl.Size = new System.Drawing.Size(0, 17);
+            this.messagelbl.TabIndex = 9;
+            // 
             // InstructorAddMarks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.messagelbl);
             this.Controls.Add(this.dataGridViewMarks);
             this.Controls.Add(this.UpdateMarkBtn);
             this.Controls.Add(this.markTb);
@@ -142,5 +152,6 @@
         private System.Windows.Forms.TextBox markTb;
         private System.Windows.Forms.Button UpdateMarkBtn;
         private System.Windows.Forms.DataGridView dataGridViewMarks;
+        private System.Windows.Forms.Label messagelbl;
     }
 }

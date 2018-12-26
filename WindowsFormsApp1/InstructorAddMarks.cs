@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         public InstructorAddMarks()
         {
             InitializeComponent();
-            showData(getData("user.txt"), "course.txt");
+            showData(getData("user.txt"), "coursestudent.txt");
         }
         private string[] getData(string path, string key = null)
         {
@@ -52,9 +52,11 @@ namespace WindowsFormsApp1
         {
             string line = nameTb.Text + ' ' + getData("user.txt")[0] + ' '  + markTb.Text;
             writeToFile("greads.txt", line);
-            
+            messagelbl.Text = "Gread updated";
+
+
         }
-        private void showData(string[] userDetails, string path)
+        private void showData(string[] instructorDetails, string path)
         {
             //Pass the file path and file name to the StreamReader constructor
             StreamReader sr = new StreamReader(path);
@@ -68,7 +70,7 @@ namespace WindowsFormsApp1
             while (line != null)
             {
                 string[] courseDetails = line.Split(' ');
-                if (userDetails[5] == courseDetails[5])
+                if (instructorDetails[5] == courseDetails[1])
                 {
                     linecount++;
                     dt.Rows.Add(courseDetails);
@@ -85,7 +87,7 @@ namespace WindowsFormsApp1
         }
         private void InitializeGridView(DataTable dt)
         {
-            string[] columnnames = { "Course name", "Points", "Instructor name", "Day", "Hours", "Department" };
+            string[] columnnames = { "Student id", "course name", "Day", "Hours"};
             foreach (string c in columnnames)
                 dt.Columns.Add(c);
         }
