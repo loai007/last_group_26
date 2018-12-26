@@ -110,6 +110,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoveCourseStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveCourseStudent.Designer.cs">
+      <DependentUpon>RemoveCourseStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Schedule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,12 @@
     </Compile>
     <Compile Include="StudentAddCourse.Designer.cs">
       <DependentUpon>StudentAddCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentMain.Designer.cs">
+      <DependentUpon>studentMain.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -152,11 +164,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RemoveCourseStudent.resx">
+      <DependentUpon>RemoveCourseStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Schedule.resx">
       <DependentUpon>Schedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentAddCourse.resx">
       <DependentUpon>StudentAddCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentMain.resx">
+      <DependentUpon>studentMain.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="collegeDataSet.xsc">
       <DependentUpon>collegeDataSet.xsd</DependentUpon>
