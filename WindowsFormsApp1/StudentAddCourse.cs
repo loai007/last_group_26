@@ -44,7 +44,7 @@ namespace WindowsFormsApp1
             StreamReader sr = new StreamReader(path);
             //Read the first line of text
             string line = sr.ReadLine();
-            int linecount=0;
+            
             //DataGridView dt = new DataGridView();
             DataTable dt = new DataTable();
             InitializeGridView(dt);//does as the name say
@@ -54,7 +54,7 @@ namespace WindowsFormsApp1
                 string[] courseDetails = line.Split(' ');
                 if (userDetails[5] == courseDetails[5])
                 {
-                    linecount++;
+                    
                     dt.Rows.Add(courseDetails);
             
                 }
@@ -76,11 +76,17 @@ namespace WindowsFormsApp1
                  details = line.Split(' ');
                 foreach (string c in details)
                     if (c == key)
-                        break;
+                    {
+                        sr.Close();
+                        return details;
+                    }
                  line = sr.ReadLine();
             }
             sr.Close();
-        return details;
+            if(key == null)
+                return details;
+
+            return null;
         }
         private void InitializeGridView(DataTable dt)
         {
@@ -112,7 +118,11 @@ namespace WindowsFormsApp1
             {
                 string[] details = line.Split(' ');
                     if (details[0] == key1 && details[1] == key2)
-                        return false;
+                {
+                    sr.Close();
+                    return false;
+                }
+                       
                 line = sr.ReadLine();
 
             }
