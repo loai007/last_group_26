@@ -134,6 +134,12 @@
     <Compile Include="studentMain.Designer.cs">
       <DependentUpon>studentMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentViewGreads.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentViewGreads.Designer.cs">
+      <DependentUpon>StudentViewGreads.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="studentMain.resx">
       <DependentUpon>studentMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentViewGreads.resx">
+      <DependentUpon>StudentViewGreads.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="collegeDataSet.xsc">
       <DependentUpon>collegeDataSet.xsd</DependentUpon>
