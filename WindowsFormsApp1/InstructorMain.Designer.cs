@@ -31,6 +31,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.corses_btn = new System.Windows.Forms.Button();
+            this.AddMarksBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -64,11 +65,22 @@
             this.corses_btn.UseVisualStyleBackColor = true;
             this.corses_btn.Click += new System.EventHandler(this.corses_btn_Click);
             // 
+            // AddMarksBtn
+            // 
+            this.AddMarksBtn.Location = new System.Drawing.Point(412, 84);
+            this.AddMarksBtn.Name = "AddMarksBtn";
+            this.AddMarksBtn.Size = new System.Drawing.Size(115, 36);
+            this.AddMarksBtn.TabIndex = 53;
+            this.AddMarksBtn.Text = "add marks";
+            this.AddMarksBtn.UseVisualStyleBackColor = true;
+            this.AddMarksBtn.Click += new System.EventHandler(this.AddMarksBtn_Click);
+            // 
             // InstructorMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.AddMarksBtn);
             this.Controls.Add(this.corses_btn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -83,5 +95,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button corses_btn;
+        private System.Windows.Forms.Button AddMarksBtn;
     }
 }

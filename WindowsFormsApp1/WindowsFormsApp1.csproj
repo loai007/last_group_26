@@ -72,6 +72,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstructorAddMarks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorAddMarks.Designer.cs">
+      <DependentUpon>InstructorAddMarks.cs</DependentUpon>
+    </Compile>
     <Compile Include="InstructorMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,9 +136,11 @@
     </Compile>
     <Compile Include="StudentAddCourse.cs">
       <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="StudentAddCourse.Designer.cs">
       <DependentUpon>StudentAddCourse.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="studentMain.cs">
       <SubType>Form</SubType>
@@ -148,6 +156,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorAddMarks.resx">
+      <DependentUpon>InstructorAddMarks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InstructorMain.resx">
       <DependentUpon>InstructorMain.cs</DependentUpon>
@@ -187,6 +198,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentAddCourse.resx">
       <DependentUpon>StudentAddCourse.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="studentMain.resx">
       <DependentUpon>studentMain.cs</DependentUpon>
