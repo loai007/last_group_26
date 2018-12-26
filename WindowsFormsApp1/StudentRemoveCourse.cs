@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class RemoveCourseStudent : Form
+    public partial class StudentRemoveCourse : Form
     {
-        public RemoveCourseStudent()
+        public StudentRemoveCourse()
         {
             InitializeComponent();
         }

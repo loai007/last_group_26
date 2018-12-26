@@ -47,7 +47,7 @@ namespace WindowsFormsApp1
         private void RemoveCorse_Click(object sender, EventArgs e)
         {
             this.Hide();
-            RemoveCourseStudent f7 = new RemoveCourseStudent();
+            StudentRemoveCourse f7 = new StudentRemoveCourse();
             f7.Show();
         }
     }

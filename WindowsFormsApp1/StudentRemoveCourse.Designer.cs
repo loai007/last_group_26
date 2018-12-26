@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class RemoveCourseStudent
+    partial class StudentRemoveCourse
     {
         /// <summary>
         /// Required designer variable.
