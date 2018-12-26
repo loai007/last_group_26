@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.AddCourse = new System.Windows.Forms.Button();
             this.massagelbl = new System.Windows.Forms.Label();
+            this.BackBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.collegeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCourses)).BeginInit();
@@ -117,11 +118,22 @@
             this.massagelbl.Size = new System.Drawing.Size(0, 17);
             this.massagelbl.TabIndex = 6;
             // 
+            // BackBtn
+            // 
+            this.BackBtn.Location = new System.Drawing.Point(713, 1);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(89, 47);
+            this.BackBtn.TabIndex = 7;
+            this.BackBtn.Text = "Back";
+            this.BackBtn.UseVisualStyleBackColor = true;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
+            // 
             // StudentAddCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.massagelbl);
             this.Controls.Add(this.AddCourse);
             this.Controls.Add(this.label1);
@@ -151,5 +163,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button AddCourse;
         private System.Windows.Forms.Label massagelbl;
+        private System.Windows.Forms.Button BackBtn;
     }
 }

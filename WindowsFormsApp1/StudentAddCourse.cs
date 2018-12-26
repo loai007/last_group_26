@@ -127,5 +127,12 @@ namespace WindowsFormsApp1
             else massagelbl.Text = "Cours exist";
 
         }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            studentMain f8 = new studentMain();
+            f8.Show();
+        }
     }
 }

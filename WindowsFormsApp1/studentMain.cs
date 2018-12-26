@@ -41,7 +41,9 @@ namespace WindowsFormsApp1
 
         private void AddCourse_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            StudentAddCourse f6 = new StudentAddCourse();
+            f6.Show();
         }
 
         private void RemoveCorse_Click(object sender, EventArgs e)
