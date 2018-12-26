@@ -52,5 +52,12 @@ namespace WindowsFormsApp1
             StudentRemoveCourse f7 = new StudentRemoveCourse();
             f7.Show();
         }
+
+        private void ViewGreadsbtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StudentViewGreads f8 = new StudentViewGreads();
+            f8.Show();
+        }
     }
 }

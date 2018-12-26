@@ -78,6 +78,13 @@ namespace WindowsFormsApp1
             dataGridViewCourses.DataSource = dt;
 
         }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            studentMain f8 = new studentMain();
+            f8.Show();
+        }
     }
 
 }
