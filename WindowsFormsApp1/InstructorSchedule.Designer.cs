@@ -48,7 +48,6 @@
             this.lbl2 = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
             this.lbl4 = new System.Windows.Forms.Label();
-            this.btnshow = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -261,16 +260,6 @@
             this.lbl4.Text = "4";
             this.lbl4.Visible = false;
             // 
-            // btnshow
-            // 
-            this.btnshow.Location = new System.Drawing.Point(37, 87);
-            this.btnshow.Name = "btnshow";
-            this.btnshow.Size = new System.Drawing.Size(108, 31);
-            this.btnshow.TabIndex = 59;
-            this.btnshow.Text = "Refresh";
-            this.btnshow.UseVisualStyleBackColor = true;
-            this.btnshow.Click += new System.EventHandler(this.btnshow_Click);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -388,7 +377,6 @@
             this.Controls.Add(this.lbl2);
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.lbl4);
-            this.Controls.Add(this.btnshow);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -427,7 +415,6 @@
         private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.Label lbl4;
-        private System.Windows.Forms.Button btnshow;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;

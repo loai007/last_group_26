@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
         public InstructorSchedule()
         {
             InitializeComponent();
+            showtable();
         }
         private void writelbl(string[] cs_details)
         {
@@ -154,20 +155,7 @@ namespace WindowsFormsApp1
             }
 
         }
-        private void btnshow_Click(object sender, EventArgs e)
-        {
-            //Pass the file path and file name to the StreamReader constructor
-            StreamReader sr = new StreamReader("user.txt");
-            //Read the first line of text
-            string line = sr.ReadLine();
-            string[] details = line.Split(' ');
-            
-            
-            string[] cs_details = line.Split();
-            writelbl(cs_details);
-            line = sr.ReadLine();
-            sr.Close();
-        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -175,6 +163,21 @@ namespace WindowsFormsApp1
             InstructorMain sm = new InstructorMain();
             sm.Show();
    
+        }
+        private void showtable()
+        {
+            //Pass the file path and file name to the StreamReader constructor
+            StreamReader sr = new StreamReader("user.txt");
+            //Read the first line of text
+            string line = sr.ReadLine();
+            string[] details = line.Split(' ');
+
+
+            string[] cs_details = line.Split();
+            writelbl(cs_details);
+            line = sr.ReadLine();
+            sr.Close();
+
         }
     }
 }

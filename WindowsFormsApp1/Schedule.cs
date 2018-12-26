@@ -17,8 +17,32 @@ namespace WindowsFormsApp1
         public Schedule()
         {
             InitializeComponent();
+            showtable();
         }
+        private void showtable()
+        {
+            //Pass the file path and file name to the StreamReader constructor
+            StreamReader sr = new StreamReader("user.txt");
+            //Read the first line of text
+            string line = sr.ReadLine();
+            string[] details = line.Split(' ');
+            sr.Close();
 
+            StreamReader srr = new StreamReader("coursestudent.txt");
+            string linecs = srr.ReadLine();
+            while (linecs != null)
+            {
+
+
+                string[] cs_details = linecs.Split();
+                if (cs_details[0] == details[0])
+                    writelbl(cs_details[2], cs_details[3], cs_details);
+
+                linecs = srr.ReadLine();
+            }
+            srr.Close();
+            
+        }
         private void writelbl(string day,string month,string[] cs_details)
         {
             switch (cs_details[2])
@@ -156,30 +180,7 @@ namespace WindowsFormsApp1
             }
 
         }
-        private void btnshow_Click(object sender, EventArgs e)
-        {
-            //Pass the file path and file name to the StreamReader constructor
-            StreamReader sr = new StreamReader("user.txt");
-            //Read the first line of text
-            string line = sr.ReadLine();
-            string[] details = line.Split(' ');
-            sr.Close();
-           
-                StreamReader srr = new StreamReader("coursestudent.txt");
-            string linecs = srr.ReadLine();
-            while (linecs != null)
-            {
-                   
-                    
-                    string[] cs_details = linecs.Split();
-                    if (cs_details[0] == details[0])
-                        writelbl(cs_details[2], cs_details[3], cs_details);
-
-                    linecs = srr.ReadLine();
-            }
-                srr.Close();       
-        }
-
+        
 
         private void lbl1_Click(object sender, EventArgs e)
         {
