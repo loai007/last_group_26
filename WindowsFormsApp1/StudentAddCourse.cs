@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
         private void StudentAddCourse_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'collegeDataSet.courses' table. You can move, or remove it, as needed.
-            this.coursesTableAdapter.Fill(this.collegeDataSet.courses);
+       // this.coursesTableAdapter.Fill(this.collegeDataSet.courses);
 
         }
 
