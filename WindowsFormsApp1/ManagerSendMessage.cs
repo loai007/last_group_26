@@ -62,7 +62,14 @@ namespace WindowsFormsApp1
                 if (Message.Text != "")
                 {
                     char s = ' ';
-                    string message = id + s + Message.Text;
+
+                    StreamReader mi = new StreamReader("user.txt");
+                    string line = mi.ReadLine();
+                    string[] details = line.Split(' ');
+                    string idM = details[0];
+                    mi.Close();
+
+                    string message = id + s + idM + s + Message.Text;
                     StreamWriter mw = new StreamWriter("messages.txt", true);
                     mw.WriteLine(message);
                     mw.Close();
