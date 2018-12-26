@@ -16,14 +16,11 @@ namespace WindowsFormsApp1
         public StudentAddCourse()
         {
             InitializeComponent();
-            showData(getUser(), "course.txt");
+            showData(getData("user.txt"), "course.txt");
 
         }
 
-        private void CoursesTable_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+     
 
         private void StudentAddCourse_Load(object sender, EventArgs e)
         {
@@ -32,68 +29,103 @@ namespace WindowsFormsApp1
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+      
 
         private void dataGridViewCourses_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+           
         }
         //un=user name
         //ps=password
         //path=path of the desired file
-        private bool showData(string[] userDetails , string path)
+        private void showData(string[] userDetails , string path)
         {
             //Pass the file path and file name to the StreamReader constructor
             StreamReader sr = new StreamReader(path);
             //Read the first line of text
             string line = sr.ReadLine();
+            int linecount=0;
+            //DataGridView dt = new DataGridView();
+            DataTable dt = new DataTable();
+            InitializeGridView(dt);//does as the name say
             //Continue to read until you reach end of file
             while (line != null)
             {
                 string[] courseDetails = line.Split(' ');
                 if (userDetails[5] == courseDetails[5])
-                    DisplayCourse(courseDetails);
+                {
+                    linecount++;
+                    dt.Rows.Add(courseDetails);
+            
+                }
                 //Read the next line
                 line = sr.ReadLine();
             }
 
             //close the file
             sr.Close();
-            return false;
-        }
-        private string[] getUser() {
-
-           
-                //Pass the file path and file name to the StreamReader constructor
-                StreamReader sr = new StreamReader("user.txt");
-                //Read the first line of text
-                string line = sr.ReadLine();
-                string[] details = line.Split(' ');
-                sr.Close();
-            return details;
-
-
-        }
-        private void DisplayCourse(string[] courseDetalis)
-        {
+            dataGridViewCourses.DataSource = dt;
             
-            DataTable dt = new DataTable();
-            string[] columnnames = {"Course name","Points","Day", "Hours" };
-            foreach (string c in courseDetalis)
+        }
+        private string[] getData(string path,string key=null) {
+            StreamReader sr = new StreamReader(path);
+            string line = sr.ReadLine();
+            string[] details= line.Split(' ');
+            while (line!=null && key != null)
             {
-                dt.Columns.Add(c);
+                 details = line.Split(' ');
+                foreach (string c in details)
+                    if (c == key)
+                        break;
+                 line = sr.ReadLine();
             }
-         
-                DataRow dr = dt.NewRow();
-                for (int i = 0; i < courseDetalis.Length; i++)
-                {
-                    dr[i] = courseDetalis[i];
-                }
-                dt.Rows.Add(dr);
-            
+            sr.Close();
+        return details;
+        }
+        private void InitializeGridView(DataTable dt)
+        {
+            string[] columnnames = { "Course name", "Points", "Instructor name", "Day", "Hours" , "Department" };
+            foreach(string c in columnnames)
+                dt.Columns.Add(c);
+        }
+        private void writeToFile(string path,string line)
+        {
+            StreamWriter sw = new StreamWriter(path, true);
+            sw.WriteLine(line);
+            sw.Close();
+        }
+        private bool addCourseForUser(string[] userDetails,string[] courseDetail)
+        {
+            char s = ' ';
+            string line = (userDetails[0] +s+ courseDetail[0] + s + courseDetail[3] + s + courseDetail[4] );
+            if (doesntExist("coursestudent.txt", userDetails[0], courseDetail[0]))
+                writeToFile("coursestudent.txt", line);
+            else return false;
+            return true;
+        }
+        private bool doesntExist(string path,string key1, string key2)
+        {
+            StreamReader sr = new StreamReader(path);
+
+            string line = sr.ReadLine();
+            while (line != null)
+            {
+                string[] details = line.Split(' ');
+                    if (details[0] == key1 && details[1] == key2)
+                        return false;
+                line = sr.ReadLine();
+
+            }
+            sr.Close();
+            return true;
+        }
+        private void AddCourse_Click(object sender, EventArgs e)
+        {
+            string coursename=textBoxAddCourse.Text;
+            if(addCourseForUser(getData("user.txt"), getData("course.txt", coursename)))
+                massagelbl.Text="Cours added";
+            else massagelbl.Text = "Cours exist";
+
         }
     }
 }
