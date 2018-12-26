@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.welcomelbl = new System.Windows.Forms.Label();
-            this.courses_studentsTableAdapter1 = new WindowsFormsApp1.collegeDataSetTableAdapters.courses_studentsTableAdapter();
-            this.collegeDataSet = new WindowsFormsApp1.collegeDataSet();
-            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.coursesTableAdapter = new WindowsFormsApp1.collegeDataSetTableAdapters.coursesTableAdapter();
             this.dataGridViewCourses = new System.Windows.Forms.DataGridView();
             this.textBoxAddCourse = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.AddCourse = new System.Windows.Forms.Button();
             this.massagelbl = new System.Windows.Forms.Label();
             this.BackBtn = new System.Windows.Forms.Button();
+            this.courses_studentsTableAdapter1 = new WindowsFormsApp1.collegeDataSetTableAdapters.courses_studentsTableAdapter();
+            this.collegeDataSet = new WindowsFormsApp1.collegeDataSet();
+            this.coursesTableAdapter = new WindowsFormsApp1.collegeDataSetTableAdapters.coursesTableAdapter();
+            this.coursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCourses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.collegeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCourses)).BeginInit();
             this.SuspendLayout();
             // 
             // welcomelbl
@@ -54,24 +54,6 @@
             this.welcomelbl.Size = new System.Drawing.Size(255, 25);
             this.welcomelbl.TabIndex = 0;
             this.welcomelbl.Text = "Here is a list of the courses: ";
-            // 
-            // courses_studentsTableAdapter1
-            // 
-            this.courses_studentsTableAdapter1.ClearBeforeFill = true;
-            // 
-            // collegeDataSet
-            // 
-            this.collegeDataSet.DataSetName = "collegeDataSet";
-            this.collegeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // coursesBindingSource
-            // 
-            this.coursesBindingSource.DataMember = "courses";
-            this.coursesBindingSource.DataSource = this.collegeDataSet;
-            // 
-            // coursesTableAdapter
-            // 
-            this.coursesTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewCourses
             // 
@@ -128,6 +110,24 @@
             this.BackBtn.UseVisualStyleBackColor = true;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
+            // courses_studentsTableAdapter1
+            // 
+            this.courses_studentsTableAdapter1.ClearBeforeFill = true;
+            // 
+            // collegeDataSet
+            // 
+            this.collegeDataSet.DataSetName = "collegeDataSet";
+            this.collegeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // coursesTableAdapter
+            // 
+            this.coursesTableAdapter.ClearBeforeFill = true;
+            // 
+            // coursesBindingSource
+            // 
+            this.coursesBindingSource.DataMember = "courses";
+            this.coursesBindingSource.DataSource = this.collegeDataSet;
+            // 
             // StudentAddCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -143,9 +143,9 @@
             this.Name = "StudentAddCourse";
             this.Text = "StudentAddCourse";
             this.Load += new System.EventHandler(this.StudentAddCourse_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCourses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.collegeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coursesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCourses)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,15 +154,15 @@
         #endregion
 
         private System.Windows.Forms.Label welcomelbl;
-        private collegeDataSetTableAdapters.courses_studentsTableAdapter courses_studentsTableAdapter1;
-        private collegeDataSet collegeDataSet;
-        private System.Windows.Forms.BindingSource coursesBindingSource;
-        private collegeDataSetTableAdapters.coursesTableAdapter coursesTableAdapter;
         private System.Windows.Forms.DataGridView dataGridViewCourses;
         private System.Windows.Forms.TextBox textBoxAddCourse;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button AddCourse;
         private System.Windows.Forms.Label massagelbl;
         private System.Windows.Forms.Button BackBtn;
+        private collegeDataSetTableAdapters.courses_studentsTableAdapter courses_studentsTableAdapter1;
+        private collegeDataSet collegeDataSet;
+        private collegeDataSetTableAdapters.coursesTableAdapter coursesTableAdapter;
+        private System.Windows.Forms.BindingSource coursesBindingSource;
     }
 }
