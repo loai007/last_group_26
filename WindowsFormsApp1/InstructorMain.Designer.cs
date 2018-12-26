@@ -55,10 +55,10 @@
             // 
             // corses_btn
             // 
-            this.corses_btn.Location = new System.Drawing.Point(288, 84);
+            this.corses_btn.Location = new System.Drawing.Point(210, 84);
             this.corses_btn.Name = "corses_btn";
             this.corses_btn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.corses_btn.Size = new System.Drawing.Size(109, 37);
+            this.corses_btn.Size = new System.Drawing.Size(140, 37);
             this.corses_btn.TabIndex = 52;
             this.corses_btn.Text = "Corses I teach";
             this.corses_btn.UseVisualStyleBackColor = true;

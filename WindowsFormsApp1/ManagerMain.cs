@@ -30,5 +30,12 @@ namespace WindowsFormsApp1
             Form1 f1 = new Form1();
             f1.Show();
         }
+
+        private void deletec_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerDeleteCourse mdc = new ManagerDeleteCourse();
+            mdc.Show();
+        }
     }
 }

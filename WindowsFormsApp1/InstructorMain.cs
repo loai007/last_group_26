@@ -42,13 +42,9 @@ namespace WindowsFormsApp1
 
         private void corses_btn_Click(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("user.txt");
-            string line = sr.ReadLine();
-            string[] details = line.Split(' ');
-            
-
-
-
+            this.Hide();
+            InstructorShowCourses isc = new InstructorShowCourses();
+            isc.Show();
 
         }
     }

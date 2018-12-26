@@ -84,11 +84,23 @@
     <Compile Include="InstructorSchedule.Designer.cs">
       <DependentUpon>InstructorSchedule.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstructorShowCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorShowCourses.Designer.cs">
+      <DependentUpon>InstructorShowCourses.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerAddC.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManagerAddC.Designer.cs">
       <DependentUpon>ManagerAddC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerDeleteCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerDeleteCourse.Designer.cs">
+      <DependentUpon>ManagerDeleteCourse.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerMain.cs">
       <SubType>Form</SubType>
@@ -125,8 +137,14 @@
     <EmbeddedResource Include="InstructorSchedule.resx">
       <DependentUpon>InstructorSchedule.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InstructorShowCourses.resx">
+      <DependentUpon>InstructorShowCourses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagerAddC.resx">
       <DependentUpon>ManagerAddC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerDeleteCourse.resx">
+      <DependentUpon>ManagerDeleteCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerMain.resx">
       <DependentUpon>ManagerMain.cs</DependentUpon>
