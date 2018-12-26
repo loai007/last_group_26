@@ -37,5 +37,12 @@ namespace WindowsFormsApp1
             ManagerDeleteCourse mdc = new ManagerDeleteCourse();
             mdc.Show();
         }
+
+        private void SendMessage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerSendMessage f9 = new ManagerSendMessage();
+            f9.Show();
+        }
     }
 }
