@@ -80,5 +80,12 @@ namespace WindowsFormsApp1
 
             stc.Close();
         }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            studentMain f8 = new studentMain();
+            f8.Show();
+        }
     }
 }

@@ -32,6 +32,7 @@
             this.textcourse = new System.Windows.Forms.TextBox();
             this.RemoveCourse = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -70,16 +71,27 @@
             this.label2.Size = new System.Drawing.Size(0, 25);
             this.label2.TabIndex = 4;
             // 
-            // RemoveCourseStudent
+            // back
+            // 
+            this.back.Location = new System.Drawing.Point(666, 1);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(133, 73);
+            this.back.TabIndex = 5;
+            this.back.Text = "Back";
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
+            // 
+            // StudentRemoveCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.back);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.RemoveCourse);
             this.Controls.Add(this.textcourse);
             this.Controls.Add(this.label1);
-            this.Name = "RemoveCourseStudent";
+            this.Name = "StudentRemoveCourse";
             this.Text = "RemoveCourseStudent";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -92,5 +104,6 @@
         private System.Windows.Forms.TextBox textcourse;
         private System.Windows.Forms.Button RemoveCourse;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button back;
     }
 }
