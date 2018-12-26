@@ -31,14 +31,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.deletec_btn = new System.Windows.Forms.Button();
+            this.SendMessage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(16, 104);
+            this.button1.Location = new System.Drawing.Point(24, 162);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 40);
+            this.button1.Size = new System.Drawing.Size(166, 62);
             this.button1.TabIndex = 0;
             this.button1.Text = "Add Course";
             this.button1.UseVisualStyleBackColor = false;
@@ -46,9 +48,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(680, 0);
+            this.button2.Location = new System.Drawing.Point(1020, 0);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 49);
+            this.button2.Size = new System.Drawing.Size(180, 77);
             this.button2.TabIndex = 51;
             this.button2.Text = "Log out";
             this.button2.UseVisualStyleBackColor = true;
@@ -58,22 +61,36 @@
             // 
             this.deletec_btn.BackColor = System.Drawing.SystemColors.Control;
             this.deletec_btn.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.deletec_btn.Location = new System.Drawing.Point(184, 104);
+            this.deletec_btn.Location = new System.Drawing.Point(276, 162);
+            this.deletec_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.deletec_btn.Name = "deletec_btn";
-            this.deletec_btn.Size = new System.Drawing.Size(125, 40);
+            this.deletec_btn.Size = new System.Drawing.Size(188, 62);
             this.deletec_btn.TabIndex = 52;
             this.deletec_btn.Text = "Delete Course";
             this.deletec_btn.UseVisualStyleBackColor = false;
             this.deletec_btn.Click += new System.EventHandler(this.deletec_btn_Click);
             // 
+            // SendMessage
+            // 
+            this.SendMessage.BackColor = System.Drawing.SystemColors.Control;
+            this.SendMessage.Location = new System.Drawing.Point(549, 162);
+            this.SendMessage.Name = "SendMessage";
+            this.SendMessage.Size = new System.Drawing.Size(178, 62);
+            this.SendMessage.TabIndex = 53;
+            this.SendMessage.Text = "Send Message";
+            this.SendMessage.UseVisualStyleBackColor = false;
+            this.SendMessage.Click += new System.EventHandler(this.SendMessage_Click);
+            // 
             // ManagerMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 703);
+            this.Controls.Add(this.SendMessage);
             this.Controls.Add(this.deletec_btn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ManagerMain";
             this.Text = "ManagerMain";
             this.ResumeLayout(false);
@@ -85,5 +102,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button deletec_btn;
+        private System.Windows.Forms.Button SendMessage;
     }
 }
