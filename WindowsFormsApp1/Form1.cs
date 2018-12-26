@@ -17,6 +17,9 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        //un=user name
+        //ps=password
+        //path=path of the desired file
         private bool FindUser(string un, string ps, string path)
         {
                 //Pass the file path and file name to the StreamReader constructor
