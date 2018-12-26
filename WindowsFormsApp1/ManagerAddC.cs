@@ -27,9 +27,16 @@ namespace WindowsFormsApp1
         {
 
         }
-        private void writeToFile(string line)
+        private void writeToManagerFile(string line)
         {
             StreamWriter sw = new StreamWriter("instructor.txt",true);
+            sw.WriteLine(line);
+            sw.Close();
+        }
+
+        private void writeToCourseFile(string line)
+        {
+            StreamWriter sw = new StreamWriter("course.txt", true);
             sw.WriteLine(line);
             sw.Close();
         }
@@ -86,14 +93,19 @@ namespace WindowsFormsApp1
             string time = timebox.Text;
             if (time == "")
                 flag = 0;
+            string points = points_txt.Text;
+            if (points == "")
+                flag = 0;
 
 
             char s = ' ';
             if (flag != 0 && ifID(id)==true)
             {
-                string line = (id + s + pass + s + name + s + last + s + dep + s + phn + s + cname + s + day + s + time);
+                string line = (id + s + pass + s + name + s + last + s + dep + s  + s + cname + s + day + s + time + s + phn);
 
-                writeToFile(line);
+                writeToManagerFile(line);
+                line = (cname + s + points + s + name + s + day + s + time + s + dep); 
+                writeToCourseFile(line);
                 lblero.Text = "added ☺";
             }
             else
