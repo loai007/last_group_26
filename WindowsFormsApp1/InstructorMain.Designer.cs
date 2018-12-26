@@ -30,6 +30,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.corses_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -52,11 +53,23 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // corses_btn
+            // 
+            this.corses_btn.Location = new System.Drawing.Point(288, 84);
+            this.corses_btn.Name = "corses_btn";
+            this.corses_btn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.corses_btn.Size = new System.Drawing.Size(109, 37);
+            this.corses_btn.TabIndex = 52;
+            this.corses_btn.Text = "Corses I teach";
+            this.corses_btn.UseVisualStyleBackColor = true;
+            this.corses_btn.Click += new System.EventHandler(this.corses_btn_Click);
+            // 
             // InstructorMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.corses_btn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "InstructorMain";
@@ -69,5 +82,6 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button corses_btn;
     }
 }

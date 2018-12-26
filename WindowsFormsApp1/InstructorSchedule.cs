@@ -163,16 +163,17 @@ namespace WindowsFormsApp1
             string[] details = line.Split(' ');
             
             
-                string[] cs_details = line.Split();
-                    writelbl(cs_details);
-                line = sr.ReadLine();
+            string[] cs_details = line.Split();
+            writelbl(cs_details);
+            line = sr.ReadLine();
             sr.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-      
+            InstructorMain sm = new InstructorMain();
+            sm.Show();
    
         }
     }
