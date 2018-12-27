@@ -103,9 +103,11 @@ namespace WindowsFormsApp1
         private bool addCourseForUser(string[] userDetails,string[] courseDetail)
         {
             char s = ' ';
-            string line = (userDetails[0] +s+ courseDetail[0] + s + courseDetail[3] + s + courseDetail[4] );
             if (doesntExist("coursestudent.txt", userDetails[0], courseDetail[0]))
+            {
+                string line = (userDetails[0] + s + courseDetail[0] + s + courseDetail[3] + s + courseDetail[4]);
                 writeToFile("coursestudent.txt", line);
+            }
             else return false;
             return true;
         }

@@ -48,6 +48,7 @@
             this.BackBtn.TabIndex = 0;
             this.BackBtn.Text = "Back";
             this.BackBtn.UseVisualStyleBackColor = true;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // label1
             // 
@@ -97,7 +98,7 @@
             // 
             this.UpdateMarkBtn.Location = new System.Drawing.Point(300, 332);
             this.UpdateMarkBtn.Name = "UpdateMarkBtn";
-            this.UpdateMarkBtn.Size = new System.Drawing.Size(75, 23);
+            this.UpdateMarkBtn.Size = new System.Drawing.Size(97, 37);
             this.UpdateMarkBtn.TabIndex = 7;
             this.UpdateMarkBtn.Text = "Update mark";
             this.UpdateMarkBtn.UseVisualStyleBackColor = true;
@@ -109,13 +110,13 @@
             this.dataGridViewMarks.Location = new System.Drawing.Point(9, 37);
             this.dataGridViewMarks.Name = "dataGridViewMarks";
             this.dataGridViewMarks.RowTemplate.Height = 24;
-            this.dataGridViewMarks.Size = new System.Drawing.Size(240, 150);
+            this.dataGridViewMarks.Size = new System.Drawing.Size(687, 150);
             this.dataGridViewMarks.TabIndex = 8;
             // 
             // messagelbl
             // 
             this.messagelbl.AutoSize = true;
-            this.messagelbl.Location = new System.Drawing.Point(297, 371);
+            this.messagelbl.Location = new System.Drawing.Point(282, 395);
             this.messagelbl.Name = "messagelbl";
             this.messagelbl.Size = new System.Drawing.Size(0, 17);
             this.messagelbl.TabIndex = 9;

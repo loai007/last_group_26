@@ -18,6 +18,21 @@ namespace WindowsFormsApp1
             InitializeComponent();
             showData(getData("user.txt"), "coursestudent.txt");
         }
+
+        private bool exist=false;
+
+        private void UpdateMarkBtn_Click(object sender, EventArgs e)
+        {
+            string line = nameTb.Text + ' ' + getData("user.txt")[5] + ' ' + markTb.Text;
+            removeStudentFromCourse(nameTb.Text, getData("user.txt")[5]);
+            if (!exist)
+            {
+                writeToFile("greads.txt", line);
+                messagelbl.Text = "Gread updated";
+            }
+            showData(getData("user.txt"), "coursestudent.txt");
+
+        }
         private string[] getData(string path, string key = null)
         {
             StreamReader sr = new StreamReader(path);
@@ -48,14 +63,64 @@ namespace WindowsFormsApp1
             sw.WriteLine(line);
             sw.Close();
         }
-        private void UpdateMarkBtn_Click(object sender, EventArgs e)
+        private void  removeStudentFromCourse(string id,string courseName)
         {
-            string line = nameTb.Text + ' ' + getData("user.txt")[0] + ' '  + markTb.Text;
-            writeToFile("greads.txt", line);
-            messagelbl.Text = "Gread updated";
+
+            if (doesntExist("coursestudent.txt", id, courseName) == true)
+            {
+                messagelbl.ForeColor = System.Drawing.Color.Red;
+                messagelbl.Text = "there is no such student in your course";
+                exist = true;
+            }
+            else
+            {
+                string[] Lines = File.ReadAllLines("coursestudent.txt");
+                //start wrighting from the start
+                StreamWriter sw = new StreamWriter("coursestudent.txt");
+
+
+
+                foreach (string part in Lines)
+                {
+
+                    string[] splitLine = part.Split(' ');
+                    if (splitLine[0] == id && splitLine[1] == courseName)
+                    {
+                        //Skip the line
+                        continue;
+                    }
+                    else
+                    {
+                        sw.WriteLine(part);
+                    }
+                }
+
+                sw.Close();
+            }
 
 
         }
+        private bool doesntExist(string path, string key1, string key2)
+        {
+            StreamReader sr = new StreamReader(path);
+
+            string line = sr.ReadLine();
+            while (line != null)
+            {
+                
+                string[] details = line.Split(' ');
+                if (details[0] == key1 && details[1] == key2)
+                {
+                    sr.Close();
+                    return false;
+                }
+                line = sr.ReadLine();
+
+            }
+            sr.Close();
+            return true;
+        }
+       
         private void showData(string[] instructorDetails, string path)
         {
             //Pass the file path and file name to the StreamReader constructor
@@ -90,6 +155,13 @@ namespace WindowsFormsApp1
             string[] columnnames = { "Student id", "course name", "Day", "Hours"};
             foreach (string c in columnnames)
                 dt.Columns.Add(c);
+        }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            InstructorMain f8 = new InstructorMain();
+            f8.Show();
         }
     }
 }
