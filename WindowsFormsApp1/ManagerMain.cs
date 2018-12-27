@@ -44,5 +44,12 @@ namespace WindowsFormsApp1
             ManagerSendMessage f9 = new ManagerSendMessage();
             f9.Show();
         }
+
+        private void ManageeMessage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerMessage f10 = new ManagerMessage();
+            f10.Show();
+        }
     }
 }

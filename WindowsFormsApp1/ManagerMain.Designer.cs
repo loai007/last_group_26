@@ -32,6 +32,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.deletec_btn = new System.Windows.Forms.Button();
             this.SendMessage = new System.Windows.Forms.Button();
+            this.ManageeMessage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -81,11 +82,23 @@
             this.SendMessage.UseVisualStyleBackColor = false;
             this.SendMessage.Click += new System.EventHandler(this.SendMessage_Click);
             // 
+            // ManageeMessage
+            // 
+            this.ManageeMessage.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ManageeMessage.Location = new System.Drawing.Point(773, 162);
+            this.ManageeMessage.Name = "ManageeMessage";
+            this.ManageeMessage.Size = new System.Drawing.Size(160, 62);
+            this.ManageeMessage.TabIndex = 54;
+            this.ManageeMessage.Text = "Massege";
+            this.ManageeMessage.UseVisualStyleBackColor = false;
+            this.ManageeMessage.Click += new System.EventHandler(this.ManageeMessage_Click);
+            // 
             // ManagerMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 703);
+            this.Controls.Add(this.ManageeMessage);
             this.Controls.Add(this.SendMessage);
             this.Controls.Add(this.deletec_btn);
             this.Controls.Add(this.button2);
@@ -103,5 +116,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button deletec_btn;
         private System.Windows.Forms.Button SendMessage;
+        private System.Windows.Forms.Button ManageeMessage;
     }
 }
