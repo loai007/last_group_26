@@ -101,7 +101,7 @@ namespace WindowsFormsApp1
             char s = ' ';
             if (flag != 0 && ifID(id)==true)
             {
-                string line = (id + s + pass + s + name + s + last + s + dep + s  + s + cname + s + day + s + time + s + phn);
+                string line = (id + s + pass + s + name + s + last + s + dep + s  + cname + s + day + s + time + s + phn);
 
                 writeToManagerFile(line);
                 line = (cname + s + points + s + name + s + day + s + time + s + dep); 
@@ -110,7 +110,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                lblero.Text = "error";
+                lblero.Text = "Error something went wrong 🍑";
             }
         }
         
