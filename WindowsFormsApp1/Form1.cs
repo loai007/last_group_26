@@ -34,6 +34,7 @@ namespace WindowsFormsApp1
                     if (details[1] == ps)
                     {
                         creatdoc(line);
+                        sr.Close();
                         return true;
                     }
                 //Read the next line
