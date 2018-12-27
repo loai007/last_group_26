@@ -38,22 +38,20 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(24, 162);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(16, 104);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 62);
-            this.button1.TabIndex = 0;
+            this.button1.Size = new System.Drawing.Size(111, 40);
+            this.button1.TabIndex = 51;
             this.button1.Text = "Add Course";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1020, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Location = new System.Drawing.Point(680, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(180, 77);
-            this.button2.TabIndex = 51;
+            this.button2.Size = new System.Drawing.Size(120, 49);
+            this.button2.TabIndex = 55;
             this.button2.Text = "Log out";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -62,10 +60,9 @@
             // 
             this.deletec_btn.BackColor = System.Drawing.SystemColors.Control;
             this.deletec_btn.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.deletec_btn.Location = new System.Drawing.Point(276, 162);
-            this.deletec_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.deletec_btn.Location = new System.Drawing.Point(184, 104);
             this.deletec_btn.Name = "deletec_btn";
-            this.deletec_btn.Size = new System.Drawing.Size(188, 62);
+            this.deletec_btn.Size = new System.Drawing.Size(125, 40);
             this.deletec_btn.TabIndex = 52;
             this.deletec_btn.Text = "Delete Course";
             this.deletec_btn.UseVisualStyleBackColor = false;
@@ -74,9 +71,10 @@
             // SendMessage
             // 
             this.SendMessage.BackColor = System.Drawing.SystemColors.Control;
-            this.SendMessage.Location = new System.Drawing.Point(549, 162);
+            this.SendMessage.Location = new System.Drawing.Point(366, 104);
+            this.SendMessage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SendMessage.Name = "SendMessage";
-            this.SendMessage.Size = new System.Drawing.Size(178, 62);
+            this.SendMessage.Size = new System.Drawing.Size(119, 40);
             this.SendMessage.TabIndex = 53;
             this.SendMessage.Text = "Send Message";
             this.SendMessage.UseVisualStyleBackColor = false;
@@ -85,9 +83,10 @@
             // ManageeMessage
             // 
             this.ManageeMessage.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ManageeMessage.Location = new System.Drawing.Point(773, 162);
+            this.ManageeMessage.Location = new System.Drawing.Point(515, 104);
+            this.ManageeMessage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ManageeMessage.Name = "ManageeMessage";
-            this.ManageeMessage.Size = new System.Drawing.Size(160, 62);
+            this.ManageeMessage.Size = new System.Drawing.Size(107, 40);
             this.ManageeMessage.TabIndex = 54;
             this.ManageeMessage.Text = "Massege";
             this.ManageeMessage.UseVisualStyleBackColor = false;
@@ -95,15 +94,14 @@
             // 
             // ManagerMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 703);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ManageeMessage);
             this.Controls.Add(this.SendMessage);
             this.Controls.Add(this.deletec_btn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ManagerMain";
             this.Text = "ManagerMain";
             this.ResumeLayout(false);

@@ -114,6 +114,12 @@
     <Compile Include="ManagerMain.Designer.cs">
       <DependentUpon>ManagerMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerMessage.Designer.cs">
+      <DependentUpon>ManagerMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerSendMessage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerMain.resx">
       <DependentUpon>ManagerMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerMessage.resx">
+      <DependentUpon>ManagerMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerSendMessage.resx">
       <DependentUpon>ManagerSendMessage.cs</DependentUpon>

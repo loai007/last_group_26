@@ -122,7 +122,7 @@
             this.idbox.Location = new System.Drawing.Point(197, 29);
             this.idbox.Name = "idbox";
             this.idbox.Size = new System.Drawing.Size(100, 22);
-            this.idbox.TabIndex = 8;
+            this.idbox.TabIndex = 50;
             this.idbox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // passbox
@@ -130,49 +130,49 @@
             this.passbox.Location = new System.Drawing.Point(197, 66);
             this.passbox.Name = "passbox";
             this.passbox.Size = new System.Drawing.Size(100, 22);
-            this.passbox.TabIndex = 9;
+            this.passbox.TabIndex = 51;
             // 
             // namebox
             // 
             this.namebox.Location = new System.Drawing.Point(197, 106);
             this.namebox.Name = "namebox";
             this.namebox.Size = new System.Drawing.Size(100, 22);
-            this.namebox.TabIndex = 10;
+            this.namebox.TabIndex = 52;
             // 
             // lastnbox
             // 
             this.lastnbox.Location = new System.Drawing.Point(197, 145);
             this.lastnbox.Name = "lastnbox";
             this.lastnbox.Size = new System.Drawing.Size(100, 22);
-            this.lastnbox.TabIndex = 11;
+            this.lastnbox.TabIndex = 53;
             // 
             // depbox
             // 
             this.depbox.Location = new System.Drawing.Point(197, 189);
             this.depbox.Name = "depbox";
             this.depbox.Size = new System.Drawing.Size(100, 22);
-            this.depbox.TabIndex = 12;
+            this.depbox.TabIndex = 54;
             // 
             // cnamebox
             // 
             this.cnamebox.Location = new System.Drawing.Point(197, 262);
             this.cnamebox.Name = "cnamebox";
             this.cnamebox.Size = new System.Drawing.Size(100, 22);
-            this.cnamebox.TabIndex = 13;
+            this.cnamebox.TabIndex = 56;
             // 
             // daybox
             // 
             this.daybox.Location = new System.Drawing.Point(197, 300);
             this.daybox.Name = "daybox";
             this.daybox.Size = new System.Drawing.Size(100, 22);
-            this.daybox.TabIndex = 14;
+            this.daybox.TabIndex = 57;
             // 
             // addbut
             // 
             this.addbut.Location = new System.Drawing.Point(413, 144);
             this.addbut.Name = "addbut";
             this.addbut.Size = new System.Drawing.Size(115, 57);
-            this.addbut.TabIndex = 15;
+            this.addbut.TabIndex = 60;
             this.addbut.Text = "Add";
             this.addbut.UseVisualStyleBackColor = true;
             this.addbut.Click += new System.EventHandler(this.addbut_Click);
@@ -182,7 +182,7 @@
             this.timebox.Location = new System.Drawing.Point(197, 343);
             this.timebox.Name = "timebox";
             this.timebox.Size = new System.Drawing.Size(100, 22);
-            this.timebox.TabIndex = 16;
+            this.timebox.TabIndex = 58;
             // 
             // label8
             // 
@@ -206,7 +206,7 @@
             this.button1.Location = new System.Drawing.Point(677, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 52);
-            this.button1.TabIndex = 19;
+            this.button1.TabIndex = 61;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -214,10 +214,10 @@
             // txtphn
             // 
             this.txtphn.Location = new System.Drawing.Point(197, 227);
-            this.txtphn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtphn.Margin = new System.Windows.Forms.Padding(2);
             this.txtphn.Name = "txtphn";
             this.txtphn.Size = new System.Drawing.Size(100, 22);
-            this.txtphn.TabIndex = 20;
+            this.txtphn.TabIndex = 55;
             // 
             // lblphn
             // 
@@ -243,7 +243,7 @@
             this.points_txt.Location = new System.Drawing.Point(197, 386);
             this.points_txt.Name = "points_txt";
             this.points_txt.Size = new System.Drawing.Size(100, 22);
-            this.points_txt.TabIndex = 23;
+            this.points_txt.TabIndex = 59;
             // 
             // ManagerAddC
             // 
