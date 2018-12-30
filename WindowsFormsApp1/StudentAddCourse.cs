@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
         public StudentAddCourse()
         {
             InitializeComponent();
+            massagelbl.Visible = false;
             showData(getData("user.txt"), "course.txt");
 
         }
@@ -103,6 +104,8 @@ namespace WindowsFormsApp1
         private bool addCourseForUser(string[] userDetails,string[] courseDetail)
         {
             char s = ' ';
+            if (courseDetail == null)
+                return false;
             if (doesntExist("coursestudent.txt", userDetails[0], courseDetail[0]))
             {
                 string line = (userDetails[0] + s + courseDetail[0] + s + courseDetail[3] + s + courseDetail[4]);
@@ -134,9 +137,18 @@ namespace WindowsFormsApp1
         private void AddCourse_Click(object sender, EventArgs e)
         {
             string coursename=textBoxAddCourse.Text;
-            if(addCourseForUser(getData("user.txt"), getData("course.txt", coursename)))
-                massagelbl.Text="Cours added";
-            else massagelbl.Text = "Cours exist";
+            if (addCourseForUser(getData("user.txt"), getData("course.txt", coursename)))
+            {
+                massagelbl.Visible = true;
+                massagelbl.ForeColor = System.Drawing.Color.Black;
+                massagelbl.Text = "Coures added";
+            }
+            else
+            {
+                massagelbl.Visible = true;
+                massagelbl.ForeColor = System.Drawing.Color.Red;
+                massagelbl.Text = "Coures exist or wrong course name";
+            }
 
         }
 

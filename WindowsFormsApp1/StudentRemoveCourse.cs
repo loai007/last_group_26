@@ -50,20 +50,23 @@ namespace WindowsFormsApp1
             string[] details = line.Split(' ');
             stc.Close();
             if (doesntExist("coursestudent.txt", details[0], textcourse.Text) == true)
-                label2.Text = "You dont have this course";
-           else if(deleteRow != -1)
-           {
+            {
+                label2.ForeColor = System.Drawing.Color.Red;
+                label2.Text = "Course not found ";
+            }
+            else if (deleteRow != -1)
+            {
                 string[] Lines = File.ReadAllLines("coursestudent.txt");
                 //start righting from the start
                 StreamWriter sw = new StreamWriter("coursestudent.txt");
-               
-               
+
+
 
                 foreach (string part in Lines)
                 {
 
                     string[] splitLine = part.Split(' ');
-                    if (splitLine[0]==details[0]  && splitLine[1]==textcourse.Text )
+                    if (splitLine[0] == details[0] && splitLine[1] == textcourse.Text)
                     {
                         //Skip the line
                         continue;

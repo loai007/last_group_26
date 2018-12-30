@@ -84,7 +84,7 @@
             // 
             // AddCourse
             // 
-            this.AddCourse.Location = new System.Drawing.Point(495, 324);
+            this.AddCourse.Location = new System.Drawing.Point(642, 296);
             this.AddCourse.Name = "AddCourse";
             this.AddCourse.Size = new System.Drawing.Size(100, 40);
             this.AddCourse.TabIndex = 5;
@@ -95,10 +95,11 @@
             // massagelbl
             // 
             this.massagelbl.AutoSize = true;
-            this.massagelbl.Location = new System.Drawing.Point(322, 336);
+            this.massagelbl.Location = new System.Drawing.Point(476, 346);
             this.massagelbl.Name = "massagelbl";
-            this.massagelbl.Size = new System.Drawing.Size(0, 17);
+            this.massagelbl.Size = new System.Drawing.Size(22, 17);
             this.massagelbl.TabIndex = 6;
+            this.massagelbl.Text = "lbl";
             // 
             // BackBtn
             // 
