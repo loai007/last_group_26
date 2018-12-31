@@ -35,6 +35,7 @@
             this.ViewGreadsbtn = new System.Windows.Forms.Button();
             this.Exams = new System.Windows.Forms.Button();
             this.viewMessagesBTN = new System.Windows.Forms.Button();
+            this.sendMessagesBTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // sst
@@ -110,11 +111,22 @@
             this.viewMessagesBTN.UseVisualStyleBackColor = true;
             this.viewMessagesBTN.Click += new System.EventHandler(this.viewMessagesBTN_Click);
             // 
+            // sendMessagesBTN
+            // 
+            this.sendMessagesBTN.Location = new System.Drawing.Point(389, 327);
+            this.sendMessagesBTN.Name = "sendMessagesBTN";
+            this.sendMessagesBTN.Size = new System.Drawing.Size(75, 23);
+            this.sendMessagesBTN.TabIndex = 58;
+            this.sendMessagesBTN.Text = "Send Messages";
+            this.sendMessagesBTN.UseVisualStyleBackColor = true;
+            this.sendMessagesBTN.Click += new System.EventHandler(this.sendMessagesBTN_Click);
+            // 
             // studentMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.sendMessagesBTN);
             this.Controls.Add(this.viewMessagesBTN);
             this.Controls.Add(this.Exams);
             this.Controls.Add(this.ViewGreadsbtn);
@@ -137,5 +149,6 @@
         private System.Windows.Forms.Button ViewGreadsbtn;
         private System.Windows.Forms.Button Exams;
         private System.Windows.Forms.Button viewMessagesBTN;
+        private System.Windows.Forms.Button sendMessagesBTN;
     }
 }
