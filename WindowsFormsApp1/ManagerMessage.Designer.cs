@@ -33,17 +33,19 @@
             this.Message = new System.Windows.Forms.Label();
             this.collegeDataSet = new WindowsFormsApp1.collegeDataSet();
             this.collegeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.Messages = new System.Windows.Forms.Button();
+            this.toLBL = new System.Windows.Forms.Label();
+            this.fromLBL = new System.Windows.Forms.Label();
+            this.messageLBL = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.collegeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.collegeDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Back
             // 
-            this.Back.Location = new System.Drawing.Point(977, -1);
+            this.Back.Location = new System.Drawing.Point(651, -1);
+            this.Back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(116, 61);
+            this.Back.Size = new System.Drawing.Size(77, 39);
             this.Back.TabIndex = 0;
             this.Back.Text = "Back";
             this.Back.UseVisualStyleBackColor = true;
@@ -52,9 +54,10 @@
             // Message
             // 
             this.Message.AutoSize = true;
-            this.Message.Location = new System.Drawing.Point(65, 101);
+            this.Message.Location = new System.Drawing.Point(11, 9);
+            this.Message.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Message.Name = "Message";
-            this.Message.Size = new System.Drawing.Size(123, 25);
+            this.Message.Size = new System.Drawing.Size(80, 17);
             this.Message.TabIndex = 1;
             this.Message.Text = "Messages :";
             // 
@@ -68,36 +71,44 @@
             this.collegeDataSetBindingSource.DataSource = this.collegeDataSet;
             this.collegeDataSetBindingSource.Position = 0;
             // 
-            // listView1
+            // toLBL
             // 
-            this.listView1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.listView1.Location = new System.Drawing.Point(185, 101);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(898, 395);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.List;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.toLBL.AutoSize = true;
+            this.toLBL.Location = new System.Drawing.Point(230, 20);
+            this.toLBL.Name = "toLBL";
+            this.toLBL.Size = new System.Drawing.Size(46, 17);
+            this.toLBL.TabIndex = 2;
+            this.toLBL.Text = "label1";
             // 
-            // Messages
+            // fromLBL
             // 
-            this.Messages.Location = new System.Drawing.Point(220, 518);
-            this.Messages.Name = "Messages";
-            this.Messages.Size = new System.Drawing.Size(175, 39);
-            this.Messages.TabIndex = 3;
-            this.Messages.Text = "New Messages";
-            this.Messages.UseVisualStyleBackColor = true;
-            this.Messages.Click += new System.EventHandler(this.Messages_Click);
+            this.fromLBL.AutoSize = true;
+            this.fromLBL.Location = new System.Drawing.Point(230, 50);
+            this.fromLBL.Name = "fromLBL";
+            this.fromLBL.Size = new System.Drawing.Size(46, 17);
+            this.fromLBL.TabIndex = 3;
+            this.fromLBL.Text = "label2";
+            // 
+            // messageLBL
+            // 
+            this.messageLBL.AutoSize = true;
+            this.messageLBL.Location = new System.Drawing.Point(230, 80);
+            this.messageLBL.Name = "messageLBL";
+            this.messageLBL.Size = new System.Drawing.Size(46, 17);
+            this.messageLBL.TabIndex = 4;
+            this.messageLBL.Text = "label3";
             // 
             // ManagerMessage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 604);
-            this.Controls.Add(this.Messages);
-            this.Controls.Add(this.listView1);
+            this.ClientSize = new System.Drawing.Size(730, 387);
+            this.Controls.Add(this.messageLBL);
+            this.Controls.Add(this.fromLBL);
+            this.Controls.Add(this.toLBL);
             this.Controls.Add(this.Message);
             this.Controls.Add(this.Back);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ManagerMessage";
             this.Text = "ManagerMessage";
             ((System.ComponentModel.ISupportInitialize)(this.collegeDataSet)).EndInit();
@@ -113,7 +124,8 @@
         private System.Windows.Forms.Label Message;
         private System.Windows.Forms.BindingSource collegeDataSetBindingSource;
         private collegeDataSet collegeDataSet;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Button Messages;
+        private System.Windows.Forms.Label toLBL;
+        private System.Windows.Forms.Label fromLBL;
+        private System.Windows.Forms.Label messageLBL;
     }
 }
