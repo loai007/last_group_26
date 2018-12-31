@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
             f.Show();
 
         }
-        private void ifId(string id)
+        /*private void ifId(string id)
         {
             StreamReader sr = new StreamReader("messages.txt");
 
@@ -62,8 +62,77 @@ namespace WindowsFormsApp1
             }
             sr.Close();
             
+        }*/
+
+        private string[] MessageFrTo(string[] details)
+        {
+            
+            string[] arr = new string[3];
+
+            char s = ' ';
+             arr[0] = details[0]; //To
+             arr[1] = details[1];//From
+
+                    
+                    for (int i = 2; i < details.Length; i++)
+                    {
+                        arr[2] = arr[2] + details[i] + s;//message
+                    }
+
+            return arr;
+
         }
-        
+
+        private void getMessage(string To)
+        {
+            StreamReader sr = new StreamReader("messages.txt");
+
+            string line = sr.ReadLine();
+            string[] details = line.Split(' ');
+
+            while (line != null)
+            {
+                if (details[0] == To)
+                {
+                    MessageFrTo(details);
+                    
+                }
+
+                line = sr.ReadLine();
+                if (line != "" && line != null)
+                {
+                    details = line.Split(' ');
+                }
+            }
+            sr.Close();
+        }
+        private int MessagesCounter(string id)
+        {
+            StreamReader sr = new StreamReader("messages.txt");
+
+            string line = sr.ReadLine();
+            string[] details = line.Split(' ');
+
+
+            int count = 0;
+            while (line != null)
+            {
+                if (id == details[0])
+                {
+                    count++;
+                }
+                
+                line = sr.ReadLine();
+                if (line != "" && line != null)
+                {
+                    details = line.Split(' ');
+                }
+
+            }
+            sr.Close();
+            return count;
+
+        }
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
         
@@ -76,7 +145,7 @@ namespace WindowsFormsApp1
             string[] details = line.Split(' ');
             string idM = details[0];
             mi.Close();
-            ifId(idM);
+            
         }
     }
 }
