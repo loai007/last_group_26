@@ -184,6 +184,12 @@
     <Compile Include="studentMain.Designer.cs">
       <DependentUpon>studentMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentShowExams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentShowExams.Designer.cs">
+      <DependentUpon>StudentShowExams.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentViewGreads.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="studentMain.resx">
       <DependentUpon>studentMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentShowExams.resx">
+      <DependentUpon>StudentShowExams.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentViewGreads.resx">
       <DependentUpon>StudentViewGreads.cs</DependentUpon>
