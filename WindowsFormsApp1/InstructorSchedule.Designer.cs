@@ -73,7 +73,7 @@
             this.lbl20.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl20.Location = new System.Drawing.Point(699, 486);
             this.lbl20.Name = "lbl20";
-            this.lbl20.Size = new System.Drawing.Size(38, 33);
+            this.lbl20.Size = new System.Drawing.Size(40, 35);
             this.lbl20.TabIndex = 79;
             this.lbl20.Text = "20";
             this.lbl20.Visible = false;
@@ -84,7 +84,7 @@
             this.lbl19.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl19.Location = new System.Drawing.Point(699, 389);
             this.lbl19.Name = "lbl19";
-            this.lbl19.Size = new System.Drawing.Size(35, 33);
+            this.lbl19.Size = new System.Drawing.Size(36, 35);
             this.lbl19.TabIndex = 78;
             this.lbl19.Text = "19";
             this.lbl19.Visible = false;
@@ -95,7 +95,7 @@
             this.lbl18.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl18.Location = new System.Drawing.Point(699, 292);
             this.lbl18.Name = "lbl18";
-            this.lbl18.Size = new System.Drawing.Size(35, 33);
+            this.lbl18.Size = new System.Drawing.Size(37, 35);
             this.lbl18.TabIndex = 77;
             this.lbl18.Text = "18";
             this.lbl18.Visible = false;
@@ -106,7 +106,7 @@
             this.lbl17.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl17.Location = new System.Drawing.Point(699, 194);
             this.lbl17.Name = "lbl17";
-            this.lbl17.Size = new System.Drawing.Size(33, 33);
+            this.lbl17.Size = new System.Drawing.Size(35, 35);
             this.lbl17.TabIndex = 76;
             this.lbl17.Text = "17";
             this.lbl17.Visible = false;
@@ -117,7 +117,7 @@
             this.lbl16.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl16.Location = new System.Drawing.Point(567, 486);
             this.lbl16.Name = "lbl16";
-            this.lbl16.Size = new System.Drawing.Size(35, 33);
+            this.lbl16.Size = new System.Drawing.Size(36, 35);
             this.lbl16.TabIndex = 75;
             this.lbl16.Text = "16";
             this.lbl16.Visible = false;
@@ -128,7 +128,7 @@
             this.lbl15.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl15.Location = new System.Drawing.Point(560, 389);
             this.lbl15.Name = "lbl15";
-            this.lbl15.Size = new System.Drawing.Size(34, 33);
+            this.lbl15.Size = new System.Drawing.Size(35, 35);
             this.lbl15.TabIndex = 74;
             this.lbl15.Text = "15";
             this.lbl15.Visible = false;
@@ -139,7 +139,7 @@
             this.lbl14.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl14.Location = new System.Drawing.Point(560, 292);
             this.lbl14.Name = "lbl14";
-            this.lbl14.Size = new System.Drawing.Size(35, 33);
+            this.lbl14.Size = new System.Drawing.Size(36, 35);
             this.lbl14.TabIndex = 73;
             this.lbl14.Text = "14";
             this.lbl14.Visible = false;
@@ -150,7 +150,7 @@
             this.lbl13.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl13.Location = new System.Drawing.Point(560, 192);
             this.lbl13.Name = "lbl13";
-            this.lbl13.Size = new System.Drawing.Size(34, 33);
+            this.lbl13.Size = new System.Drawing.Size(36, 35);
             this.lbl13.TabIndex = 72;
             this.lbl13.Text = "13";
             this.lbl13.Visible = false;
@@ -161,7 +161,7 @@
             this.lbl12.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl12.Location = new System.Drawing.Point(430, 486);
             this.lbl12.Name = "lbl12";
-            this.lbl12.Size = new System.Drawing.Size(34, 33);
+            this.lbl12.Size = new System.Drawing.Size(36, 35);
             this.lbl12.TabIndex = 71;
             this.lbl12.Text = "12";
             this.lbl12.Visible = false;
@@ -172,7 +172,7 @@
             this.lbl11.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl11.Location = new System.Drawing.Point(429, 389);
             this.lbl11.Name = "lbl11";
-            this.lbl11.Size = new System.Drawing.Size(31, 33);
+            this.lbl11.Size = new System.Drawing.Size(33, 35);
             this.lbl11.TabIndex = 70;
             this.lbl11.Text = "11";
             this.lbl11.Visible = false;
@@ -183,7 +183,7 @@
             this.lbl10.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl10.Location = new System.Drawing.Point(429, 291);
             this.lbl10.Name = "lbl10";
-            this.lbl10.Size = new System.Drawing.Size(35, 33);
+            this.lbl10.Size = new System.Drawing.Size(37, 35);
             this.lbl10.TabIndex = 69;
             this.lbl10.Text = "10";
             this.lbl10.Visible = false;
@@ -194,7 +194,7 @@
             this.lbl9.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl9.Location = new System.Drawing.Point(433, 194);
             this.lbl9.Name = "lbl9";
-            this.lbl9.Size = new System.Drawing.Size(27, 33);
+            this.lbl9.Size = new System.Drawing.Size(27, 35);
             this.lbl9.TabIndex = 68;
             this.lbl9.Text = "9";
             this.lbl9.Visible = false;
@@ -205,7 +205,7 @@
             this.lbl8.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl8.Location = new System.Drawing.Point(298, 486);
             this.lbl8.Name = "lbl8";
-            this.lbl8.Size = new System.Drawing.Size(27, 33);
+            this.lbl8.Size = new System.Drawing.Size(28, 35);
             this.lbl8.TabIndex = 67;
             this.lbl8.Text = "8";
             this.lbl8.Visible = false;
@@ -216,7 +216,7 @@
             this.lbl7.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl7.Location = new System.Drawing.Point(298, 389);
             this.lbl7.Name = "lbl7";
-            this.lbl7.Size = new System.Drawing.Size(25, 33);
+            this.lbl7.Size = new System.Drawing.Size(26, 35);
             this.lbl7.TabIndex = 66;
             this.lbl7.Text = "7";
             this.lbl7.Visible = false;
@@ -227,7 +227,7 @@
             this.lbl6.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl6.Location = new System.Drawing.Point(298, 291);
             this.lbl6.Name = "lbl6";
-            this.lbl6.Size = new System.Drawing.Size(27, 33);
+            this.lbl6.Size = new System.Drawing.Size(27, 35);
             this.lbl6.TabIndex = 65;
             this.lbl6.Text = "6";
             this.lbl6.Visible = false;
@@ -238,7 +238,7 @@
             this.lbl5.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl5.Location = new System.Drawing.Point(298, 192);
             this.lbl5.Name = "lbl5";
-            this.lbl5.Size = new System.Drawing.Size(26, 33);
+            this.lbl5.Size = new System.Drawing.Size(26, 35);
             this.lbl5.TabIndex = 64;
             this.lbl5.Text = "5";
             this.lbl5.Visible = false;
@@ -249,7 +249,7 @@
             this.lbl3.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl3.Location = new System.Drawing.Point(182, 389);
             this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(26, 33);
+            this.lbl3.Size = new System.Drawing.Size(27, 35);
             this.lbl3.TabIndex = 63;
             this.lbl3.Text = "3";
             this.lbl3.Visible = false;
@@ -260,7 +260,7 @@
             this.lbl2.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl2.Location = new System.Drawing.Point(179, 292);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(26, 33);
+            this.lbl2.Size = new System.Drawing.Size(27, 35);
             this.lbl2.TabIndex = 62;
             this.lbl2.Text = "2";
             this.lbl2.Visible = false;
@@ -271,7 +271,7 @@
             this.lbl1.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1.Location = new System.Drawing.Point(182, 194);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(23, 33);
+            this.lbl1.Size = new System.Drawing.Size(24, 35);
             this.lbl1.TabIndex = 61;
             this.lbl1.Text = "1";
             this.lbl1.Visible = false;
@@ -282,7 +282,7 @@
             this.lbl4.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl4.Location = new System.Drawing.Point(182, 486);
             this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(27, 33);
+            this.lbl4.Size = new System.Drawing.Size(27, 35);
             this.lbl4.TabIndex = 60;
             this.lbl4.Text = "4";
             this.lbl4.Visible = false;
@@ -293,7 +293,7 @@
             this.label9.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(36, 310);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 66);
+            this.label9.Size = new System.Drawing.Size(69, 70);
             this.label9.TabIndex = 58;
             this.label9.Text = "14:00\r\n16:00";
             // 
@@ -303,7 +303,7 @@
             this.label8.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(36, 222);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 66);
+            this.label8.Size = new System.Drawing.Size(69, 70);
             this.label8.TabIndex = 57;
             this.label8.Text = "12:00\r\n14:00\r\n";
             // 
@@ -313,7 +313,7 @@
             this.label7.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(36, 125);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 66);
+            this.label7.Size = new System.Drawing.Size(70, 70);
             this.label7.TabIndex = 56;
             this.label7.Text = "10:00\r\n12:00";
             // 
@@ -323,7 +323,7 @@
             this.label6.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(36, 21);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 66);
+            this.label6.Size = new System.Drawing.Size(70, 70);
             this.label6.TabIndex = 55;
             this.label6.Text = "8:00\r\n10:00";
             // 
@@ -345,9 +345,9 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Location = new System.Drawing.Point(4, 152);
+            this.panel2.Location = new System.Drawing.Point(-1, 152);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(124, 397);
+            this.panel2.Size = new System.Drawing.Size(129, 397);
             this.panel2.TabIndex = 82;
             // 
             // label4
@@ -356,7 +356,7 @@
             this.label4.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(519, 40);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 33);
+            this.label4.Size = new System.Drawing.Size(123, 35);
             this.label4.TabIndex = 53;
             this.label4.Text = "Wednesday";
             // 
@@ -366,7 +366,7 @@
             this.label3.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(406, 40);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 33);
+            this.label3.Size = new System.Drawing.Size(82, 35);
             this.label3.TabIndex = 52;
             this.label3.Text = "Tusday";
             // 
@@ -376,7 +376,7 @@
             this.label2.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(267, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 33);
+            this.label2.Size = new System.Drawing.Size(92, 35);
             this.label2.TabIndex = 51;
             this.label2.Text = "Monday";
             // 
@@ -386,7 +386,7 @@
             this.label1.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(151, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 33);
+            this.label1.Size = new System.Drawing.Size(86, 35);
             this.label1.TabIndex = 50;
             this.label1.Text = "Sunday";
             // 
@@ -396,7 +396,7 @@
             this.label5.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(669, 40);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 33);
+            this.label5.Size = new System.Drawing.Size(104, 35);
             this.label5.TabIndex = 54;
             this.label5.Text = "Thursday";
             // 

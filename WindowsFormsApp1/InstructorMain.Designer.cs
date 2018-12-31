@@ -34,6 +34,7 @@
             this.AddMarksBtn = new System.Windows.Forms.Button();
             this.showstudents_btn = new System.Windows.Forms.Button();
             this.uperpanel = new System.Windows.Forms.Panel();
+            this.instructorname_lbl = new System.Windows.Forms.Label();
             this.uperpanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,18 +102,31 @@
             // uperpanel
             // 
             this.uperpanel.BackColor = System.Drawing.Color.LightGreen;
+            this.uperpanel.Controls.Add(this.instructorname_lbl);
             this.uperpanel.Controls.Add(this.button2);
             this.uperpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.uperpanel.Location = new System.Drawing.Point(0, 0);
             this.uperpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uperpanel.Name = "uperpanel";
-            this.uperpanel.Size = new System.Drawing.Size(747, 85);
+            this.uperpanel.Size = new System.Drawing.Size(747, 101);
             this.uperpanel.TabIndex = 55;
+            // 
+            // instructorname_lbl
+            // 
+            this.instructorname_lbl.AutoSize = true;
+            this.instructorname_lbl.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.instructorname_lbl.Location = new System.Drawing.Point(264, 37);
+            this.instructorname_lbl.Name = "instructorname_lbl";
+            this.instructorname_lbl.Size = new System.Drawing.Size(164, 33);
+            this.instructorname_lbl.TabIndex = 52;
+            this.instructorname_lbl.Text = "Instructor Name";
+            this.instructorname_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // InstructorMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(747, 549);
             this.Controls.Add(this.uperpanel);
             this.Controls.Add(this.showstudents_btn);
@@ -124,6 +138,7 @@
             this.Text = "InstructorMain";
             this.Load += new System.EventHandler(this.InstructorMain_Load);
             this.uperpanel.ResumeLayout(false);
+            this.uperpanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -136,5 +151,6 @@
         private System.Windows.Forms.Button AddMarksBtn;
         private System.Windows.Forms.Button showstudents_btn;
         private System.Windows.Forms.Panel uperpanel;
+        private System.Windows.Forms.Label instructorname_lbl;
     }
 }
