@@ -184,6 +184,12 @@
     <Compile Include="studentMain.Designer.cs">
       <DependentUpon>studentMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentSendRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentSendRequests.Designer.cs">
+      <DependentUpon>StudentSendRequests.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentSendMessages.cs">
       <SubType>Form</SubType>
     </Compile>
