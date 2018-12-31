@@ -44,6 +44,7 @@
             this.dataGridMessage.RowTemplate.Height = 24;
             this.dataGridMessage.Size = new System.Drawing.Size(283, 384);
             this.dataGridMessage.TabIndex = 10;
+            this.dataGridMessage.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridMessage_RowHeaderMouseClick_1);
             // 
             // messageLBL
             // 

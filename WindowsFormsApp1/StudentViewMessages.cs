@@ -26,33 +26,9 @@ namespace WindowsFormsApp1
             showData(allMessage);
         }
         string[] allMessage;
-        private void Back_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ManagerMain f = new ManagerMain();
-            f.Show();
+       
 
-        }
-
-        //private string[] MessageFrTo(string[] details)
-        //{
-
-        //    string[] arr = new string[3];
-
-        //    char s = ' ';
-        //     arr[0] = details[0]; //To
-        //     arr[1] = details[1];//From
-
-
-        //            for (int i = 2; i < details.Length; i++)
-        //            {
-        //                arr[2] = arr[2] + details[i] + s;//message
-        //            }
-
-        //    return arr;
-
-        //}
-
+      
         private string[] getMessage(string to, string from)
         {
             StreamReader sr = new StreamReader("messages.txt");
@@ -175,16 +151,19 @@ namespace WindowsFormsApp1
 
         }
 
-        private void dataGridMessage_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-
-        }
+      
 
         private void Back_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             studentMain f8 = new studentMain();
             f8.Show();
+
+        }
+
+        private void dataGridMessage_RowHeaderMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            getMessage(getData("user.txt")[0], dataGridMessage.CurrentRow.Cells[0].Value.ToString());
 
         }
     }
