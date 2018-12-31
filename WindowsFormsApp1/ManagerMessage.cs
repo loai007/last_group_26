@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
             ManagerMain f = new ManagerMain();
             f.Show();
 
-        }~
+        }
 
         private string[] MessageFrTo(string[] details)
         {

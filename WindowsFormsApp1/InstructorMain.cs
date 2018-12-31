@@ -45,7 +45,6 @@ namespace WindowsFormsApp1
             this.Hide();
             InstructorShowCourse isc = new InstructorShowCourse();
             isc.Show();
-
         }
 
         private void AddMarksBtn_Click(object sender, EventArgs e)
