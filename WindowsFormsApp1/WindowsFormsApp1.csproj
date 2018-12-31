@@ -90,11 +90,11 @@
     <Compile Include="InstructorSchedule.Designer.cs">
       <DependentUpon>InstructorSchedule.cs</DependentUpon>
     </Compile>
-    <Compile Include="InstructorShowCourses.cs">
+    <Compile Include="InstructorShowCourse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InstructorShowCourses.Designer.cs">
-      <DependentUpon>InstructorShowCourses.cs</DependentUpon>
+    <Compile Include="InstructorShowCourse.Designer.cs">
+      <DependentUpon>InstructorShowCourse.cs</DependentUpon>
     </Compile>
     <Compile Include="InstructorShowStudenstInCourse.cs">
       <SubType>Form</SubType>
@@ -144,6 +144,12 @@
     <Compile Include="ManagerShowInstructors.Designer.cs">
       <DependentUpon>ManagerShowInstructors.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerShowStudentsInCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerShowStudentsInCourse.Designer.cs">
+      <DependentUpon>ManagerShowStudentsInCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentRemoveCourse.cs">
@@ -190,8 +196,8 @@
     <EmbeddedResource Include="InstructorSchedule.resx">
       <DependentUpon>InstructorSchedule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InstructorShowCourses.resx">
-      <DependentUpon>InstructorShowCourses.cs</DependentUpon>
+    <EmbeddedResource Include="InstructorShowCourse.resx">
+      <DependentUpon>InstructorShowCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InstructorShowStudenstInCourse.resx">
       <DependentUpon>InstructorShowStudenstInCourse.cs</DependentUpon>
@@ -216,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerShowInstructors.resx">
       <DependentUpon>ManagerShowInstructors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerShowStudentsInCourse.resx">
+      <DependentUpon>ManagerShowStudentsInCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -11,9 +11,9 @@ using System.IO;
 
 namespace WindowsFormsApp1
 {
-    public partial class InstructorShowCourses : Form
+    public partial class InstructorShowCourse : Form
     {
-        public InstructorShowCourses()
+        public InstructorShowCourse()
         {
             InitializeComponent();
             checkcourse();

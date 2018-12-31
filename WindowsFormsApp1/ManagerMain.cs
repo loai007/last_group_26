@@ -65,5 +65,12 @@ namespace WindowsFormsApp1
             ManagerShowCoursesInDepartment f10 = new ManagerShowCoursesInDepartment();
             f10.Show();
         }
+
+        private void showstudents_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerShowStudentsInCourse f10 = new ManagerShowStudentsInCourse();
+            f10.Show();
+        }
     }
 }
