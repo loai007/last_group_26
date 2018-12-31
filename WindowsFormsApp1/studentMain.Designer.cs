@@ -36,6 +36,7 @@
             this.Exams = new System.Windows.Forms.Button();
             this.viewMessagesBTN = new System.Windows.Forms.Button();
             this.sendMessagesBTN = new System.Windows.Forms.Button();
+            this.SendRequestBTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // sst
@@ -71,7 +72,7 @@
             // RemoveCorse
             // 
             this.RemoveCorse.Location = new System.Drawing.Point(237, 100);
-            this.RemoveCorse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RemoveCorse.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveCorse.Name = "RemoveCorse";
             this.RemoveCorse.Size = new System.Drawing.Size(100, 48);
             this.RemoveCorse.TabIndex = 54;
@@ -92,7 +93,7 @@
             // Exams
             // 
             this.Exams.Location = new System.Drawing.Point(463, 100);
-            this.Exams.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Exams.Margin = new System.Windows.Forms.Padding(2);
             this.Exams.Name = "Exams";
             this.Exams.Size = new System.Drawing.Size(100, 48);
             this.Exams.TabIndex = 56;
@@ -121,11 +122,22 @@
             this.sendMessagesBTN.UseVisualStyleBackColor = true;
             this.sendMessagesBTN.Click += new System.EventHandler(this.sendMessagesBTN_Click);
             // 
+            // SendRequestBTN
+            // 
+            this.SendRequestBTN.Location = new System.Drawing.Point(472, 255);
+            this.SendRequestBTN.Name = "SendRequestBTN";
+            this.SendRequestBTN.Size = new System.Drawing.Size(75, 52);
+            this.SendRequestBTN.TabIndex = 59;
+            this.SendRequestBTN.Text = "Send Request";
+            this.SendRequestBTN.UseVisualStyleBackColor = true;
+            this.SendRequestBTN.Click += new System.EventHandler(this.SendRequestBTN_Click);
+            // 
             // studentMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.SendRequestBTN);
             this.Controls.Add(this.sendMessagesBTN);
             this.Controls.Add(this.viewMessagesBTN);
             this.Controls.Add(this.Exams);
@@ -150,5 +162,6 @@
         private System.Windows.Forms.Button Exams;
         private System.Windows.Forms.Button viewMessagesBTN;
         private System.Windows.Forms.Button sendMessagesBTN;
+        private System.Windows.Forms.Button SendRequestBTN;
     }
 }

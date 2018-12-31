@@ -16,5 +16,12 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void backBTN_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            studentMain f8 = new studentMain();
+            f8.Show();
+        }
     }
 }

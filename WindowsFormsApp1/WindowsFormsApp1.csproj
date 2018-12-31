@@ -284,6 +284,9 @@
     <EmbeddedResource Include="StudentSendMessages.resx">
       <DependentUpon>StudentSendMessages.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StudentSendRequests.resx">
+      <DependentUpon>StudentSendRequests.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentShowExams.resx">
       <DependentUpon>StudentShowExams.cs</DependentUpon>
     </EmbeddedResource>

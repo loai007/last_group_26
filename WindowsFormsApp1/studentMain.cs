@@ -81,5 +81,12 @@ namespace WindowsFormsApp1
             StudentSendMessages f = new StudentSendMessages();
             f.Show();
         }
+
+        private void SendRequestBTN_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StudentSendRequests f = new StudentSendRequests();
+            f.Show();
+        }
     }
 }
