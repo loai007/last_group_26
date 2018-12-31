@@ -72,6 +72,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstructorShowCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorShowCourse.Designer.cs">
+      <DependentUpon>InstructorShowCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorShowStudenstInCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorShowStudenstInCourse.Designer.cs">
+      <DependentUpon>InstructorShowStudenstInCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerAddCourseDate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,12 +107,6 @@
     </Compile>
     <Compile Include="InstructorSchedule.Designer.cs">
       <DependentUpon>InstructorSchedule.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InstructorShowCourses.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InstructorShowCourses.Designer.cs">
-      <DependentUpon>InstructorShowCourses.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerAddC.cs">
       <SubType>Form</SubType>
@@ -131,6 +137,18 @@
     </Compile>
     <Compile Include="ManagerSendMessage.Designer.cs">
       <DependentUpon>ManagerSendMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerShowCoursesInDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerShowCoursesInDepartment.Designer.cs">
+      <DependentUpon>ManagerShowCoursesInDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerShowInstructors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerShowInstructors.Designer.cs">
+      <DependentUpon>ManagerShowInstructors.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -169,6 +187,12 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InstructorShowCourse.resx">
+      <DependentUpon>InstructorShowCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorShowStudenstInCourse.resx">
+      <DependentUpon>InstructorShowStudenstInCourse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagerAddCourseDate.resx">
       <DependentUpon>ManagerAddCourseDate.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,9 +204,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InstructorSchedule.resx">
       <DependentUpon>InstructorSchedule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InstructorShowCourses.resx">
-      <DependentUpon>InstructorShowCourses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerAddC.resx">
       <DependentUpon>ManagerAddC.cs</DependentUpon>
@@ -198,6 +219,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerSendMessage.resx">
       <DependentUpon>ManagerSendMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerShowCoursesInDepartment.resx">
+      <DependentUpon>ManagerShowCoursesInDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerShowInstructors.resx">
+      <DependentUpon>ManagerShowInstructors.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
