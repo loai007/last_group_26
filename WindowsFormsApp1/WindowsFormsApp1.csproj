@@ -196,6 +196,12 @@
     <Compile Include="StudentViewGreads.Designer.cs">
       <DependentUpon>StudentViewGreads.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentViewMessages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentViewMessages.Designer.cs">
+      <DependentUpon>StudentViewMessages.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentViewGreads.resx">
       <DependentUpon>StudentViewGreads.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentViewMessages.resx">
+      <DependentUpon>StudentViewMessages.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="collegeDataSet.xsc">
       <DependentUpon>collegeDataSet.xsd</DependentUpon>
