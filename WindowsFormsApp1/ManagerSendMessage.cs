@@ -29,9 +29,9 @@ namespace WindowsFormsApp1
             ManagerMain f = new ManagerMain();
             f.Show();
         }
-        private bool ifID(string id)
+        private bool ifID(string id,string path)
         {
-            StreamReader sr = new StreamReader("student.txt");
+            StreamReader sr = new StreamReader(path);
 
             string line = sr.ReadLine();
             string[] details = line.Split(' ');
@@ -55,7 +55,7 @@ namespace WindowsFormsApp1
         private void Send_Click(object sender, EventArgs e)
         {
            string id= StudentId.Text;
-            if (ifID(id) != true)
+            if (ifID(id, "student.txt") != true || ifID(id, "instructor.txt") != true|| ifID(id, "manager.txt") != true)
                 idFind.Text = "id not exist";
             else
             {
@@ -79,6 +79,11 @@ namespace WindowsFormsApp1
                     SendStudent.Text = "empty message";
 
             }
+
+        }
+
+        private void IdSt_Click(object sender, EventArgs e)
+        {
 
         }
     }
