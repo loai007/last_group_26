@@ -54,5 +54,12 @@ namespace WindowsFormsApp1
             InstructorAddMarks iam = new InstructorAddMarks();
             iam.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            InstructorShowStudenstInCourse iam = new InstructorShowStudenstInCourse();
+            iam.Show();
+        }
     }
 }

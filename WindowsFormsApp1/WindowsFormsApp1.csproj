@@ -96,6 +96,12 @@
     <Compile Include="InstructorShowCourses.Designer.cs">
       <DependentUpon>InstructorShowCourses.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstructorShowStudenstInCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorShowStudenstInCourse.Designer.cs">
+      <DependentUpon>InstructorShowStudenstInCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerAddC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InstructorShowCourses.resx">
       <DependentUpon>InstructorShowCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorShowStudenstInCourse.resx">
+      <DependentUpon>InstructorShowStudenstInCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerAddC.resx">
       <DependentUpon>ManagerAddC.cs</DependentUpon>
