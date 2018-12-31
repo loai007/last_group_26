@@ -88,5 +88,12 @@ namespace WindowsFormsApp1
             StudentSendRequests f = new StudentSendRequests();
             f.Show();
         }
+
+        private void viewRequestsBTN_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            studentViewRequests f = new studentViewRequests();
+            f.Show();
+        }
     }
 }

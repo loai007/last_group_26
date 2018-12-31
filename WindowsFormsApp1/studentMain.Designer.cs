@@ -37,6 +37,7 @@
             this.viewMessagesBTN = new System.Windows.Forms.Button();
             this.sendMessagesBTN = new System.Windows.Forms.Button();
             this.SendRequestBTN = new System.Windows.Forms.Button();
+            this.viewRequestsBTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // sst
@@ -132,11 +133,22 @@
             this.SendRequestBTN.UseVisualStyleBackColor = true;
             this.SendRequestBTN.Click += new System.EventHandler(this.SendRequestBTN_Click);
             // 
+            // viewRequestsBTN
+            // 
+            this.viewRequestsBTN.Location = new System.Drawing.Point(389, 180);
+            this.viewRequestsBTN.Name = "viewRequestsBTN";
+            this.viewRequestsBTN.Size = new System.Drawing.Size(96, 69);
+            this.viewRequestsBTN.TabIndex = 60;
+            this.viewRequestsBTN.Text = "View Requests Status";
+            this.viewRequestsBTN.UseVisualStyleBackColor = true;
+            this.viewRequestsBTN.Click += new System.EventHandler(this.viewRequestsBTN_Click);
+            // 
             // studentMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.viewRequestsBTN);
             this.Controls.Add(this.SendRequestBTN);
             this.Controls.Add(this.sendMessagesBTN);
             this.Controls.Add(this.viewMessagesBTN);
@@ -163,5 +175,6 @@
         private System.Windows.Forms.Button viewMessagesBTN;
         private System.Windows.Forms.Button sendMessagesBTN;
         private System.Windows.Forms.Button SendRequestBTN;
+        private System.Windows.Forms.Button viewRequestsBTN;
     }
 }
