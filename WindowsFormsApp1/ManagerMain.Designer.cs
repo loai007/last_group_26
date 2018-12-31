@@ -34,6 +34,7 @@
             this.SendMessage = new System.Windows.Forms.Button();
             this.ManageeMessage = new System.Windows.Forms.Button();
             this.showinstructors_btn = new System.Windows.Forms.Button();
+            this.showcourses_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -103,11 +104,22 @@
             this.showinstructors_btn.UseVisualStyleBackColor = true;
             this.showinstructors_btn.Click += new System.EventHandler(this.showinstructors_btn_Click);
             // 
+            // showcourses_btn
+            // 
+            this.showcourses_btn.Location = new System.Drawing.Point(366, 203);
+            this.showcourses_btn.Name = "showcourses_btn";
+            this.showcourses_btn.Size = new System.Drawing.Size(106, 61);
+            this.showcourses_btn.TabIndex = 57;
+            this.showcourses_btn.Text = "Show All Courses In My Department";
+            this.showcourses_btn.UseVisualStyleBackColor = true;
+            this.showcourses_btn.Click += new System.EventHandler(this.showcourses_btn_Click);
+            // 
             // ManagerMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.showcourses_btn);
             this.Controls.Add(this.showinstructors_btn);
             this.Controls.Add(this.ManageeMessage);
             this.Controls.Add(this.SendMessage);
@@ -128,5 +140,6 @@
         private System.Windows.Forms.Button SendMessage;
         private System.Windows.Forms.Button ManageeMessage;
         private System.Windows.Forms.Button showinstructors_btn;
+        private System.Windows.Forms.Button showcourses_btn;
     }
 }

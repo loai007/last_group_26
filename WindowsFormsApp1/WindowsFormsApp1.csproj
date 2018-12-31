@@ -132,6 +132,12 @@
     <Compile Include="ManagerSendMessage.Designer.cs">
       <DependentUpon>ManagerSendMessage.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerShowCoursesInDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerShowCoursesInDepartment.Designer.cs">
+      <DependentUpon>ManagerShowCoursesInDepartment.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerShowInstructors.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerSendMessage.resx">
       <DependentUpon>ManagerSendMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerShowCoursesInDepartment.resx">
+      <DependentUpon>ManagerShowCoursesInDepartment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerShowInstructors.resx">
       <DependentUpon>ManagerShowInstructors.cs</DependentUpon>
