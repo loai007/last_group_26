@@ -160,7 +160,7 @@ namespace WindowsFormsApp1
 
             //close the file
             dataGridMessage.DataSource = dt;
-
+            
         }
         private void InitializeGridView(DataTable dt)
         {

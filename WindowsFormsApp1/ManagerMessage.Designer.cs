@@ -91,11 +91,13 @@
             // 
             // dataGridMessage
             // 
+            this.dataGridMessage.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridMessage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridMessage.Location = new System.Drawing.Point(2, -1);
+            this.dataGridMessage.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dataGridMessage.Location = new System.Drawing.Point(0, 0);
             this.dataGridMessage.Name = "dataGridMessage";
             this.dataGridMessage.RowTemplate.Height = 24;
-            this.dataGridMessage.Size = new System.Drawing.Size(283, 384);
+            this.dataGridMessage.Size = new System.Drawing.Size(260, 387);
             this.dataGridMessage.TabIndex = 5;
             this.dataGridMessage.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridMessage_RowHeaderMouseClick);
             // 
