@@ -70,9 +70,7 @@
             // 
             // listView1
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.listView1.Location = new System.Drawing.Point(185, 101);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(898, 395);
