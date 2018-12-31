@@ -49,7 +49,7 @@
             this.groupBox1.Controls.Add(this.textBoxun);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(243, 187);
+            this.groupBox1.Location = new System.Drawing.Point(194, 187);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(358, 284);
             this.groupBox1.TabIndex = 0;
@@ -117,7 +117,7 @@
             this.uper_panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.uper_panel.Location = new System.Drawing.Point(0, 0);
             this.uper_panel.Name = "uper_panel";
-            this.uper_panel.Size = new System.Drawing.Size(882, 100);
+            this.uper_panel.Size = new System.Drawing.Size(748, 100);
             this.uper_panel.TabIndex = 1;
             // 
             // label3
@@ -126,7 +126,7 @@
             this.label3.Font = new System.Drawing.Font("Sitka Display", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(142, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(489, 68);
+            this.label3.Size = new System.Drawing.Size(502, 69);
             this.label3.TabIndex = 0;
             this.label3.Text = "The College of Engineers";
             // 
@@ -135,7 +135,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(882, 643);
+            this.ClientSize = new System.Drawing.Size(748, 549);
             this.Controls.Add(this.uper_panel);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
