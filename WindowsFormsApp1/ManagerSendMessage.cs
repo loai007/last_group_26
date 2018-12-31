@@ -69,7 +69,7 @@ namespace WindowsFormsApp1
                     string idM = details[0];
                     mi.Close();
 
-                    string message = id + s + idM + s + Message.Text+"\r\n ";
+                    string message = id + s + idM + s + Message.Text+ "\r\nEOMessage";
                     StreamWriter mw = new StreamWriter("messages.txt", true);
                     mw.WriteLine(message);
                     mw.Close();
