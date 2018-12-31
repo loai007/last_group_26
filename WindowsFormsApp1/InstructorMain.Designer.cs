@@ -32,6 +32,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.corses_btn = new System.Windows.Forms.Button();
             this.AddMarksBtn = new System.Windows.Forms.Button();
+            this.showstudents_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -75,11 +76,22 @@
             this.AddMarksBtn.UseVisualStyleBackColor = true;
             this.AddMarksBtn.Click += new System.EventHandler(this.AddMarksBtn_Click);
             // 
+            // showstudents_btn
+            // 
+            this.showstudents_btn.Location = new System.Drawing.Point(29, 192);
+            this.showstudents_btn.Name = "showstudents_btn";
+            this.showstudents_btn.Size = new System.Drawing.Size(116, 46);
+            this.showstudents_btn.TabIndex = 54;
+            this.showstudents_btn.Text = "Show Students In My Course";
+            this.showstudents_btn.UseVisualStyleBackColor = true;
+            this.showstudents_btn.Click += new System.EventHandler(this.showstudents_btn_Click);
+            // 
             // InstructorMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.showstudents_btn);
             this.Controls.Add(this.AddMarksBtn);
             this.Controls.Add(this.corses_btn);
             this.Controls.Add(this.button2);
@@ -96,5 +108,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button corses_btn;
         private System.Windows.Forms.Button AddMarksBtn;
+        private System.Windows.Forms.Button showstudents_btn;
     }
 }

@@ -65,6 +65,26 @@ namespace WindowsFormsApp1
             ManagerAddCourseDate iam = new ManagerAddCourseDate();
             iam.Show();
         }
-        
+
+        private void courseindeoartment_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerShowCoursesInDepartment iam = new ManagerShowCoursesInDepartment();
+            iam.Show();
+        }
+
+        private void showinstructor_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerShowInstructors iam = new ManagerShowInstructors();
+            iam.Show();
+        }
+
+        private void showsutdents_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerShowStudentsInCourse iam = new ManagerShowStudentsInCourse();
+            iam.Show();
+        }
     }
 }

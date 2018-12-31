@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
         private void corses_btn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            InstructorShowCourses isc = new InstructorShowCourses();
+            InstructorShowCourse isc = new InstructorShowCourse();
             isc.Show();
 
         }
@@ -54,6 +54,12 @@ namespace WindowsFormsApp1
             InstructorAddMarks iam = new InstructorAddMarks();
             iam.Show();
         }
-      
+
+        private void showstudents_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            InstructorShowStudenstInCourse iam = new InstructorShowStudenstInCourse();
+            iam.Show();
+        }
     }
 }

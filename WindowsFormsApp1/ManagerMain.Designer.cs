@@ -34,6 +34,9 @@
             this.SendMessage = new System.Windows.Forms.Button();
             this.ManageeMessage = new System.Windows.Forms.Button();
             this.AddDatebtn = new System.Windows.Forms.Button();
+            this.courseindeoartment_btn = new System.Windows.Forms.Button();
+            this.showinstructor_btn = new System.Windows.Forms.Button();
+            this.showsutdents = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -103,11 +106,44 @@
             this.AddDatebtn.UseVisualStyleBackColor = true;
             this.AddDatebtn.Click += new System.EventHandler(this.AddDatebtn_Click);
             // 
+            // courseindeoartment_btn
+            // 
+            this.courseindeoartment_btn.Location = new System.Drawing.Point(516, 231);
+            this.courseindeoartment_btn.Name = "courseindeoartment_btn";
+            this.courseindeoartment_btn.Size = new System.Drawing.Size(131, 73);
+            this.courseindeoartment_btn.TabIndex = 57;
+            this.courseindeoartment_btn.Text = "Show Courses In My Department";
+            this.courseindeoartment_btn.UseVisualStyleBackColor = true;
+            this.courseindeoartment_btn.Click += new System.EventHandler(this.courseindeoartment_btn_Click);
+            // 
+            // showinstructor_btn
+            // 
+            this.showinstructor_btn.Location = new System.Drawing.Point(366, 242);
+            this.showinstructor_btn.Name = "showinstructor_btn";
+            this.showinstructor_btn.Size = new System.Drawing.Size(122, 62);
+            this.showinstructor_btn.TabIndex = 58;
+            this.showinstructor_btn.Text = "Show Instructor In My Department";
+            this.showinstructor_btn.UseVisualStyleBackColor = true;
+            this.showinstructor_btn.Click += new System.EventHandler(this.showinstructor_btn_Click);
+            // 
+            // showsutdents
+            // 
+            this.showsutdents.Location = new System.Drawing.Point(184, 242);
+            this.showsutdents.Name = "showsutdents";
+            this.showsutdents.Size = new System.Drawing.Size(120, 62);
+            this.showsutdents.TabIndex = 59;
+            this.showsutdents.Text = "Show Students In Course In My Department";
+            this.showsutdents.UseVisualStyleBackColor = true;
+            this.showsutdents.Click += new System.EventHandler(this.showsutdents_Click);
+            // 
             // ManagerMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.showsutdents);
+            this.Controls.Add(this.showinstructor_btn);
+            this.Controls.Add(this.courseindeoartment_btn);
             this.Controls.Add(this.AddDatebtn);
             this.Controls.Add(this.ManageeMessage);
             this.Controls.Add(this.SendMessage);
@@ -128,5 +164,8 @@
         private System.Windows.Forms.Button SendMessage;
         private System.Windows.Forms.Button ManageeMessage;
         private System.Windows.Forms.Button AddDatebtn;
+        private System.Windows.Forms.Button courseindeoartment_btn;
+        private System.Windows.Forms.Button showinstructor_btn;
+        private System.Windows.Forms.Button showsutdents;
     }
 }
