@@ -33,6 +33,7 @@
             this.deletec_btn = new System.Windows.Forms.Button();
             this.SendMessage = new System.Windows.Forms.Button();
             this.ManageeMessage = new System.Windows.Forms.Button();
+            this.showinstructors_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -72,7 +73,7 @@
             // 
             this.SendMessage.BackColor = System.Drawing.SystemColors.Control;
             this.SendMessage.Location = new System.Drawing.Point(366, 104);
-            this.SendMessage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SendMessage.Margin = new System.Windows.Forms.Padding(2);
             this.SendMessage.Name = "SendMessage";
             this.SendMessage.Size = new System.Drawing.Size(119, 40);
             this.SendMessage.TabIndex = 53;
@@ -84,7 +85,7 @@
             // 
             this.ManageeMessage.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ManageeMessage.Location = new System.Drawing.Point(515, 104);
-            this.ManageeMessage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ManageeMessage.Margin = new System.Windows.Forms.Padding(2);
             this.ManageeMessage.Name = "ManageeMessage";
             this.ManageeMessage.Size = new System.Drawing.Size(107, 40);
             this.ManageeMessage.TabIndex = 54;
@@ -92,11 +93,22 @@
             this.ManageeMessage.UseVisualStyleBackColor = false;
             this.ManageeMessage.Click += new System.EventHandler(this.ManageeMessage_Click);
             // 
+            // showinstructors_btn
+            // 
+            this.showinstructors_btn.Location = new System.Drawing.Point(515, 203);
+            this.showinstructors_btn.Name = "showinstructors_btn";
+            this.showinstructors_btn.Size = new System.Drawing.Size(121, 61);
+            this.showinstructors_btn.TabIndex = 56;
+            this.showinstructors_btn.Text = "Show Instructors In My Department";
+            this.showinstructors_btn.UseVisualStyleBackColor = true;
+            this.showinstructors_btn.Click += new System.EventHandler(this.showinstructors_btn_Click);
+            // 
             // ManagerMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.showinstructors_btn);
             this.Controls.Add(this.ManageeMessage);
             this.Controls.Add(this.SendMessage);
             this.Controls.Add(this.deletec_btn);
@@ -115,5 +127,6 @@
         private System.Windows.Forms.Button deletec_btn;
         private System.Windows.Forms.Button SendMessage;
         private System.Windows.Forms.Button ManageeMessage;
+        private System.Windows.Forms.Button showinstructors_btn;
     }
 }

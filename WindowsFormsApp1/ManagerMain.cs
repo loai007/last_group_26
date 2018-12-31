@@ -51,5 +51,12 @@ namespace WindowsFormsApp1
             ManagerMessage f10 = new ManagerMessage();
             f10.Show();
         }
+
+        private void showinstructors_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerShowInstructors f10 = new ManagerShowInstructors();
+            f10.Show();
+        }
     }
 }

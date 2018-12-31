@@ -61,5 +61,10 @@ namespace WindowsFormsApp1
             InstructorShowStudenstInCourse iam = new InstructorShowStudenstInCourse();
             iam.Show();
         }
+
+        private void showinstructor_btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
