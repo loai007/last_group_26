@@ -52,25 +52,19 @@ namespace WindowsFormsApp1
             f10.Show();
         }
 
-        private void showinstructors_btn_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ManagerShowInstructors f10 = new ManagerShowInstructors();
-            f10.Show();
+            ManagerAddCourseDate iam = new ManagerAddCourseDate();
+            iam.Show();
         }
 
-        private void showcourses_btn_Click(object sender, EventArgs e)
+        private void AddDatebtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ManagerShowCoursesInDepartment f10 = new ManagerShowCoursesInDepartment();
-            f10.Show();
+            ManagerAddCourseDate iam = new ManagerAddCourseDate();
+            iam.Show();
         }
-
-        private void showstudents_btn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ManagerShowStudentsInCourse f10 = new ManagerShowStudentsInCourse();
-            f10.Show();
-        }
+        
     }
 }

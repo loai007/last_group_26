@@ -55,9 +55,9 @@ namespace WindowsFormsApp1
                 string[] courseDetails = line.Split(' ');
                 if (userDetails[5] == courseDetails[5])
                 {
-                    
-                    dt.Rows.Add(courseDetails);
-            
+
+                        dt.Rows.Add(courseDetails);
+
                 }
                 //Read the next line
                 line = sr.ReadLine();
@@ -75,6 +75,7 @@ namespace WindowsFormsApp1
             while (line!=null && key != null)
             {
                  details = line.Split(' ');
+
                 foreach (string c in details)
                     if (c == key)
                     {
@@ -91,7 +92,7 @@ namespace WindowsFormsApp1
         }
         private void InitializeGridView(DataTable dt)
         {
-            string[] columnnames = { "Course name", "Points", "Instructor name", "Day", "Hours" , "Department" };
+            string[] columnnames = { "Course name", "Points", "Instructor name", "Day", "Hours" , "Department" ,"Exam Date","Exam Time"};
             foreach(string c in columnnames)
                 dt.Columns.Add(c);
         }
