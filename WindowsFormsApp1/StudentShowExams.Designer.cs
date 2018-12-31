@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.Back = new System.Windows.Forms.Button();
-            this.ShowEsams = new System.Windows.Forms.DataGridView();
             this.Show = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.ShowEsams)).BeginInit();
+            this.ShowExams = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.ShowExams)).BeginInit();
             this.SuspendLayout();
             // 
             // Back
@@ -44,16 +44,6 @@
             this.Back.UseVisualStyleBackColor = true;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
-            // ShowEsams
-            // 
-            this.ShowEsams.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ShowEsams.Location = new System.Drawing.Point(114, 66);
-            this.ShowEsams.Name = "ShowEsams";
-            this.ShowEsams.RowTemplate.Height = 33;
-            this.ShowEsams.Size = new System.Drawing.Size(674, 318);
-            this.ShowEsams.TabIndex = 1;
-            this.ShowEsams.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ShowEsams_CellContentClick);
-            // 
             // Show
             // 
             this.Show.Location = new System.Drawing.Point(3, 66);
@@ -64,17 +54,27 @@
             this.Show.UseVisualStyleBackColor = true;
             this.Show.Click += new System.EventHandler(this.Show_Click);
             // 
+            // ShowExams
+            // 
+            this.ShowExams.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ShowExams.Location = new System.Drawing.Point(124, 66);
+            this.ShowExams.Name = "ShowExams";
+            this.ShowExams.RowTemplate.Height = 33;
+            this.ShowExams.Size = new System.Drawing.Size(664, 336);
+            this.ShowExams.TabIndex = 3;
+            this.ShowExams.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ShowExams_CellContentClick);
+            // 
             // StudentShowExams
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ShowExams);
             this.Controls.Add(this.Show);
-            this.Controls.Add(this.ShowEsams);
             this.Controls.Add(this.Back);
             this.Name = "StudentShowExams";
             this.Text = "StudentShowExams";
-            ((System.ComponentModel.ISupportInitialize)(this.ShowEsams)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ShowExams)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -82,7 +82,7 @@
         #endregion
 
         private System.Windows.Forms.Button Back;
-        private System.Windows.Forms.DataGridView ShowEsams;
         private System.Windows.Forms.Button Show;
+        private System.Windows.Forms.DataGridView ShowExams;
     }
 }

@@ -59,5 +59,13 @@ namespace WindowsFormsApp1
             StudentViewGreads f8 = new StudentViewGreads();
             f8.Show();
         }
+
+        private void Exams_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StudentShowExams f = new StudentShowExams();
+            f.Show();
+
+        }
     }
 }
