@@ -1,0 +1,5 @@
+﻿c# 5 saher 3 10 computers 18/12/1997 02:00
+cpp 3 asd 2 10 computers 18/10/1221 12:01
+btn 6 ass 1 8 computers
+socking 9 hoo 5 14 computers
+asholeOpener 2 ah 5 14 computers

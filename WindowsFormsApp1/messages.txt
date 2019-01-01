@@ -1,0 +1,27 @@
+﻿222 111 from:111
+to:222
+first
+EOMessage
+222 212 from:212 
+to:222
+second
+EOMessage
+111 323 from:323 
+to:111
+third
+EOMessage
+323 212 from:212 
+to:323 
+fourth
+EOMessage
+111 222 from:212 
+to:111 
+fifth
+EOMessage
+111 222 from:212 
+to:111 
+last
+EOMessage
+
+111 111 11sad as
+EOMessage

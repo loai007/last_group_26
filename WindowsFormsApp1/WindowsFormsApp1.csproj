@@ -359,5 +359,16 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="course.txt" />
+    <Content Include="coursestudent.txt" />
+    <Content Include="department.txt" />
+    <Content Include="greads.txt" />
+    <Content Include="instructor.txt" />
+    <Content Include="manager.txt" />
+    <Content Include="messages.txt" />
+    <Content Include="student.txt" />
+    <Content Include="user.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
