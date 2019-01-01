@@ -36,6 +36,7 @@
             this.uperpanel = new System.Windows.Forms.Panel();
             this.instructorname_lbl = new System.Windows.Forms.Label();
             this.VeiwMessagesBTN = new System.Windows.Forms.Button();
+            this.viewRequestsBTN = new System.Windows.Forms.Button();
             this.uperpanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,12 +136,25 @@
             this.VeiwMessagesBTN.UseVisualStyleBackColor = true;
             this.VeiwMessagesBTN.Click += new System.EventHandler(this.VeiwMessagesBTN_Click);
             // 
+            // viewRequestsBTN
+            // 
+            this.viewRequestsBTN.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewRequestsBTN.Location = new System.Drawing.Point(513, 255);
+            this.viewRequestsBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.viewRequestsBTN.Name = "viewRequestsBTN";
+            this.viewRequestsBTN.Size = new System.Drawing.Size(152, 65);
+            this.viewRequestsBTN.TabIndex = 57;
+            this.viewRequestsBTN.Text = " View Requests";
+            this.viewRequestsBTN.UseVisualStyleBackColor = true;
+            this.viewRequestsBTN.Click += new System.EventHandler(this.viewRequestsBTN_Click);
+            // 
             // InstructorMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(747, 549);
+            this.Controls.Add(this.viewRequestsBTN);
             this.Controls.Add(this.VeiwMessagesBTN);
             this.Controls.Add(this.uperpanel);
             this.Controls.Add(this.showstudents_btn);
@@ -167,5 +181,6 @@
         private System.Windows.Forms.Panel uperpanel;
         private System.Windows.Forms.Label instructorname_lbl;
         private System.Windows.Forms.Button VeiwMessagesBTN;
+        private System.Windows.Forms.Button viewRequestsBTN;
     }
 }
