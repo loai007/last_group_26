@@ -90,11 +90,11 @@
     <Compile Include="InstructorViewMessages.Designer.cs">
       <DependentUpon>InstructorViewMessages.cs</DependentUpon>
     </Compile>
-    <Compile Include="InstructorViewRequests.cs">
+    <Compile Include="InstructorAnswerRequests.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InstructorViewRequests.Designer.cs">
-      <DependentUpon>InstructorViewRequests.cs</DependentUpon>
+    <Compile Include="InstructorAnswerRequests.Designer.cs">
+      <DependentUpon>InstructorAnswerRequests.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerAddCourseDate.cs">
       <SubType>Form</SubType>
@@ -244,8 +244,8 @@
     <EmbeddedResource Include="InstructorViewMessages.resx">
       <DependentUpon>InstructorViewMessages.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InstructorViewRequests.resx">
-      <DependentUpon>InstructorViewRequests.cs</DependentUpon>
+    <EmbeddedResource Include="InstructorAnswerRequests.resx">
+      <DependentUpon>InstructorAnswerRequests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerAddCourseDate.resx">
       <DependentUpon>ManagerAddCourseDate.cs</DependentUpon>

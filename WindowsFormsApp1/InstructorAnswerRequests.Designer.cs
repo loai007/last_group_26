@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class InstructorViewRequests
+    partial class InstructorAnswerRequests
     {
         /// <summary>
         /// Required designer variable.

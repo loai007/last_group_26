@@ -11,9 +11,9 @@ using System.IO;
 
 namespace WindowsFormsApp1
 {
-    public partial class InstructorViewRequests : Form
+    public partial class InstructorAnswerRequests : Form
     {
-        public InstructorViewRequests()
+        public InstructorAnswerRequests()
         {
             InitializeComponent();
             errorLBL.Text = "";

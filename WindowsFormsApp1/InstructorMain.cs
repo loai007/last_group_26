@@ -93,7 +93,7 @@ namespace WindowsFormsApp1
         private void viewRequestsBTN_Click(object sender, EventArgs e)
         {
             this.Hide();
-            InstructorViewRequests iam = new InstructorViewRequests();
+            InstructorAnswerRequests iam = new InstructorAnswerRequests();
             iam.Show();
         }
     }
