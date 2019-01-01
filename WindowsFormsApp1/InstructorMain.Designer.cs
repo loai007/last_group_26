@@ -35,6 +35,7 @@
             this.showstudents_btn = new System.Windows.Forms.Button();
             this.uperpanel = new System.Windows.Forms.Panel();
             this.instructorname_lbl = new System.Windows.Forms.Label();
+            this.VeiwMessagesBTN = new System.Windows.Forms.Button();
             this.uperpanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,10 +118,22 @@
             this.instructorname_lbl.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.instructorname_lbl.Location = new System.Drawing.Point(264, 37);
             this.instructorname_lbl.Name = "instructorname_lbl";
-            this.instructorname_lbl.Size = new System.Drawing.Size(164, 33);
+            this.instructorname_lbl.Size = new System.Drawing.Size(170, 35);
             this.instructorname_lbl.TabIndex = 52;
             this.instructorname_lbl.Text = "Instructor Name";
             this.instructorname_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // VeiwMessagesBTN
+            // 
+            this.VeiwMessagesBTN.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VeiwMessagesBTN.Location = new System.Drawing.Point(302, 255);
+            this.VeiwMessagesBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.VeiwMessagesBTN.Name = "VeiwMessagesBTN";
+            this.VeiwMessagesBTN.Size = new System.Drawing.Size(152, 65);
+            this.VeiwMessagesBTN.TabIndex = 56;
+            this.VeiwMessagesBTN.Text = "Veiw Messages";
+            this.VeiwMessagesBTN.UseVisualStyleBackColor = true;
+            this.VeiwMessagesBTN.Click += new System.EventHandler(this.VeiwMessagesBTN_Click);
             // 
             // InstructorMain
             // 
@@ -128,6 +141,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(747, 549);
+            this.Controls.Add(this.VeiwMessagesBTN);
             this.Controls.Add(this.uperpanel);
             this.Controls.Add(this.showstudents_btn);
             this.Controls.Add(this.AddMarksBtn);
@@ -152,5 +166,6 @@
         private System.Windows.Forms.Button showstudents_btn;
         private System.Windows.Forms.Panel uperpanel;
         private System.Windows.Forms.Label instructorname_lbl;
+        private System.Windows.Forms.Button VeiwMessagesBTN;
     }
 }

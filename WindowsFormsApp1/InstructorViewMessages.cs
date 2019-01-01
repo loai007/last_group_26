@@ -8,20 +8,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+
 namespace WindowsFormsApp1
 {
-    public partial class studentViewRequests : Form
+    public partial class InstructorViewMessages : Form
     {
-        public studentViewRequests()
+        public InstructorViewMessages()
         {
             InitializeComponent();
             myId = getData("user.txt")[0];
-            myRequestsCoutAndexport();
-            showRequestsDGV();
-            
+            myMessagesCoutAndExport();
+            showMessagesDGV();
+            fromLBL.Text = "";
+            toLBL.Text = "";
+            messageLBL.Text = "";
         }
-
-        
+        private void showMessagesDGV()
+        {
+            DataTable dt = new DataTable();
+            string[] columnnames = { "Message From" };
+            foreach (string c in columnnames)
+                dt.Columns.Add(c);
+            foreach (string c in fromId)
+                dt.Rows.Add(c);
+            dataGridView.DataSource = dt;
+        }
         private string[] getData(string path, string key = null)
         {
             StreamReader sr = new StreamReader(path);
@@ -43,13 +54,13 @@ namespace WindowsFormsApp1
         int count = 0;
         string myId;
         string[] fromId;
-        string[] request;
-        string[] status;
-        private void myRequestsCoutAndexport()
+        string[] messageTxt;
+        
+        private void myMessagesCoutAndExport()
         {
-            
-            
-            StreamReader sr = new StreamReader("requests.txt");
+
+
+            StreamReader sr = new StreamReader("messages.txt");
             string line = sr.ReadLine();
             while (line != null)
             {
@@ -61,10 +72,10 @@ namespace WindowsFormsApp1
             }
             bool flag = false;
             fromId = new string[count];
-            request = new string[count];
-            status = new string[count];
+            messageTxt = new string[count];
+           
             sr.Close();
-            sr = new StreamReader("requests.txt");
+            sr = new StreamReader("messages.txt");
             line = sr.ReadLine();
             int i = 0;
             while (line != null && count != 0)
@@ -72,25 +83,24 @@ namespace WindowsFormsApp1
                 string[] details = line.Split(' ');
                 if (details[0] == "EOMessage")//"EOMessage"
                 {
-                    if (flag)
-                    {
-                    status[i] = details[1];
-                        i++;
-                    }
+                    if (flag) i++;
                     flag = false;
+                    
                 }
 
                 else if (flag)
                 {
                     for (int c = 0; c < details.Length; c++)
-                        request[i] += "\r\n "+details[c];
+                        messageTxt[i] += "\r\n" + details[c];
                 }
 
                 else if (details[0] == myId)
                 {
                     fromId[i] = details[1];
                     for (int c = 2; c < details.Length; c++)
-                        request[i] += "\r\n " + details[c];
+                    {
+                        messageTxt[i] += "\r\n" + details[c];
+                    }
                     flag = true;
                 }
 
@@ -99,30 +109,20 @@ namespace WindowsFormsApp1
             sr.Close();
 
         }
-        private void showRequestsDGV()
-        {
-            DataTable dt = new DataTable();
-            string[] columnnames = { "Request from" };
-            foreach (string c in columnnames)
-                dt.Columns.Add(c);
-            foreach (string c in fromId)
-                dt.Rows.Add(c);
-            dataGridView.DataSource = dt;
-        }
-        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+
+        private void dataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int selectedIndex = dataGridView.CurrentRow.Index;
-            fromLBL.Text= fromId[selectedIndex];
+            fromLBL.Text = fromId[selectedIndex];
             toLBL.Text = myId;
-            requestLBL.Text =request[selectedIndex];
-            statusLBL.Text =status[selectedIndex];
+            messageLBL.Text = messageTxt[selectedIndex];
         }
 
         private void backBTN_Click(object sender, EventArgs e)
         {
             this.Hide();
-            studentMain f8 = new studentMain();
-            f8.Show();
+            InstructorMain f4 = new InstructorMain();
+            f4.Show();
         }
     }
 }

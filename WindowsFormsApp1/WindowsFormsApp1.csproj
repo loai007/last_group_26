@@ -84,6 +84,12 @@
     <Compile Include="InstructorShowStudenstInCourse.Designer.cs">
       <DependentUpon>InstructorShowStudenstInCourse.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstructorViewMessages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorViewMessages.Designer.cs">
+      <DependentUpon>InstructorViewMessages.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerAddCourseDate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InstructorShowStudenstInCourse.resx">
       <DependentUpon>InstructorShowStudenstInCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorViewMessages.resx">
+      <DependentUpon>InstructorViewMessages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerAddCourseDate.resx">
       <DependentUpon>ManagerAddCourseDate.cs</DependentUpon>

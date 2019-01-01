@@ -82,5 +82,12 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void VeiwMessagesBTN_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            InstructorViewMessages iam = new InstructorViewMessages();
+            iam.Show();
+        }
     }
 }
