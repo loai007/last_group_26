@@ -121,5 +121,12 @@ namespace WindowsFormsApp1
             InstructorAnswerRequests iam = new InstructorAnswerRequests();
             iam.Show();
         }
+
+        private void SendMessages_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            InstructorSendMessage f = new InstructorSendMessage();
+            f.Show();
+        }
     }
 }
