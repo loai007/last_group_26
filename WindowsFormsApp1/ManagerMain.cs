@@ -52,6 +52,7 @@ namespace WindowsFormsApp1
             this.Hide();
             Form1 f1 = new Form1();
             f1.Show();
+            managername_lbl.Text = "";
         }
 
         private void deletec_btn_Click(object sender, EventArgs e)
