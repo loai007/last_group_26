@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        static string FullName;
         //un=user name
         //ps=password
         //path=path of the desired file
@@ -34,6 +35,7 @@ namespace WindowsFormsApp1
                     if (details[1] == ps)
                     {
                         creatdoc(line);
+                        FullName = details[2] + " " + details[3];
                         sr.Close();
                         return true;
                     }
@@ -62,20 +64,20 @@ namespace WindowsFormsApp1
             studentMain st = new studentMain();
             InstructorMain ins = new InstructorMain();
             ManagerMain ma = new ManagerMain();
-            string path;
-            int flag = 0;
+            
+           
             string un = textBoxun.Text;
             string ps = textBoxps.Text;
             if (un != "" && ps != "")
             {
-                path = "student.txt";
-                if (FindUser(un, ps, path)) {  flag = 1; this.Hide(); st.Show(); }
-                path = "instructor.txt";
-                if (FindUser(un, ps, path)) {  flag = 1; this.Hide(); ins.Show(); }
-                path = "manager.txt";
-                if (FindUser(un, ps, path)) {  flag = 1; this.Hide(); ma.Show(); }
-                if (flag == 0)
-                    ERE.Text = "Wrong password or ID";
+                
+                if (FindUser(un, ps, "student.txt")) {   this.Hide(); st.Show(); }
+                
+               else if (FindUser(un, ps, "instructor.txt")) {   this.Hide(); Task.Delay(1000); ins.Show(); }
+                
+              else  if (FindUser(un, ps, "manager.txt")) {   this.Hide(); Task.Delay(1000); ma.Show(); }
+
+              else      ERE.Text = "Wrong password or ID";
             }
             else ERE.Text = "Fill in the password and ID";
 

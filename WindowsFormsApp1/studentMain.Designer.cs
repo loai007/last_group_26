@@ -38,6 +38,7 @@
             this.sendMessagesBTN = new System.Windows.Forms.Button();
             this.SendRequestBTN = new System.Windows.Forms.Button();
             this.viewRequestsBTN = new System.Windows.Forms.Button();
+            this.studentname_lbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // sst
@@ -143,11 +144,21 @@
             this.viewRequestsBTN.UseVisualStyleBackColor = true;
             this.viewRequestsBTN.Click += new System.EventHandler(this.viewRequestsBTN_Click);
             // 
+            // studentname_lbl
+            // 
+            this.studentname_lbl.AutoSize = true;
+            this.studentname_lbl.Location = new System.Drawing.Point(211, 23);
+            this.studentname_lbl.Name = "studentname_lbl";
+            this.studentname_lbl.Size = new System.Drawing.Size(46, 17);
+            this.studentname_lbl.TabIndex = 61;
+            this.studentname_lbl.Text = "label1";
+            // 
             // studentMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.studentname_lbl);
             this.Controls.Add(this.viewRequestsBTN);
             this.Controls.Add(this.SendRequestBTN);
             this.Controls.Add(this.sendMessagesBTN);
@@ -160,7 +171,9 @@
             this.Controls.Add(this.sst);
             this.Name = "studentMain";
             this.Text = "studentMain";
+            this.Load += new System.EventHandler(this.studentMain_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -176,5 +189,6 @@
         private System.Windows.Forms.Button sendMessagesBTN;
         private System.Windows.Forms.Button SendRequestBTN;
         private System.Windows.Forms.Button viewRequestsBTN;
+        private System.Windows.Forms.Label studentname_lbl;
     }
 }
