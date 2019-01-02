@@ -96,6 +96,12 @@
     <Compile Include="InstructorAnswerRequests.Designer.cs">
       <DependentUpon>InstructorAnswerRequests.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstructorViewRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorViewRequests.Designer.cs">
+      <DependentUpon>InstructorViewRequests.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerAddCourseDate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,12 @@
     </Compile>
     <Compile Include="ManagerAddC.Designer.cs">
       <DependentUpon>ManagerAddC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerAnswerRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerAnswerRequests.Designer.cs">
+      <DependentUpon>ManagerAnswerRequests.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagerDeleteCourse.cs">
       <SubType>Form</SubType>
@@ -247,6 +259,9 @@
     <EmbeddedResource Include="InstructorAnswerRequests.resx">
       <DependentUpon>InstructorAnswerRequests.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InstructorViewRequests.resx">
+      <DependentUpon>InstructorViewRequests.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagerAddCourseDate.resx">
       <DependentUpon>ManagerAddCourseDate.cs</DependentUpon>
     </EmbeddedResource>
@@ -261,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerAddC.resx">
       <DependentUpon>ManagerAddC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerAnswerRequests.resx">
+      <DependentUpon>ManagerAnswerRequests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerDeleteCourse.resx">
       <DependentUpon>ManagerDeleteCourse.cs</DependentUpon>

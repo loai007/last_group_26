@@ -37,6 +37,7 @@
             this.instructorname_lbl = new System.Windows.Forms.Label();
             this.VeiwMessagesBTN = new System.Windows.Forms.Button();
             this.viewRequestsBTN = new System.Windows.Forms.Button();
+            this.answerRequestsBTN = new System.Windows.Forms.Button();
             this.uperpanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,9 +145,19 @@
             this.viewRequestsBTN.Name = "viewRequestsBTN";
             this.viewRequestsBTN.Size = new System.Drawing.Size(152, 65);
             this.viewRequestsBTN.TabIndex = 5;
-            this.viewRequestsBTN.Text = " View Requests";
+            this.viewRequestsBTN.Text = " View My Requests";
             this.viewRequestsBTN.UseVisualStyleBackColor = true;
             this.viewRequestsBTN.Click += new System.EventHandler(this.viewRequestsBTN_Click);
+            // 
+            // answerRequestsBTN
+            // 
+            this.answerRequestsBTN.Location = new System.Drawing.Point(513, 387);
+            this.answerRequestsBTN.Name = "answerRequestsBTN";
+            this.answerRequestsBTN.Size = new System.Drawing.Size(152, 65);
+            this.answerRequestsBTN.TabIndex = 56;
+            this.answerRequestsBTN.Text = "Answer Requests";
+            this.answerRequestsBTN.UseVisualStyleBackColor = true;
+            this.answerRequestsBTN.Click += new System.EventHandler(this.answerRequestsBTN_Click);
             // 
             // InstructorMain
             // 
@@ -154,6 +165,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(747, 549);
+            this.Controls.Add(this.answerRequestsBTN);
             this.Controls.Add(this.viewRequestsBTN);
             this.Controls.Add(this.VeiwMessagesBTN);
             this.Controls.Add(this.uperpanel);
@@ -182,5 +194,6 @@
         private System.Windows.Forms.Label instructorname_lbl;
         private System.Windows.Forms.Button VeiwMessagesBTN;
         private System.Windows.Forms.Button viewRequestsBTN;
+        private System.Windows.Forms.Button answerRequestsBTN;
     }
 }

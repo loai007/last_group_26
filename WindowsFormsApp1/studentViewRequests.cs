@@ -81,16 +81,15 @@ namespace WindowsFormsApp1
                 }
 
                 else if (flag)
-                {
-                    for (int c = 0; c < details.Length; c++)
-                        request[i] += "\r\n "+details[c];
-                }
+                    request[i] +=  line+ "\r\n";
 
                 else if (details[0] == myId)
                 {
                     fromId[i] = details[1];
+                    
                     for (int c = 2; c < details.Length; c++)
-                        request[i] += "\r\n " + details[c];
+                        request[i] +=  " "+details[c];
+                    request[i] += "\r\n";
                     flag = true;
                 }
 

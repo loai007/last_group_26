@@ -83,6 +83,7 @@
             // 
             this.requestLBL.AutoSize = true;
             this.requestLBL.Location = new System.Drawing.Point(373, 206);
+            this.requestLBL.MaximumSize = new System.Drawing.Size(294, 263);
             this.requestLBL.Name = "requestLBL";
             this.requestLBL.Size = new System.Drawing.Size(46, 17);
             this.requestLBL.TabIndex = 4;

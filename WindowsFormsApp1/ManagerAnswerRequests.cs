@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+
 namespace WindowsFormsApp1
 {
-    public partial class InstructorAnswerRequests : Form
+    public partial class ManagerAnswerRequests : Form
     {
-        public InstructorAnswerRequests()
+        public ManagerAnswerRequests()
         {
             InitializeComponent();
             errorLBL.Text = "";
@@ -44,14 +45,11 @@ namespace WindowsFormsApp1
             return details;
         }
         private int count = 0;
-        private int selectedIndex=-1;
+        private int selectedIndex = -1;
         private string myId;
         private string[] fromId;
         private string[] request;
         private string[] status;
-        ///////////////////////////////////////////////////////////////////////////////////////////
-        //in instructor view requests search for details[0]==myid 
-        ///////////////////////////////////////////////////////////////////////////////////////////
 
         private void myRequestsCoutAndexport()
         {
@@ -62,7 +60,7 @@ namespace WindowsFormsApp1
             {
                 string[] details = line.Split(' ');
 
-                if (flagbinding )
+                if (flagbinding)
                 {
                     if (details[0] == "EOMessage")
                         if (details[1] != "binding")
@@ -76,7 +74,7 @@ namespace WindowsFormsApp1
                     count++;
                     flagbinding = true;
                 }
-                
+
 
                 line = sr.ReadLine();
             }
@@ -107,8 +105,9 @@ namespace WindowsFormsApp1
                 else if (details[1] == myId)
                 {
                     fromId[i] = details[0];
+                    
                     for (int c = 2; c < details.Length; c++)
-                        request[i] += "\r\n " + details[c];
+                        request[i] += details[c]+" ";
                     flag = true;
                 }
 
@@ -126,25 +125,6 @@ namespace WindowsFormsApp1
             foreach (string c in fromId)
                 dt.Rows.Add(c);
             dataGridView.DataSource = dt;
-        }
-        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-             selectedIndex = dataGridView.CurrentRow.Index;
-            if (count != 0)
-            {
-                fromLBL.Text = fromId[selectedIndex];
-                toLBL.Text = myId;
-                requestLBL.Text = request[selectedIndex];
-                statusLBL.Text = status[selectedIndex];
-            }
-            else errorLBL.Text = "No Requests";
-        }
-
-        private void backBTN_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            InstructorMain f8 = new InstructorMain();
-            f8.Show();
         }
         private void ChangeStatusForRequest()
         {
@@ -164,14 +144,14 @@ namespace WindowsFormsApp1
                         if (splitedLine[0] == "EOMessage")
                             if (splitedLine[1] != status[messageIndex])
                             {
-                                string newLine = splitedLine[0] + ' ' + status[messageIndex] ;
+                                string newLine = splitedLine[0] + ' ' + status[messageIndex];
                                 sw.WriteLine(newLine);
                                 messageIndex++;
                             }
                             else
-                            
+
                                 sw.WriteLine(Lines[i]);
-                            
+
                     }
                 }
 
@@ -181,6 +161,19 @@ namespace WindowsFormsApp1
 
         }
 
+        private void dataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            selectedIndex = dataGridView.CurrentRow.Index;
+            if (count != 0)
+            {
+                fromLBL.Text = fromId[selectedIndex];
+                toLBL.Text = myId;
+                requestLBL.Text = request[selectedIndex];
+                statusLBL.Text = status[selectedIndex];
+            }
+            else errorLBL.Text = "No Requests";
+        }
+
         private void approveBTN_Click(object sender, EventArgs e)
         {
             if (selectedIndex > -1)
@@ -188,7 +181,6 @@ namespace WindowsFormsApp1
                 status[selectedIndex] = "Approved";
                 ChangeStatusForRequest();
             }
-
         }
 
         private void DenyBTN_Click(object sender, EventArgs e)
@@ -199,5 +191,13 @@ namespace WindowsFormsApp1
                 ChangeStatusForRequest();
             }
         }
+
+        private void backBTN_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerMain b = new ManagerMain();
+            b.Show();
+        }
+        
     }
 }

@@ -23,17 +23,22 @@ namespace WindowsFormsApp1
         {
             StreamReader sr = new StreamReader(path);
             string line = sr.ReadLine();
-            string[] details = line.Split(' ');
-            while (line != null && key != null)
+            if (line != null)
             {
-                details = line.Split(' ');
-                foreach (string c in details)
-                    if (c == key)
-                        break;
-                line = sr.ReadLine();
+                string[] details = line.Split(' ');
+                while (line != null && key != null)
+                {
+                    details = line.Split(' ');
+                    foreach (string c in details)
+                        if (c == key)
+                            break;
+                    line = sr.ReadLine();
+                }
+                sr.Close();
+                return details[2] + " " + details[3];
             }
             sr.Close();
-            return details[2]+" "+details[3];
+            return null;
         }
 
         private void buTime_Click(object sender, EventArgs e)
@@ -92,6 +97,13 @@ namespace WindowsFormsApp1
         }
 
         private void viewRequestsBTN_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            InstructorViewRequests iam = new InstructorViewRequests();
+            iam.Show();
+        }
+
+        private void answerRequestsBTN_Click(object sender, EventArgs e)
         {
             this.Hide();
             InstructorAnswerRequests iam = new InstructorAnswerRequests();
