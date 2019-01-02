@@ -55,7 +55,7 @@ namespace WindowsFormsApp1
         private void Send_Click(object sender, EventArgs e)
         {
            string id= StudentId.Text;
-            if (ifID(id, "student.txt") != true || ifID(id, "instructor.txt") != true|| ifID(id, "manager.txt") != true)
+            if (ifID(id, "student.txt") != true && ifID(id, "instructor.txt") != true && ifID(id, "manager.txt") != true)
                 idFind.Text = "id not exist";
             else
             {

@@ -45,6 +45,7 @@ namespace WindowsFormsApp1
             return details;
         }
         private int count = 0;
+        private bool messages = false;
         private int selectedIndex = -1;
         private string myId;
         private string[] fromId;
@@ -55,63 +56,68 @@ namespace WindowsFormsApp1
         {
             StreamReader sr = new StreamReader("requests.txt");
             string line = sr.ReadLine();
-            bool flagbinding = false;
+            messages = false;
             while (line != null)
             {
                 string[] details = line.Split(' ');
-
-                if (flagbinding)
-                {
-                    if (details[0] == "EOMessage")
-                        if (details[1] != "binding")
+                if (details.Length >= 2)
+                    if (details[1] == myId)
+                    {
+                        //flagbinding = true;
+                        line = sr.ReadLine();
+                        while (line != null && details[0] == "EOMessage")
                         {
-                            flagbinding = false;
-                            count--;
+                            details = line.Split(' ');
+                            line = sr.ReadLine();
                         }
-                }
-                else if (details[1] == myId)
-                {
-                    count++;
-                    flagbinding = true;
-                }
-
-
+                        if (details[1] == "binding")
+                        {
+                            count++;
+                            messages = true;
+                        }
+                    }
                 line = sr.ReadLine();
+
             }
             bool flag = false;
-            fromId = new string[count];
-            request = new string[count];
-            status = new string[count];
+            fromId = new string[count+1];
+            request = new string[count+1];
+            status = new string[count+1];
             sr.Close();
             sr = new StreamReader("requests.txt");
             line = sr.ReadLine();
             int i = 0;
-            while (line != null && count != 0)
+            while (line != null && messages)
             {
+                //first part of every message/request 
                 string[] details = line.Split(' ');
-                if (details[0] == "EOMessage")//"EOMessage"
-                {
-                    if (flag)
+                if (details.Length >= 2)
+                    if (details[1] == myId)
                     {
-                        status[i] = details[1];
-                        i++;
-                    }
-                    flag = false;
-                }
-
-                else if (flag)
-                        request[i] += "\r\n" + line;
-
-                else if (details[1] == myId)
-                {
-                    fromId[i] = details[0];
+                        request[i] = "";
+                        fromId[i] = details[0];
+                        for (int c = 2; c < details.Length; c++)
+                            request[i] += " " + details[c];
+                        request[i] += "\r\n";
                     
-                    for (int c = 2; c < details.Length; c++)
-                        request[i] += details[c]+" ";
-                    flag = true;
-                }
-
-                line = sr.ReadLine();
+                        //secoud part where the masseage is
+                        line = sr.ReadLine();
+                        details = line.Split(' ');
+                        while (line != null)
+                        {
+                            details = line.Split(' ');
+                            if (details[0] == "EOMessage") break;
+                            request[i] += line + "\r\n";
+                            line = sr.ReadLine();
+                        }
+                        //lastpart where the EOMessage
+                        if (details[1] == "binding")
+                        {
+                            status[i] = details[1];
+                            i++;
+                        }
+                    }
+                    line = sr.ReadLine();
             }
             sr.Close();
 
@@ -129,9 +135,9 @@ namespace WindowsFormsApp1
         private void ChangeStatusForRequest()
         {
             int messageIndex = 0;
-            string[] Lines = File.ReadAllLines("request.txt");
-            File.Delete("request.txt");// Deleting the file
-            using (StreamWriter sw = File.AppendText("request.txt"))
+            string[] Lines = File.ReadAllLines("requests.txt");
+            File.Delete("requests.txt");// Deleting the file
+            using (StreamWriter sw = File.AppendText("requests.txt"))
 
                 for (int i = 0; i < Lines.Length; i++)
                 {
@@ -164,8 +170,9 @@ namespace WindowsFormsApp1
         private void dataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             selectedIndex = dataGridView.CurrentRow.Index;
-            if (count != 0)
+            if (messages && selectedIndex<=count)
             {
+                errorLBL.Text = "";
                 fromLBL.Text = fromId[selectedIndex];
                 toLBL.Text = myId;
                 requestLBL.Text = request[selectedIndex];
@@ -176,7 +183,7 @@ namespace WindowsFormsApp1
 
         private void approveBTN_Click(object sender, EventArgs e)
         {
-            if (selectedIndex > -1)
+            if (selectedIndex > -1 && selectedIndex <= count)
             {
                 status[selectedIndex] = "Approved";
                 ChangeStatusForRequest();
@@ -185,7 +192,7 @@ namespace WindowsFormsApp1
 
         private void DenyBTN_Click(object sender, EventArgs e)
         {
-            if (selectedIndex > -1)
+            if (selectedIndex > -1 && selectedIndex <= count)
             {
                 status[selectedIndex] = "Denied";
                 ChangeStatusForRequest();
