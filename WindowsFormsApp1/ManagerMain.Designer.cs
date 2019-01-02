@@ -200,6 +200,7 @@
             this.Controls.Add(this.button1);
             this.Name = "ManagerMain";
             this.Text = "ManagerMain";
+            this.Load += new System.EventHandler(this.ManagerMain_Load);
             this.uperpanel.ResumeLayout(false);
             this.uperpanel.PerformLayout();
             this.ResumeLayout(false);

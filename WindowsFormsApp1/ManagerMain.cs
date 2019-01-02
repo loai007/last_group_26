@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         public ManagerMain()
         {
             InitializeComponent();
-            managername_lbl.Text = "Welcome" + " " + getData("user.txt");
+            
         }
         private string getData(string path, string key = null)
         {
@@ -34,7 +34,8 @@ namespace WindowsFormsApp1
                     line = sr.ReadLine();
                 }
                 sr.Close();
-                return details[2] + " " + details[3];
+                if (details.Length != 1)
+                    return details[2] + " " + details[3];
             }
             sr.Close();
             return null;
@@ -51,8 +52,19 @@ namespace WindowsFormsApp1
         {
             this.Hide();
             Form1 f1 = new Form1();
+            EmptyUserFile();
             f1.Show();
-            managername_lbl.Text = "";
+           
+        }
+
+        private void EmptyUserFile()
+        {
+
+            StreamWriter sw = new StreamWriter("user.txt");
+            string line = "";
+            sw.WriteLine(line);
+            sw.Close();
+
         }
 
         private void deletec_btn_Click(object sender, EventArgs e)
@@ -118,5 +130,10 @@ namespace WindowsFormsApp1
             iam.Show();
         
     }
+
+        private void ManagerMain_Load(object sender, EventArgs e)
+        {
+            managername_lbl.Text = "Welcome" + " " + getData("user.txt");
+        }
     }
 }

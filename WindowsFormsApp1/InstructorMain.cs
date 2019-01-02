@@ -13,27 +13,33 @@ namespace WindowsFormsApp1
 {
     public partial class InstructorMain : Form
     {
+        
         public InstructorMain()
         {
             InitializeComponent();
-            instructorname_lbl.Text = "Welcome"+" "+getData("user.txt");
-        }
 
+        }
         private string getData(string path, string key = null)
         {
             StreamReader sr = new StreamReader(path);
             string line = sr.ReadLine();
-            string[] details = line.Split(' ');
-            while (line != null && key != null)
+            if (line != null)
             {
-                details = line.Split(' ');
-                foreach (string c in details)
-                    if (c == key)
-                        break;
-                line = sr.ReadLine();
+                string[] details = line.Split(' ');
+                while (line != null && key != null)
+                {
+                    details = line.Split(' ');
+                    foreach (string c in details)
+                        if (c == key)
+                            break;
+                    line = sr.ReadLine();
+                }
+                sr.Close();
+                if(details.Length!=1)
+                    return details[2] + " " + details[3];
             }
             sr.Close();
-            return details[2]+" "+details[3];
+            return null;
         }
 
         private void buTime_Click(object sender, EventArgs e)
@@ -53,9 +59,19 @@ namespace WindowsFormsApp1
 
             this.Hide();
             Form1 f1 = new Form1();
-            instructorname_lbl.Text = "";
+            EmptyUserFile();
             f1.Show();
            
+        }
+
+        private void EmptyUserFile()
+        {
+
+            StreamWriter sw = new StreamWriter("user.txt");
+            string line = "";
+            sw.WriteLine(line);
+            sw.Close();
+
         }
 
         private void corses_btn_Click(object sender, EventArgs e)
@@ -81,6 +97,7 @@ namespace WindowsFormsApp1
 
         private void InstructorMain_Load(object sender, EventArgs e)
         {
+            instructorname_lbl.Text = "Welcome" + " " + getData("user.txt");
 
         }
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WindowsFormsApp1
 {
@@ -27,10 +28,20 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
+            //EmptyUserFile();
+
             Form1 f1 = new Form1();
             f1.Show();
         }
+        private void EmptyUserFile()
+        {
 
+            StreamWriter sw = new StreamWriter("user.txt");
+            string line = "";
+            sw.WriteLine(line);
+            sw.Close();
+
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -94,6 +105,32 @@ namespace WindowsFormsApp1
             this.Hide();
             studentViewRequests f = new studentViewRequests();
             f.Show();
+        }
+        private string getData(string path, string key = null)
+        {
+            StreamReader sr = new StreamReader(path);
+            string line = sr.ReadLine();
+            if (line != null)
+            {
+                string[] details = line.Split(' ');
+                while (line != null && key != null)
+                {
+                    details = line.Split(' ');
+                    foreach (string c in details)
+                        if (c == key)
+                            break;
+                    line = sr.ReadLine();
+                }
+                sr.Close();
+                if (details.Length != 1)
+                    return details[2] + " " + details[3];
+            }
+            sr.Close();
+            return null;
+        }
+        private void studentMain_Load(object sender, EventArgs e)
+        {
+            studentname_lbl.Text = "Welcome" + " " + getData("user.txt");
         }
     }
 }
