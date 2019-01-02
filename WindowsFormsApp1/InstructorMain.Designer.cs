@@ -59,7 +59,7 @@
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(121, 46);
-            this.button2.TabIndex = 51;
+            this.button2.TabIndex = 10;
             this.button2.Text = "Sigh out";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -72,7 +72,7 @@
             this.corses_btn.Name = "corses_btn";
             this.corses_btn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.corses_btn.Size = new System.Drawing.Size(139, 37);
-            this.corses_btn.TabIndex = 52;
+            this.corses_btn.TabIndex = 1;
             this.corses_btn.Text = "Corses I Teach";
             this.corses_btn.UseVisualStyleBackColor = true;
             this.corses_btn.Click += new System.EventHandler(this.corses_btn_Click);
@@ -84,7 +84,7 @@
             this.AddMarksBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddMarksBtn.Name = "AddMarksBtn";
             this.AddMarksBtn.Size = new System.Drawing.Size(141, 37);
-            this.AddMarksBtn.TabIndex = 53;
+            this.AddMarksBtn.TabIndex = 2;
             this.AddMarksBtn.Text = "Add Exam Marks";
             this.AddMarksBtn.UseVisualStyleBackColor = true;
             this.AddMarksBtn.Click += new System.EventHandler(this.AddMarksBtn_Click);
@@ -96,7 +96,7 @@
             this.showstudents_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.showstudents_btn.Name = "showstudents_btn";
             this.showstudents_btn.Size = new System.Drawing.Size(152, 65);
-            this.showstudents_btn.TabIndex = 54;
+            this.showstudents_btn.TabIndex = 3;
             this.showstudents_btn.Text = "Show Students In My Course";
             this.showstudents_btn.UseVisualStyleBackColor = true;
             this.showstudents_btn.Click += new System.EventHandler(this.showstudents_btn_Click);
@@ -116,10 +116,10 @@
             // instructorname_lbl
             // 
             this.instructorname_lbl.AutoSize = true;
-            this.instructorname_lbl.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.instructorname_lbl.Location = new System.Drawing.Point(264, 37);
+            this.instructorname_lbl.Font = new System.Drawing.Font("Sitka Display", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.instructorname_lbl.Location = new System.Drawing.Point(228, 41);
             this.instructorname_lbl.Name = "instructorname_lbl";
-            this.instructorname_lbl.Size = new System.Drawing.Size(170, 35);
+            this.instructorname_lbl.Size = new System.Drawing.Size(285, 58);
             this.instructorname_lbl.TabIndex = 52;
             this.instructorname_lbl.Text = "Instructor Name";
             this.instructorname_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -131,7 +131,7 @@
             this.VeiwMessagesBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VeiwMessagesBTN.Name = "VeiwMessagesBTN";
             this.VeiwMessagesBTN.Size = new System.Drawing.Size(152, 65);
-            this.VeiwMessagesBTN.TabIndex = 56;
+            this.VeiwMessagesBTN.TabIndex = 4;
             this.VeiwMessagesBTN.Text = "Veiw Messages";
             this.VeiwMessagesBTN.UseVisualStyleBackColor = true;
             this.VeiwMessagesBTN.Click += new System.EventHandler(this.VeiwMessagesBTN_Click);
@@ -143,7 +143,7 @@
             this.viewRequestsBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.viewRequestsBTN.Name = "viewRequestsBTN";
             this.viewRequestsBTN.Size = new System.Drawing.Size(152, 65);
-            this.viewRequestsBTN.TabIndex = 57;
+            this.viewRequestsBTN.TabIndex = 5;
             this.viewRequestsBTN.Text = " View Requests";
             this.viewRequestsBTN.UseVisualStyleBackColor = true;
             this.viewRequestsBTN.Click += new System.EventHandler(this.viewRequestsBTN_Click);

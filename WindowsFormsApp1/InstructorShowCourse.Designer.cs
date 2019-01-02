@@ -45,7 +45,7 @@
             // Back_btn
             // 
             this.Back_btn.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Back_btn.Location = new System.Drawing.Point(677, 2);
+            this.Back_btn.Location = new System.Drawing.Point(676, 3);
             this.Back_btn.Name = "Back_btn";
             this.Back_btn.Size = new System.Drawing.Size(121, 46);
             this.Back_btn.TabIndex = 1;

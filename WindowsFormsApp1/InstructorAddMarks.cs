@@ -69,7 +69,7 @@ namespace WindowsFormsApp1
             if (doesntExist("coursestudent.txt", id, courseName) == true)
             {
                 messagelbl.ForeColor = System.Drawing.Color.Red;
-                messagelbl.Text = "there is no such student in your course";
+                messagelbl.Text = "Wrong Student ID";
                 exist = true;
             }
             else
