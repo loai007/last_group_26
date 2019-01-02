@@ -27,6 +27,7 @@ namespace WindowsFormsApp1
             sr.Close();
             return details[2]+" "+details[3];
         }
+
         private void buTime_Click(object sender, EventArgs e)
         {
 
