@@ -39,6 +39,7 @@
             this.showsutdents = new System.Windows.Forms.Button();
             this.uperpanel = new System.Windows.Forms.Panel();
             this.managername_lbl = new System.Windows.Forms.Label();
+            this.AnswerRequestsBTN = new System.Windows.Forms.Button();
             this.uperpanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -171,12 +172,23 @@
             this.managername_lbl.Text = "Manager Name";
             this.managername_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // AnswerRequestsBTN
+            // 
+            this.AnswerRequestsBTN.Location = new System.Drawing.Point(63, 410);
+            this.AnswerRequestsBTN.Name = "AnswerRequestsBTN";
+            this.AnswerRequestsBTN.Size = new System.Drawing.Size(129, 77);
+            this.AnswerRequestsBTN.TabIndex = 61;
+            this.AnswerRequestsBTN.Text = "Answer Requests";
+            this.AnswerRequestsBTN.UseVisualStyleBackColor = true;
+            this.AnswerRequestsBTN.Click += new System.EventHandler(this.AnswerRequestsBTN_Click);
+            // 
             // ManagerMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(747, 549);
+            this.Controls.Add(this.AnswerRequestsBTN);
             this.Controls.Add(this.uperpanel);
             this.Controls.Add(this.showsutdents);
             this.Controls.Add(this.showinstructor_btn);
@@ -207,5 +219,6 @@
         private System.Windows.Forms.Button showsutdents;
         private System.Windows.Forms.Panel uperpanel;
         private System.Windows.Forms.Label managername_lbl;
+        private System.Windows.Forms.Button AnswerRequestsBTN;
     }
 }

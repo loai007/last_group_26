@@ -69,11 +69,11 @@ namespace WindowsFormsApp1
             if (un != "" && ps != "")
             {
                 path = "student.txt";
-                if (FindUser(un, ps, path)) { st.Show(); flag = 1; this.Hide(); }
+                if (FindUser(un, ps, path)) {  flag = 1; this.Hide(); st.Show(); }
                 path = "instructor.txt";
-                if (FindUser(un, ps, path)) { ins.Show(); flag = 1; this.Hide(); }
+                if (FindUser(un, ps, path)) {  flag = 1; this.Hide(); ins.Show(); }
                 path = "manager.txt";
-                if (FindUser(un, ps, path)) { ma.Show(); flag = 1; this.Hide(); }
+                if (FindUser(un, ps, path)) {  flag = 1; this.Hide(); ma.Show(); }
                 if (flag == 0)
                     ERE.Text = "Wrong password or ID";
             }

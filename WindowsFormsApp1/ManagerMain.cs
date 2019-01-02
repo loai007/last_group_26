@@ -110,5 +110,13 @@ namespace WindowsFormsApp1
             ManagerShowStudentsInCourse iam = new ManagerShowStudentsInCourse();
             iam.Show();
         }
+
+        private void AnswerRequestsBTN_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerAnswerRequests iam = new ManagerAnswerRequests();
+            iam.Show();
+        
+    }
     }
 }
