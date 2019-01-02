@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WindowsFormsApp1
 {
@@ -15,6 +16,24 @@ namespace WindowsFormsApp1
         public ManagerMain()
         {
             InitializeComponent();
+            managername_lbl.Text = "Welcome" + " " + getData("user.txt");
+        }
+
+        private string getData(string path, string key = null)
+        {
+            StreamReader sr = new StreamReader(path);
+            string line = sr.ReadLine();
+            string[] details = line.Split(' ');
+            while (line != null && key != null)
+            {
+                details = line.Split(' ');
+                foreach (string c in details)
+                    if (c == key)
+                        break;
+                line = sr.ReadLine();
+            }
+            sr.Close();
+            return details[2] + " " + details[3];
         }
 
         private void button1_Click(object sender, EventArgs e)

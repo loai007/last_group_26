@@ -51,12 +51,15 @@
             this.lblphn = new System.Windows.Forms.Label();
             this.points_lbl = new System.Windows.Forms.Label();
             this.points_txt = new System.Windows.Forms.TextBox();
+            this.uperpanel = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.uperpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 34);
+            this.label1.Location = new System.Drawing.Point(45, 155);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 17);
             this.label1.TabIndex = 0;
@@ -66,7 +69,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 71);
+            this.label2.Location = new System.Drawing.Point(45, 192);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 17);
             this.label2.TabIndex = 1;
@@ -75,7 +78,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 111);
+            this.label3.Location = new System.Drawing.Point(45, 232);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 17);
             this.label3.TabIndex = 2;
@@ -84,7 +87,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 148);
+            this.label4.Location = new System.Drawing.Point(45, 269);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(133, 17);
             this.label4.TabIndex = 3;
@@ -93,7 +96,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(37, 194);
+            this.label5.Location = new System.Drawing.Point(45, 315);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(145, 17);
             this.label5.TabIndex = 4;
@@ -102,7 +105,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(40, 266);
+            this.label6.Location = new System.Drawing.Point(375, 226);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 17);
             this.label6.TabIndex = 5;
@@ -111,7 +114,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(40, 304);
+            this.label7.Location = new System.Drawing.Point(375, 264);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 17);
             this.label7.TabIndex = 6;
@@ -119,7 +122,7 @@
             // 
             // idbox
             // 
-            this.idbox.Location = new System.Drawing.Point(197, 29);
+            this.idbox.Location = new System.Drawing.Point(205, 150);
             this.idbox.Name = "idbox";
             this.idbox.Size = new System.Drawing.Size(100, 22);
             this.idbox.TabIndex = 50;
@@ -127,51 +130,52 @@
             // 
             // passbox
             // 
-            this.passbox.Location = new System.Drawing.Point(197, 66);
+            this.passbox.Location = new System.Drawing.Point(205, 187);
             this.passbox.Name = "passbox";
             this.passbox.Size = new System.Drawing.Size(100, 22);
             this.passbox.TabIndex = 51;
             // 
             // namebox
             // 
-            this.namebox.Location = new System.Drawing.Point(197, 106);
+            this.namebox.Location = new System.Drawing.Point(205, 227);
             this.namebox.Name = "namebox";
             this.namebox.Size = new System.Drawing.Size(100, 22);
             this.namebox.TabIndex = 52;
             // 
             // lastnbox
             // 
-            this.lastnbox.Location = new System.Drawing.Point(197, 145);
+            this.lastnbox.Location = new System.Drawing.Point(205, 266);
             this.lastnbox.Name = "lastnbox";
             this.lastnbox.Size = new System.Drawing.Size(100, 22);
             this.lastnbox.TabIndex = 53;
             // 
             // depbox
             // 
-            this.depbox.Location = new System.Drawing.Point(197, 189);
+            this.depbox.Location = new System.Drawing.Point(205, 310);
             this.depbox.Name = "depbox";
             this.depbox.Size = new System.Drawing.Size(100, 22);
             this.depbox.TabIndex = 54;
             // 
             // cnamebox
             // 
-            this.cnamebox.Location = new System.Drawing.Point(197, 262);
+            this.cnamebox.Location = new System.Drawing.Point(532, 222);
             this.cnamebox.Name = "cnamebox";
             this.cnamebox.Size = new System.Drawing.Size(100, 22);
             this.cnamebox.TabIndex = 56;
             // 
             // daybox
             // 
-            this.daybox.Location = new System.Drawing.Point(197, 300);
+            this.daybox.Location = new System.Drawing.Point(532, 260);
             this.daybox.Name = "daybox";
             this.daybox.Size = new System.Drawing.Size(100, 22);
             this.daybox.TabIndex = 57;
             // 
             // addbut
             // 
-            this.addbut.Location = new System.Drawing.Point(413, 144);
+            this.addbut.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addbut.Location = new System.Drawing.Point(293, 411);
             this.addbut.Name = "addbut";
-            this.addbut.Size = new System.Drawing.Size(115, 57);
+            this.addbut.Size = new System.Drawing.Size(121, 46);
             this.addbut.TabIndex = 60;
             this.addbut.Text = "Add";
             this.addbut.UseVisualStyleBackColor = true;
@@ -179,7 +183,7 @@
             // 
             // timebox
             // 
-            this.timebox.Location = new System.Drawing.Point(197, 343);
+            this.timebox.Location = new System.Drawing.Point(532, 303);
             this.timebox.Name = "timebox";
             this.timebox.Size = new System.Drawing.Size(100, 22);
             this.timebox.TabIndex = 58;
@@ -187,7 +191,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(46, 347);
+            this.label8.Location = new System.Drawing.Point(381, 307);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(88, 17);
             this.label8.TabIndex = 17;
@@ -196,16 +200,17 @@
             // lblero
             // 
             this.lblero.AutoSize = true;
-            this.lblero.Location = new System.Drawing.Point(424, 259);
+            this.lblero.Location = new System.Drawing.Point(408, 291);
             this.lblero.Name = "lblero";
             this.lblero.Size = new System.Drawing.Size(0, 17);
             this.lblero.TabIndex = 18;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(677, 0);
+            this.button1.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(624, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 52);
+            this.button1.Size = new System.Drawing.Size(121, 46);
             this.button1.TabIndex = 61;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
@@ -213,7 +218,7 @@
             // 
             // txtphn
             // 
-            this.txtphn.Location = new System.Drawing.Point(197, 227);
+            this.txtphn.Location = new System.Drawing.Point(205, 348);
             this.txtphn.Margin = new System.Windows.Forms.Padding(2);
             this.txtphn.Name = "txtphn";
             this.txtphn.Size = new System.Drawing.Size(100, 22);
@@ -222,7 +227,7 @@
             // lblphn
             // 
             this.lblphn.AutoSize = true;
-            this.lblphn.Location = new System.Drawing.Point(46, 230);
+            this.lblphn.Location = new System.Drawing.Point(54, 351);
             this.lblphn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblphn.Name = "lblphn";
             this.lblphn.Size = new System.Drawing.Size(103, 17);
@@ -232,7 +237,7 @@
             // points_lbl
             // 
             this.points_lbl.AutoSize = true;
-            this.points_lbl.Location = new System.Drawing.Point(40, 391);
+            this.points_lbl.Location = new System.Drawing.Point(375, 351);
             this.points_lbl.Name = "points_lbl";
             this.points_lbl.Size = new System.Drawing.Size(125, 17);
             this.points_lbl.TabIndex = 22;
@@ -240,21 +245,44 @@
             // 
             // points_txt
             // 
-            this.points_txt.Location = new System.Drawing.Point(197, 386);
+            this.points_txt.Location = new System.Drawing.Point(532, 346);
             this.points_txt.Name = "points_txt";
             this.points_txt.Size = new System.Drawing.Size(100, 22);
             this.points_txt.TabIndex = 59;
+            // 
+            // uperpanel
+            // 
+            this.uperpanel.BackColor = System.Drawing.Color.LightGreen;
+            this.uperpanel.Controls.Add(this.label9);
+            this.uperpanel.Controls.Add(this.button1);
+            this.uperpanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uperpanel.Location = new System.Drawing.Point(0, 0);
+            this.uperpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uperpanel.Name = "uperpanel";
+            this.uperpanel.Size = new System.Drawing.Size(747, 101);
+            this.uperpanel.TabIndex = 62;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Sitka Display", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(210, 34);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(287, 58);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Add New Course";
             // 
             // ManagerAddC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(747, 549);
+            this.Controls.Add(this.uperpanel);
             this.Controls.Add(this.points_txt);
             this.Controls.Add(this.points_lbl);
             this.Controls.Add(this.lblphn);
             this.Controls.Add(this.txtphn);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblero);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.timebox);
@@ -275,6 +303,8 @@
             this.Controls.Add(this.label1);
             this.Name = "ManagerAddC";
             this.Text = "ManagerAddC";
+            this.uperpanel.ResumeLayout(false);
+            this.uperpanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,5 +335,7 @@
         private System.Windows.Forms.Label lblphn;
         private System.Windows.Forms.Label points_lbl;
         private System.Windows.Forms.TextBox points_txt;
+        private System.Windows.Forms.Panel uperpanel;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -44,7 +44,8 @@
             // 
             // BackBtn
             // 
-            this.BackBtn.Location = new System.Drawing.Point(673, 3);
+            this.BackBtn.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackBtn.Location = new System.Drawing.Point(624, 3);
             this.BackBtn.Name = "BackBtn";
             this.BackBtn.Size = new System.Drawing.Size(121, 46);
             this.BackBtn.TabIndex = 0;
@@ -134,7 +135,7 @@
             this.uperpanel.Location = new System.Drawing.Point(0, 0);
             this.uperpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uperpanel.Name = "uperpanel";
-            this.uperpanel.Size = new System.Drawing.Size(799, 101);
+            this.uperpanel.Size = new System.Drawing.Size(747, 101);
             this.uperpanel.TabIndex = 56;
             // 
             // InstructorAddMarks
@@ -142,7 +143,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(799, 549);
+            this.ClientSize = new System.Drawing.Size(747, 549);
             this.Controls.Add(this.uperpanel);
             this.Controls.Add(this.messagelbl);
             this.Controls.Add(this.dataGridViewMarks);
