@@ -329,10 +329,10 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(654, -1);
+            this.button1.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(656, 1);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 52);
+            this.button1.Size = new System.Drawing.Size(121, 46);
             this.button1.TabIndex = 80;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;

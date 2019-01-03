@@ -40,6 +40,7 @@
             this.uperpanel = new System.Windows.Forms.Panel();
             this.managername_lbl = new System.Windows.Forms.Label();
             this.AnswerRequestsBTN = new System.Windows.Forms.Button();
+            this.date_lbl = new System.Windows.Forms.Label();
             this.uperpanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -152,6 +153,7 @@
             // uperpanel
             // 
             this.uperpanel.BackColor = System.Drawing.Color.LightGreen;
+            this.uperpanel.Controls.Add(this.date_lbl);
             this.uperpanel.Controls.Add(this.managername_lbl);
             this.uperpanel.Controls.Add(this.button2);
             this.uperpanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -181,6 +183,16 @@
             this.AnswerRequestsBTN.Text = "Answer Requests";
             this.AnswerRequestsBTN.UseVisualStyleBackColor = true;
             this.AnswerRequestsBTN.Click += new System.EventHandler(this.AnswerRequestsBTN_Click);
+            // 
+            // date_lbl
+            // 
+            this.date_lbl.AutoSize = true;
+            this.date_lbl.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_lbl.Location = new System.Drawing.Point(31, 58);
+            this.date_lbl.Name = "date_lbl";
+            this.date_lbl.Size = new System.Drawing.Size(60, 33);
+            this.date_lbl.TabIndex = 62;
+            this.date_lbl.Text = "Date";
             // 
             // ManagerMain
             // 
@@ -221,5 +233,6 @@
         private System.Windows.Forms.Panel uperpanel;
         private System.Windows.Forms.Label managername_lbl;
         private System.Windows.Forms.Button AnswerRequestsBTN;
+        private System.Windows.Forms.Label date_lbl;
     }
 }

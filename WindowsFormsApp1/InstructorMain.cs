@@ -98,6 +98,7 @@ namespace WindowsFormsApp1
         private void InstructorMain_Load(object sender, EventArgs e)
         {
             instructorname_lbl.Text = "Welcome" + " " + getData("user.txt");
+            date_lbl.Text = DateTime.Now.ToShortDateString();
 
         }
 

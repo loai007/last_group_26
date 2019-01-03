@@ -131,6 +131,7 @@ namespace WindowsFormsApp1
         private void studentMain_Load(object sender, EventArgs e)
         {
             studentname_lbl.Text = "Welcome" + " " + getData("user.txt");
+            date_lbl.Text = DateTime.Now.ToShortDateString();
         }
     }
 }

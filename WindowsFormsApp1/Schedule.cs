@@ -209,5 +209,95 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void lbl9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

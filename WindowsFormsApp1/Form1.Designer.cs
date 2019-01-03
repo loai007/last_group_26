@@ -37,6 +37,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.ERE = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.date_lbl = new System.Windows.Forms.Label();
             this.uper_panel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -135,12 +136,23 @@
             this.groupBox1.Text = "user details";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // date_lbl
+            // 
+            this.date_lbl.AutoSize = true;
+            this.date_lbl.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_lbl.Location = new System.Drawing.Point(616, 122);
+            this.date_lbl.Name = "date_lbl";
+            this.date_lbl.Size = new System.Drawing.Size(60, 33);
+            this.date_lbl.TabIndex = 2;
+            this.date_lbl.Text = "Date";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(748, 549);
+            this.Controls.Add(this.date_lbl);
             this.Controls.Add(this.uper_panel);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
@@ -151,6 +163,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -164,6 +177,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label ERE;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label date_lbl;
     }
 }
 

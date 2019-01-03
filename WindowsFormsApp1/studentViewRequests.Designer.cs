@@ -38,14 +38,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.uperpanel = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.uperpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // backBTN
             // 
-            this.backBTN.Location = new System.Drawing.Point(722, 12);
+            this.backBTN.Font = new System.Drawing.Font("Sitka Display", 10.2F);
+            this.backBTN.Location = new System.Drawing.Point(676, 3);
             this.backBTN.Name = "backBTN";
-            this.backBTN.Size = new System.Drawing.Size(75, 23);
+            this.backBTN.Size = new System.Drawing.Size(121, 46);
             this.backBTN.TabIndex = 0;
             this.backBTN.Text = "Back";
             this.backBTN.UseVisualStyleBackColor = true;
@@ -54,91 +58,123 @@
             // dataGridView
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(12, 54);
+            this.dataGridView.Location = new System.Drawing.Point(23, 134);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(197, 220);
+            this.dataGridView.Size = new System.Drawing.Size(268, 304);
             this.dataGridView.TabIndex = 1;
             this.dataGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
             // fromLBL
             // 
             this.fromLBL.AutoSize = true;
-            this.fromLBL.Location = new System.Drawing.Point(373, 114);
+            this.fromLBL.Font = new System.Drawing.Font("Sitka Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fromLBL.Location = new System.Drawing.Point(446, 202);
             this.fromLBL.Name = "fromLBL";
-            this.fromLBL.Size = new System.Drawing.Size(46, 17);
+            this.fromLBL.Size = new System.Drawing.Size(46, 21);
             this.fromLBL.TabIndex = 2;
             this.fromLBL.Text = "label1";
             // 
             // toLBL
             // 
             this.toLBL.AutoSize = true;
-            this.toLBL.Location = new System.Drawing.Point(373, 157);
+            this.toLBL.Font = new System.Drawing.Font("Sitka Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toLBL.Location = new System.Drawing.Point(446, 245);
             this.toLBL.Name = "toLBL";
-            this.toLBL.Size = new System.Drawing.Size(46, 17);
+            this.toLBL.Size = new System.Drawing.Size(48, 21);
             this.toLBL.TabIndex = 3;
             this.toLBL.Text = "label2";
             // 
             // requestLBL
             // 
             this.requestLBL.AutoSize = true;
-            this.requestLBL.Location = new System.Drawing.Point(373, 206);
+            this.requestLBL.Font = new System.Drawing.Font("Sitka Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.requestLBL.Location = new System.Drawing.Point(446, 294);
             this.requestLBL.MaximumSize = new System.Drawing.Size(294, 263);
             this.requestLBL.Name = "requestLBL";
-            this.requestLBL.Size = new System.Drawing.Size(46, 17);
+            this.requestLBL.Size = new System.Drawing.Size(48, 21);
             this.requestLBL.TabIndex = 4;
             this.requestLBL.Text = "label3";
             // 
             // statusLBL
             // 
             this.statusLBL.AutoSize = true;
-            this.statusLBL.Location = new System.Drawing.Point(667, 133);
+            this.statusLBL.Font = new System.Drawing.Font("Sitka Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusLBL.Location = new System.Drawing.Point(658, 202);
             this.statusLBL.Name = "statusLBL";
-            this.statusLBL.Size = new System.Drawing.Size(46, 17);
+            this.statusLBL.Size = new System.Drawing.Size(46, 21);
             this.statusLBL.TabIndex = 5;
             this.statusLBL.Text = "label1";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(300, 114);
+            this.label1.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(373, 202);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 17);
+            this.label1.Size = new System.Drawing.Size(54, 24);
             this.label1.TabIndex = 6;
             this.label1.Text = "From:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(315, 157);
+            this.label2.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(388, 245);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 17);
+            this.label2.Size = new System.Drawing.Size(33, 24);
             this.label2.TabIndex = 7;
             this.label2.Text = "To:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(284, 206);
+            this.label3.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(357, 294);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 17);
+            this.label3.Size = new System.Drawing.Size(69, 24);
             this.label3.TabIndex = 8;
             this.label3.Text = "request:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(583, 133);
+            this.label4.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(574, 202);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 17);
+            this.label4.Size = new System.Drawing.Size(58, 24);
             this.label4.TabIndex = 9;
             this.label4.Text = "status:";
+            // 
+            // uperpanel
+            // 
+            this.uperpanel.BackColor = System.Drawing.Color.LightGreen;
+            this.uperpanel.Controls.Add(this.label5);
+            this.uperpanel.Controls.Add(this.backBTN);
+            this.uperpanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uperpanel.Location = new System.Drawing.Point(0, 0);
+            this.uperpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uperpanel.Name = "uperpanel";
+            this.uperpanel.Size = new System.Drawing.Size(800, 101);
+            this.uperpanel.TabIndex = 58;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Sitka Display", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(264, 42);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(263, 58);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Show Requests";
             // 
             // studentViewRequests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.uperpanel);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -148,10 +184,11 @@
             this.Controls.Add(this.toLBL);
             this.Controls.Add(this.fromLBL);
             this.Controls.Add(this.dataGridView);
-            this.Controls.Add(this.backBTN);
             this.Name = "studentViewRequests";
             this.Text = "studentViewRequests";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            this.uperpanel.ResumeLayout(false);
+            this.uperpanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,5 +206,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel uperpanel;
+        private System.Windows.Forms.Label label5;
     }
 }

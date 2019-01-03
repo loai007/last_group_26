@@ -91,7 +91,7 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            date_lbl.Text = DateTime.Now.ToShortDateString();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

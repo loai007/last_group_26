@@ -159,5 +159,10 @@ namespace WindowsFormsApp1
             studentMain f8 = new studentMain();
             f8.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
