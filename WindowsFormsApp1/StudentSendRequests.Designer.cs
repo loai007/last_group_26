@@ -49,9 +49,10 @@
             // backBTN
             // 
             this.backBTN.Font = new System.Drawing.Font("Sitka Display", 10.2F);
-            this.backBTN.Location = new System.Drawing.Point(623, 3);
+            this.backBTN.Location = new System.Drawing.Point(467, 2);
+            this.backBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.backBTN.Name = "backBTN";
-            this.backBTN.Size = new System.Drawing.Size(121, 46);
+            this.backBTN.Size = new System.Drawing.Size(91, 37);
             this.backBTN.TabIndex = 0;
             this.backBTN.Text = "Back";
             this.backBTN.UseVisualStyleBackColor = true;
@@ -61,18 +62,21 @@
             // 
             this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(12, 168);
+            this.dataGridView.Location = new System.Drawing.Point(9, 136);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(679, 150);
+            this.dataGridView.Size = new System.Drawing.Size(509, 122);
             this.dataGridView.TabIndex = 1;
+            this.dataGridView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_RowHeaderMouseClick);
             // 
             // InstructorBTN
             // 
             this.InstructorBTN.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InstructorBTN.Location = new System.Drawing.Point(28, 386);
+            this.InstructorBTN.Location = new System.Drawing.Point(21, 314);
+            this.InstructorBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.InstructorBTN.Name = "InstructorBTN";
-            this.InstructorBTN.Size = new System.Drawing.Size(87, 36);
+            this.InstructorBTN.Size = new System.Drawing.Size(65, 29);
             this.InstructorBTN.TabIndex = 2;
             this.InstructorBTN.Text = "Instructors";
             this.InstructorBTN.UseVisualStyleBackColor = true;
@@ -81,9 +85,10 @@
             // ManagerBTN
             // 
             this.ManagerBTN.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManagerBTN.Location = new System.Drawing.Point(136, 387);
+            this.ManagerBTN.Location = new System.Drawing.Point(102, 314);
+            this.ManagerBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ManagerBTN.Name = "ManagerBTN";
-            this.ManagerBTN.Size = new System.Drawing.Size(87, 36);
+            this.ManagerBTN.Size = new System.Drawing.Size(65, 29);
             this.ManagerBTN.TabIndex = 3;
             this.ManagerBTN.Text = "Managers";
             this.ManagerBTN.UseVisualStyleBackColor = true;
@@ -93,34 +98,38 @@
             // 
             this.fromLBL.AutoSize = true;
             this.fromLBL.Font = new System.Drawing.Font("Sitka Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fromLBL.Location = new System.Drawing.Point(28, 336);
+            this.fromLBL.Location = new System.Drawing.Point(21, 273);
+            this.fromLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.fromLBL.Name = "fromLBL";
-            this.fromLBL.Size = new System.Drawing.Size(147, 28);
+            this.fromLBL.Size = new System.Drawing.Size(115, 21);
             this.fromLBL.TabIndex = 4;
             this.fromLBL.Text = "Request From :  ";
             // 
             // idTB
             // 
-            this.idTB.Location = new System.Drawing.Point(471, 336);
+            this.idTB.Location = new System.Drawing.Point(353, 273);
+            this.idTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idTB.Name = "idTB";
-            this.idTB.Size = new System.Drawing.Size(100, 22);
+            this.idTB.Size = new System.Drawing.Size(76, 20);
             this.idTB.TabIndex = 5;
             // 
             // messageTB
             // 
-            this.messageTB.Location = new System.Drawing.Point(359, 373);
+            this.messageTB.Location = new System.Drawing.Point(269, 303);
+            this.messageTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.messageTB.Multiline = true;
             this.messageTB.Name = "messageTB";
-            this.messageTB.Size = new System.Drawing.Size(258, 164);
+            this.messageTB.Size = new System.Drawing.Size(194, 134);
             this.messageTB.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sitka Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(367, 331);
+            this.label1.Location = new System.Drawing.Point(275, 269);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 28);
+            this.label1.Size = new System.Drawing.Size(69, 21);
             this.label1.TabIndex = 7;
             this.label1.Text = "Enter ID:";
             // 
@@ -128,18 +137,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Sitka Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(270, 373);
+            this.label2.Location = new System.Drawing.Point(202, 303);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 28);
+            this.label2.Size = new System.Drawing.Size(65, 21);
             this.label2.TabIndex = 8;
             this.label2.Text = "Request:";
             // 
             // sendBTN
             // 
             this.sendBTN.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sendBTN.Location = new System.Drawing.Point(642, 387);
+            this.sendBTN.Location = new System.Drawing.Point(482, 314);
+            this.sendBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.sendBTN.Name = "sendBTN";
-            this.sendBTN.Size = new System.Drawing.Size(83, 36);
+            this.sendBTN.Size = new System.Drawing.Size(62, 29);
             this.sendBTN.TabIndex = 9;
             this.sendBTN.Text = "Send";
             this.sendBTN.UseVisualStyleBackColor = true;
@@ -149,9 +160,10 @@
             // 
             this.messageLBL.AutoSize = true;
             this.messageLBL.Font = new System.Drawing.Font("Sitka Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.messageLBL.Location = new System.Drawing.Point(657, 450);
+            this.messageLBL.Location = new System.Drawing.Point(493, 366);
+            this.messageLBL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.messageLBL.Name = "messageLBL";
-            this.messageLBL.Size = new System.Drawing.Size(48, 21);
+            this.messageLBL.Size = new System.Drawing.Size(38, 18);
             this.messageLBL.TabIndex = 10;
             this.messageLBL.Text = "label3";
             // 
@@ -159,9 +171,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 124);
+            this.label3.Location = new System.Drawing.Point(20, 101);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(306, 29);
+            this.label3.Size = new System.Drawing.Size(244, 23);
             this.label3.TabIndex = 11;
             this.label3.Text = "who do you want to request from :";
             // 
@@ -172,27 +185,28 @@
             this.uperpanel.Controls.Add(this.backBTN);
             this.uperpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.uperpanel.Location = new System.Drawing.Point(0, 0);
-            this.uperpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uperpanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uperpanel.Name = "uperpanel";
-            this.uperpanel.Size = new System.Drawing.Size(747, 101);
+            this.uperpanel.Size = new System.Drawing.Size(560, 82);
             this.uperpanel.TabIndex = 58;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Sitka Display", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(249, 42);
+            this.label4.Location = new System.Drawing.Point(187, 34);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(253, 58);
+            this.label4.Size = new System.Drawing.Size(204, 47);
             this.label4.TabIndex = 4;
             this.label4.Text = "Send Requests";
             // 
             // StudentSendRequests
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(747, 549);
+            this.ClientSize = new System.Drawing.Size(560, 446);
             this.Controls.Add(this.uperpanel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.messageLBL);
@@ -205,6 +219,7 @@
             this.Controls.Add(this.ManagerBTN);
             this.Controls.Add(this.InstructorBTN);
             this.Controls.Add(this.dataGridView);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "StudentSendRequests";
             this.Text = "StudentSend";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();

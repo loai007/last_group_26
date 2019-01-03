@@ -45,74 +45,82 @@ namespace WindowsFormsApp1
         }
         private int count = 0;
         private int selectedIndex=-1;
+        private bool messages = false;
         private string myId;
         private string[] fromId;
         private string[] request;
         private string[] status;
-        ///////////////////////////////////////////////////////////////////////////////////////////
-        //in instructor view requests search for details[0]==myid 
-        ///////////////////////////////////////////////////////////////////////////////////////////
+
 
         private void myRequestsCoutAndexport()
         {
             StreamReader sr = new StreamReader("requests.txt");
             string line = sr.ReadLine();
-            bool flagbinding = false;
+            string[] details;
             while (line != null)
             {
-                string[] details = line.Split(' ');
-
-                if (flagbinding )
+                details = line.Split(' ');
+                if (details.Length >= 2)
                 {
-                    if (details[0] == "EOMessage")
-                        if (details[1] != "binding")
+                    if (details[1] == myId)
+                    {
+                        while (line != null && details[0] != "EOMessage")
                         {
-                            flagbinding = false;
-                            count--;
+                            details = line.Split(' ');
+                            line = sr.ReadLine();
                         }
+                        if (details[1] == "binding")
+                        {
+                            count++;
+                            messages = true;
+                        }
+                    }
                 }
-                else if (details[1] == myId)
-                {
-                    count++;
-                    flagbinding = true;
-                }
-                
+                else
+                    line = sr.ReadLine();
 
-                line = sr.ReadLine();
             }
-            bool flag = false;
+            
+
+            details = line.Split(' ');
             fromId = new string[count];
             request = new string[count];
             status = new string[count];
             sr.Close();
             sr = new StreamReader("requests.txt");
             line = sr.ReadLine();
-            int i = 0;
-            while (line != null && count != 0)
+            int i = 0,del;
+            while (line != null && messages)
             {
-                string[] details = line.Split(' ');
-                if (details[0] == "EOMessage")//"EOMessage"
-                {
-                    if (flag)
+                if (details.Length >= 2)
+                    if (details[1] == myId)
                     {
-                        status[i] = details[1];
-                        i++;
+                        request[i] = "";
+                        fromId[i] = details[0];
+                        del = details[0].Length + details[1].Length + 2;
+                        request[i] += line.Remove(0, del);
+                        request[i] += "\r\n";
+
+                        //secoud part where the masseage is
+                        line = sr.ReadLine();
+                        details = line.Split(' ');
+                        while (line != null)
+                        {
+                            details = line.Split(' ');
+                            if (details[0] == "EOMessage") break;
+                            request[i] += line + "\r\n";
+                            line = sr.ReadLine();
+                        }
+                        //lastpart where the EOMessage
+                        if (details[1] == "binding")
+                        {
+                            status[i] = details[1];
+                            i++;
+                        }
+                        else fromId[i] = null;
                     }
-                    flag = false;
-                }
-
-                else if (flag)
-                        request[i] += "\r\n" + line;
-
-                else if (details[1] == myId)
-                {
-                    fromId[i] = details[0];
-                    for (int c = 2; c < details.Length; c++)
-                        request[i] += "\r\n " + details[c];
-                    flag = true;
-                }
-
                 line = sr.ReadLine();
+                
             }
             sr.Close();
 
@@ -124,6 +132,7 @@ namespace WindowsFormsApp1
             foreach (string c in columnnames)
                 dt.Columns.Add(c);
             foreach (string c in fromId)
+                if (c!=null)
                 dt.Rows.Add(c);
             dataGridView.DataSource = dt;
         }
@@ -146,37 +155,42 @@ namespace WindowsFormsApp1
             InstructorMain f8 = new InstructorMain();
             f8.Show();
         }
-        private void ChangeStatusForRequest()
+        private void ChangeStatusForRequest(string holeRequest, string newStatus)
         {
-            int messageIndex = 0;
-            string[] Lines = File.ReadAllLines("request.txt");
-            File.Delete("request.txt");// Deleting the file
-            using (StreamWriter sw = File.AppendText("request.txt"))
+            bool found = true;
+            string[] Lines = File.ReadAllLines("requests.txt");
+            string requestFinder = "";
+            File.Delete("requests.txt");// Deleting the file
+            using (StreamWriter sw = File.AppendText("requests.txt"))
 
                 for (int i = 0; i < Lines.Length; i++)
-                {
-                    string[] splitedLine = Lines[i].Split();
-                    if (splitedLine[1] == myId)
+
+                    if (found)
+                    {
+                        sw.WriteLine(Lines[i]);
+                        requestFinder = Lines[i] + "\r\n";
+                        found = false;
+
+                    }
+                    else
                     {
 
-                        while (i < Lines.Length && splitedLine[0] != "EOMessage") i++;
-
-                        if (splitedLine[0] == "EOMessage")
-                            if (splitedLine[1] != status[messageIndex])
-                            {
-                                string newLine = splitedLine[0] + ' ' + status[messageIndex] ;
-                                sw.WriteLine(newLine);
-                                messageIndex++;
-                            }
+                        if (Lines[i].Split(' ')[0] == "EOMessage")
+                        {
+                            if (requestFinder + "EOMessage binding" == holeRequest)
+                                sw.WriteLine("EOMessage " + newStatus);
                             else
-                            
                                 sw.WriteLine(Lines[i]);
-                            
+                            found = true;
+                        }
+                        else sw.WriteLine(Lines[i]);
+                        requestFinder += Lines[i] + "\r\n";
                     }
-                }
+
 
             errorLBL.ForeColor = System.Drawing.Color.Black;
-            errorLBL.Text = "Coming soon!!";
+            errorLBL.Text = "Request "+ newStatus;
+
 
 
         }
@@ -186,7 +200,8 @@ namespace WindowsFormsApp1
             if (selectedIndex > -1)
             {
                 status[selectedIndex] = "Approved";
-                ChangeStatusForRequest();
+                string holeRequest = fromLBL.Text + " " + toLBL.Text + " " + requestLBL.Text + "EOMessage " + statusLBL.Text;
+                ChangeStatusForRequest(holeRequest, "Approved");
             }
 
         }
@@ -196,7 +211,8 @@ namespace WindowsFormsApp1
             if (selectedIndex > -1)
             {
                 status[selectedIndex] = "Denied";
-                ChangeStatusForRequest();
+                string holeRequest = fromLBL.Text + " " + toLBL.Text + " " + requestLBL.Text + "EOMessage " + statusLBL.Text;
+                ChangeStatusForRequest(holeRequest, "Denied");
             }
         }
     }

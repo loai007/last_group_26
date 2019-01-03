@@ -78,6 +78,12 @@
     <Compile Include="InstructorSendMessage.Designer.cs">
       <DependentUpon>InstructorSendMessage.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstructorSendRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstructorSendRequests.Designer.cs">
+      <DependentUpon>InstructorSendRequests.cs</DependentUpon>
+    </Compile>
     <Compile Include="InstructorShowCourse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InstructorSendMessage.resx">
       <DependentUpon>InstructorSendMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstructorSendRequests.resx">
+      <DependentUpon>InstructorSendRequests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InstructorShowCourse.resx">
       <DependentUpon>InstructorShowCourse.cs</DependentUpon>

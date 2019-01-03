@@ -92,8 +92,7 @@ namespace WindowsFormsApp1
                         request[i] = "";
                         fromId[i] = details[0];
                         del = details[0].Length + details[1].Length + 2;
-                       // for (int c = 2; c < details.Length; c++)
-                            request[i] += line.Remove(0,del);/* " " + details[c];*/
+                        request[i] += line.Remove(0,del);/* " " + details[c];*/
                         request[i] += "\r\n";
                     
                         //secoud part where the masseage is
@@ -112,6 +111,7 @@ namespace WindowsFormsApp1
                             status[i] = details[1];
                             i++;
                         }
+                        else fromId[i] = null ;
                     }
                     line = sr.ReadLine();
             }
@@ -165,7 +165,7 @@ namespace WindowsFormsApp1
                     
 
             errorLBL.ForeColor = System.Drawing.Color.Black;
-            errorLBL.Text = "Done";
+            errorLBL.Text = "Request " + newStatus;
            
 
 

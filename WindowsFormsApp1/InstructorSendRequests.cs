@@ -11,22 +11,20 @@ using System.IO;
 
 namespace WindowsFormsApp1
 {
-    public partial class StudentSendRequests : Form
+    public partial class InstructorSendRequests : Form
     {
-        public StudentSendRequests()
+        public InstructorSendRequests()
         {
             InitializeComponent();
-            showInstructors();
+            showManagers();
             messageLBL.Text = "";
-            fromLBL.Text = "Request From Instructor";
+            fromLBL.Text = "Request From Manager";
         }
-        string lockfor = "instructor.txt";
+        string lockfor = "manager.txt";
         string spamDetection = null;
         private void backBTN_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            studentMain f8 = new studentMain();
-            f8.Show();
+            
         }
         private bool doesntExist(string path, string key1)
         {
@@ -35,9 +33,9 @@ namespace WindowsFormsApp1
             string line = sr.ReadLine();
             while (line != null)
             {
-                
+
                 string[] details = line.Split(' ');
-                if (details[0] == key1 )
+                if (details[0] == key1)
                 {
                     sr.Close();
                     return false;
@@ -48,45 +46,14 @@ namespace WindowsFormsApp1
             sr.Close();
             return true;
         }
-        private void showInstructors( )
-        {
-            StreamReader sr = new StreamReader("instructor.txt");
-            string line = sr.ReadLine();
-            DataTable dt = new DataTable();
-            //Initialize Grid View
-            string[] columnnames = { "ID", "Name", "Last Name","Department", "Course" ,"Phone Numer"};
-            foreach (string c in columnnames)
-                dt.Columns.Add(c);
-            while (line != null)
-            {
-                string[] details = line.Split(' ');
-                if (details.Length >= 9)
-                {
-                    string[] showLine = { details[0], details[2], details[3], details[4], details[5], details[8] };
-                    dt.Rows.Add(showLine);
-                }
-                else
-                {
-                    messageLBL.Text = "Files Error instructor.txt";
-                    sr.Close();
-                    return;
-                }
-                //Read the next line
-                line = sr.ReadLine();
-            }
-
-            //close the file
-            sr.Close();
-            dataGridView.DataSource = dt;
-
-        }
+        
         private void showManagers()
         {
             StreamReader sr = new StreamReader("manager.txt");
             string line = sr.ReadLine();
             DataTable dt = new DataTable();
             //Initialize Grid View
-            string[] columnnames = { "ID", "Name", "Last Name", "Department",  "Phone Numer" };
+            string[] columnnames = { "ID", "Name", "Last Name", "Department", "Phone Numer" };
             foreach (string c in columnnames)
                 dt.Columns.Add(c);
             while (line != null)
@@ -94,7 +61,7 @@ namespace WindowsFormsApp1
                 string[] details = line.Split(' ');
                 if (details.Length >= 6)
                 {
-                    string[] showLine = { details[0], details[2], details[3], details[5], details[4]};
+                    string[] showLine = { details[0], details[2], details[3], details[5], details[4] };
                     dt.Rows.Add(showLine);
                 }
                 else
@@ -130,32 +97,23 @@ namespace WindowsFormsApp1
             sr.Close();
             return details;
         }
-       
+
         private void addToRequests(string req, string fromId, string toId)
         {
             StreamWriter sw = new StreamWriter("requests.txt", true);
             string status = "binding";
-            string line =  fromId + ' ' + toId + ' ' + req+ "\r\nEOMessage "+ status;
+            string line = fromId + ' ' + toId + ' ' + req + "\r\nEOMessage " + status;
             sw.WriteLine(line);
             sw.Close();
         }
-        private void InstructorBTN_Click(object sender, EventArgs e)
-        {
-            fromLBL.Text = "Request From Instructor";
-            lockfor = "instructor.txt";
-            showInstructors();
-        }
 
-        private void ManagerBTN_Click(object sender, EventArgs e)
+        private void dataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            fromLBL.Text = "Request From Manager";
-            lockfor = "manager.txt";
-            showManagers( );
+            idTB.Text = dataGridView.CurrentRow.Cells[0].Value.ToString();
         }
 
         private void sendBTN_Click(object sender, EventArgs e)
         {
-            
             if (doesntExist(lockfor, idTB.Text))
                 messageLBL.Text = "Wrong ID ";
             else
@@ -166,13 +124,15 @@ namespace WindowsFormsApp1
                 messageLBL.Text = "Sent";
                 spamDetection = messageTB.Text;
             }
-            else messageLBL.Text = "Dont Spam 🤬";
-
+            else messageLBL.Text = "Change Your Request To Request Again ";
         }
 
-        private void dataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void backBTN_Click_1(object sender, EventArgs e)
         {
-            idTB.Text = dataGridView.CurrentRow.Cells[0].Value.ToString();
+            this.Hide();
+            InstructorMain f8 = new InstructorMain();
+            f8.Show();
         }
+     
     }
 }

@@ -53,8 +53,7 @@ namespace WindowsFormsApp1
             string line = sr.ReadLine();
             while (line != null)
             {
-                string[] details = line.Split(' ');
-                if (details[0] == myId)
+                if (line.Split(' ')[0] == myId)
                     count++;
 
                 line = sr.ReadLine();
@@ -66,7 +65,7 @@ namespace WindowsFormsApp1
             sr.Close();
             sr = new StreamReader("requests.txt");
             line = sr.ReadLine();
-            int i = 0;
+            int i = 0,del;
             while (line != null && count != 0)
             {
                 string[] details = line.Split(' ');
@@ -86,9 +85,8 @@ namespace WindowsFormsApp1
                 else if (details[0] == myId)
                 {
                     fromId[i] = details[1];
-                    
-                    for (int c = 2; c < details.Length; c++)
-                        request[i] +=  " "+details[c];
+                    del = details[0].Length + details[1].Length + 2;
+                    request[i] += line.Remove(0, del);
                     request[i] += "\r\n";
                     flag = true;
                 }

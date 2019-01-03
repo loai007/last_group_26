@@ -129,5 +129,12 @@ namespace WindowsFormsApp1
             InstructorSendMessage f = new InstructorSendMessage();
             f.Show();
         }
+
+        private void SendRequestBTN_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            InstructorSendRequests f = new InstructorSendRequests();
+            f.Show();
+        }
     }
 }

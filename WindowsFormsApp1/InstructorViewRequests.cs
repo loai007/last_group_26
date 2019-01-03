@@ -15,14 +15,12 @@ namespace WindowsFormsApp1
         public InstructorViewRequests()
         {
             InitializeComponent();
-            errorLBL.Text = "";
             fromLBL.Text = "";
             toLBL.Text = "";
             requestLBL.Text = "";
             statusLBL.Text = "";
             myId = getData("user.txt")[0];
             myRequestsCoutAndexport();
-            if (count>0 )errorLBL.Text = "";
             showRequestsDGV();
         }
         private string[] getData(string path, string key = null)
@@ -44,49 +42,43 @@ namespace WindowsFormsApp1
             return details;
         }
         private int count = 0;
+        private bool messages = false;
         private int selectedIndex = -1;
         private string myId;
-        private string[] fromId;
+        private string[] toId;
         private string[] request;
         private string[] status;
        
 
         private void myRequestsCoutAndexport()
         {
+            bool flag = false ;
             StreamReader sr = new StreamReader("requests.txt");
             string line = sr.ReadLine();
-            bool flagbinding = false;
             while (line != null)
             {
                 string[] details = line.Split(' ');
+               
+                    if (details[0] == myId)
+                    {
+                            count++;
+                            messages = true;
+                        
+                    }
+                
+             
+                    line = sr.ReadLine();
 
-                if (flagbinding)
-                {
-                    if (details[0] == "EOMessage")
-                        if (details[1] != "binding")
-                        {
-                            flagbinding = false;
-                            count--;
-                        }
-                }
-                else if (details[1] == myId)
-                {
-                    count++;
-                    flagbinding = true;
-                }
-
-
-                line = sr.ReadLine();
             }
-            bool flag = false;
-            fromId = new string[count];
+            
+            toId = new string[count];
             request = new string[count];
             status = new string[count];
             sr.Close();
             sr = new StreamReader("requests.txt");
             line = sr.ReadLine();
-            int i = 0;
-            while (line != null && count != 0)
+            int i = 0,del;
+            while (line != null && messages)
             {
                 string[] details = line.Split(' ');
                 if (details[0] == "EOMessage")//"EOMessage"
@@ -100,16 +92,13 @@ namespace WindowsFormsApp1
                 }
 
                 else if (flag)
-                {
-                    request[i] +=  line + "\r\n";
-                }
+                    request[i] += line + "\r\n";
 
-                else if (details[1] == myId)
+                else if (details[0] == myId)
                 {
-                    fromId[i] = details[0];
-                    
-                    for (int c = 2; c < details.Length; c++)
-                        request[i] +=  details[c] +" " ;
+                    toId[i] = details[1];
+                    del = details[0].Length + details[1].Length + 2;
+                    request[i] += line.Remove(0, del);
                     request[i] += "\r\n";
                     flag = true;
                 }
@@ -118,62 +107,27 @@ namespace WindowsFormsApp1
             }
             sr.Close();
 
+
+
         }
+
         private void showRequestsDGV()
         {
             DataTable dt = new DataTable();
             string[] columnnames = { "Request from" };
             foreach (string c in columnnames)
                 dt.Columns.Add(c);
-            foreach (string c in fromId)
-                dt.Rows.Add(c);
+            foreach (string c in toId)
+                if (c != null)
+                    dt.Rows.Add(c);
             dataGridView.DataSource = dt;
-        }
-        
-
-       
-        private void ChangeStatusForRequest()
-        {
-            int messageIndex = 0;
-            string[] Lines = File.ReadAllLines("request.txt");
-            File.Delete("request.txt");// Deleting the file
-            using (StreamWriter sw = File.AppendText("request.txt"))
-
-                for (int i = 0; i < Lines.Length; i++)
-                {
-                    string[] splitedLine = Lines[i].Split();
-                    if (splitedLine[1] == myId)
-                    {
-
-                        while (i < Lines.Length && splitedLine[0] != "EOMessage") i++;
-
-                        if (splitedLine[0] == "EOMessage")
-                            if (splitedLine[1] != status[messageIndex])
-                            {
-                                string newLine = splitedLine[0] + ' ' + status[messageIndex];
-                                sw.WriteLine(newLine);
-                                messageIndex++;
-                            }
-                            else
-
-                                sw.WriteLine(Lines[i]);
-
-                    }
-                }
-
-            errorLBL.ForeColor = System.Drawing.Color.Black;
-            errorLBL.Text = "Coming soon!!";
-                    
-
         }
 
         private void backBTN_Click(object sender, EventArgs e)
         {
-            
                 this.Hide();
                 InstructorMain f8 = new InstructorMain();
                 f8.Show();
-            
         }
 
         private void dataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -181,12 +135,18 @@ namespace WindowsFormsApp1
             selectedIndex = dataGridView.CurrentRow.Index;
             if (count != 0)
             {
-                fromLBL.Text = fromId[selectedIndex];
+                fromLBL.Text = toId[selectedIndex];
                 toLBL.Text = myId;
                 requestLBL.Text = request[selectedIndex];
                 statusLBL.Text = status[selectedIndex];
             }
             else errorLBL.Text = "No Requests";
+        }
+
+        private void InstructorViewRequests_Load(object sender, EventArgs e)
+        {
+            if (!messages) errorLBL.Text = "you Havent Sent Any Requests";
+            else errorLBL.Text = "";
         }
     }
 }
