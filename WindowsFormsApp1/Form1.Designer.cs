@@ -89,6 +89,7 @@
             this.textBoxun.Size = new System.Drawing.Size(100, 22);
             this.textBoxun.TabIndex = 0;
             this.textBoxun.TextChanged += new System.EventHandler(this.textBoxun_TextChanged);
+            this.textBoxun.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxun_KeyDown);
             // 
             // textBoxps
             // 
@@ -96,6 +97,7 @@
             this.textBoxps.Name = "textBoxps";
             this.textBoxps.Size = new System.Drawing.Size(100, 22);
             this.textBoxps.TabIndex = 1;
+            this.textBoxps.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxps_KeyDown);
             // 
             // button1
             // 
@@ -110,10 +112,11 @@
             // ERE
             // 
             this.ERE.AutoSize = true;
-            this.ERE.Location = new System.Drawing.Point(55, 83);
+            this.ERE.Location = new System.Drawing.Point(75, 228);
             this.ERE.Name = "ERE";
-            this.ERE.Size = new System.Drawing.Size(0, 17);
+            this.ERE.Size = new System.Drawing.Size(184, 17);
             this.ERE.TabIndex = 7;
+            this.ERE.Text = "~~~~~~~~~~~~~~~~~~~~~~";
             this.ERE.UseMnemonic = false;
             // 
             // groupBox1
