@@ -144,7 +144,7 @@
             // VeiwMessagesBTN
             // 
             this.VeiwMessagesBTN.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VeiwMessagesBTN.Location = new System.Drawing.Point(226, 207);
+            this.VeiwMessagesBTN.Location = new System.Drawing.Point(385, 206);
             this.VeiwMessagesBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.VeiwMessagesBTN.Name = "VeiwMessagesBTN";
             this.VeiwMessagesBTN.Size = new System.Drawing.Size(114, 53);
@@ -156,7 +156,7 @@
             // viewRequestsBTN
             // 
             this.viewRequestsBTN.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewRequestsBTN.Location = new System.Drawing.Point(385, 207);
+            this.viewRequestsBTN.Location = new System.Drawing.Point(58, 314);
             this.viewRequestsBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.viewRequestsBTN.Name = "viewRequestsBTN";
             this.viewRequestsBTN.Size = new System.Drawing.Size(114, 53);
@@ -178,7 +178,7 @@
             // 
             // SendMessages
             // 
-            this.SendMessages.Location = new System.Drawing.Point(226, 314);
+            this.SendMessages.Location = new System.Drawing.Point(226, 207);
             this.SendMessages.Margin = new System.Windows.Forms.Padding(2);
             this.SendMessages.Name = "SendMessages";
             this.SendMessages.Size = new System.Drawing.Size(114, 53);
@@ -189,7 +189,7 @@
             // 
             // SendRequestBTN
             // 
-            this.SendRequestBTN.Location = new System.Drawing.Point(58, 314);
+            this.SendRequestBTN.Location = new System.Drawing.Point(226, 314);
             this.SendRequestBTN.Name = "SendRequestBTN";
             this.SendRequestBTN.Size = new System.Drawing.Size(114, 53);
             this.SendRequestBTN.TabIndex = 58;

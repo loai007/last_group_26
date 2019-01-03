@@ -38,9 +38,9 @@
             this.showinstructor_btn = new System.Windows.Forms.Button();
             this.showsutdents = new System.Windows.Forms.Button();
             this.uperpanel = new System.Windows.Forms.Panel();
+            this.date_lbl = new System.Windows.Forms.Label();
             this.managername_lbl = new System.Windows.Forms.Label();
             this.AnswerRequestsBTN = new System.Windows.Forms.Button();
-            this.date_lbl = new System.Windows.Forms.Label();
             this.uperpanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,9 +48,10 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(53, 157);
+            this.button1.Location = new System.Drawing.Point(40, 130);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 40);
+            this.button1.Size = new System.Drawing.Size(105, 55);
             this.button1.TabIndex = 51;
             this.button1.Text = "Add New Course";
             this.button1.UseVisualStyleBackColor = false;
@@ -59,9 +60,10 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(624, 2);
+            this.button2.Location = new System.Drawing.Point(468, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 46);
+            this.button2.Size = new System.Drawing.Size(91, 37);
             this.button2.TabIndex = 55;
             this.button2.Text = "Log out";
             this.button2.UseVisualStyleBackColor = true;
@@ -72,9 +74,10 @@
             this.deletec_btn.BackColor = System.Drawing.Color.Transparent;
             this.deletec_btn.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deletec_btn.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.deletec_btn.Location = new System.Drawing.Point(221, 157);
+            this.deletec_btn.Location = new System.Drawing.Point(160, 128);
+            this.deletec_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.deletec_btn.Name = "deletec_btn";
-            this.deletec_btn.Size = new System.Drawing.Size(125, 40);
+            this.deletec_btn.Size = new System.Drawing.Size(105, 55);
             this.deletec_btn.TabIndex = 52;
             this.deletec_btn.Text = "Delete Course";
             this.deletec_btn.UseVisualStyleBackColor = false;
@@ -84,10 +87,10 @@
             // 
             this.SendMessage.BackColor = System.Drawing.Color.Transparent;
             this.SendMessage.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SendMessage.Location = new System.Drawing.Point(392, 157);
+            this.SendMessage.Location = new System.Drawing.Point(280, 128);
             this.SendMessage.Margin = new System.Windows.Forms.Padding(2);
             this.SendMessage.Name = "SendMessage";
-            this.SendMessage.Size = new System.Drawing.Size(119, 40);
+            this.SendMessage.Size = new System.Drawing.Size(105, 55);
             this.SendMessage.TabIndex = 53;
             this.SendMessage.Text = "Send Message";
             this.SendMessage.UseVisualStyleBackColor = false;
@@ -97,10 +100,10 @@
             // 
             this.ManageeMessage.BackColor = System.Drawing.Color.Transparent;
             this.ManageeMessage.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ManageeMessage.Location = new System.Drawing.Point(552, 157);
+            this.ManageeMessage.Location = new System.Drawing.Point(400, 128);
             this.ManageeMessage.Margin = new System.Windows.Forms.Padding(2);
             this.ManageeMessage.Name = "ManageeMessage";
-            this.ManageeMessage.Size = new System.Drawing.Size(107, 40);
+            this.ManageeMessage.Size = new System.Drawing.Size(105, 55);
             this.ManageeMessage.TabIndex = 54;
             this.ManageeMessage.Text = "Massege Box";
             this.ManageeMessage.UseVisualStyleBackColor = false;
@@ -109,9 +112,10 @@
             // AddDatebtn
             // 
             this.AddDatebtn.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddDatebtn.Location = new System.Drawing.Point(58, 297);
+            this.AddDatebtn.Location = new System.Drawing.Point(40, 230);
+            this.AddDatebtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AddDatebtn.Name = "AddDatebtn";
-            this.AddDatebtn.Size = new System.Drawing.Size(134, 59);
+            this.AddDatebtn.Size = new System.Drawing.Size(105, 55);
             this.AddDatebtn.TabIndex = 56;
             this.AddDatebtn.Text = "Add Course Exam Date";
             this.AddDatebtn.UseVisualStyleBackColor = true;
@@ -120,9 +124,10 @@
             // courseindeoartment_btn
             // 
             this.courseindeoartment_btn.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.courseindeoartment_btn.Location = new System.Drawing.Point(552, 294);
+            this.courseindeoartment_btn.Location = new System.Drawing.Point(400, 230);
+            this.courseindeoartment_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.courseindeoartment_btn.Name = "courseindeoartment_btn";
-            this.courseindeoartment_btn.Size = new System.Drawing.Size(127, 62);
+            this.courseindeoartment_btn.Size = new System.Drawing.Size(105, 55);
             this.courseindeoartment_btn.TabIndex = 57;
             this.courseindeoartment_btn.Text = "Courses In My Department";
             this.courseindeoartment_btn.UseVisualStyleBackColor = true;
@@ -131,9 +136,10 @@
             // showinstructor_btn
             // 
             this.showinstructor_btn.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showinstructor_btn.Location = new System.Drawing.Point(371, 294);
+            this.showinstructor_btn.Location = new System.Drawing.Point(280, 230);
+            this.showinstructor_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.showinstructor_btn.Name = "showinstructor_btn";
-            this.showinstructor_btn.Size = new System.Drawing.Size(140, 65);
+            this.showinstructor_btn.Size = new System.Drawing.Size(105, 55);
             this.showinstructor_btn.TabIndex = 58;
             this.showinstructor_btn.Text = "Instructor In My Department";
             this.showinstructor_btn.UseVisualStyleBackColor = true;
@@ -142,9 +148,10 @@
             // showsutdents
             // 
             this.showsutdents.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showsutdents.Location = new System.Drawing.Point(233, 297);
+            this.showsutdents.Location = new System.Drawing.Point(160, 230);
+            this.showsutdents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.showsutdents.Name = "showsutdents";
-            this.showsutdents.Size = new System.Drawing.Size(103, 62);
+            this.showsutdents.Size = new System.Drawing.Size(105, 55);
             this.showsutdents.TabIndex = 59;
             this.showsutdents.Text = "Students In Course";
             this.showsutdents.UseVisualStyleBackColor = true;
@@ -158,48 +165,51 @@
             this.uperpanel.Controls.Add(this.button2);
             this.uperpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.uperpanel.Location = new System.Drawing.Point(0, 0);
-            this.uperpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uperpanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uperpanel.Name = "uperpanel";
-            this.uperpanel.Size = new System.Drawing.Size(747, 101);
+            this.uperpanel.Size = new System.Drawing.Size(560, 82);
             this.uperpanel.TabIndex = 60;
+            // 
+            // date_lbl
+            // 
+            this.date_lbl.AutoSize = true;
+            this.date_lbl.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_lbl.Location = new System.Drawing.Point(23, 47);
+            this.date_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.date_lbl.Name = "date_lbl";
+            this.date_lbl.Size = new System.Drawing.Size(49, 28);
+            this.date_lbl.TabIndex = 62;
+            this.date_lbl.Text = "Date";
             // 
             // managername_lbl
             // 
             this.managername_lbl.AutoSize = true;
             this.managername_lbl.Font = new System.Drawing.Font("Sitka Display", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.managername_lbl.Location = new System.Drawing.Point(223, 42);
+            this.managername_lbl.Location = new System.Drawing.Point(167, 34);
+            this.managername_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.managername_lbl.Name = "managername_lbl";
-            this.managername_lbl.Size = new System.Drawing.Size(266, 58);
+            this.managername_lbl.Size = new System.Drawing.Size(212, 47);
             this.managername_lbl.TabIndex = 56;
             this.managername_lbl.Text = "Manager Name";
             this.managername_lbl.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // AnswerRequestsBTN
             // 
-            this.AnswerRequestsBTN.Location = new System.Drawing.Point(63, 410);
+            this.AnswerRequestsBTN.Location = new System.Drawing.Point(220, 330);
+            this.AnswerRequestsBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AnswerRequestsBTN.Name = "AnswerRequestsBTN";
-            this.AnswerRequestsBTN.Size = new System.Drawing.Size(129, 77);
+            this.AnswerRequestsBTN.Size = new System.Drawing.Size(105, 55);
             this.AnswerRequestsBTN.TabIndex = 61;
             this.AnswerRequestsBTN.Text = "Answer Requests";
             this.AnswerRequestsBTN.UseVisualStyleBackColor = true;
             this.AnswerRequestsBTN.Click += new System.EventHandler(this.AnswerRequestsBTN_Click);
             // 
-            // date_lbl
-            // 
-            this.date_lbl.AutoSize = true;
-            this.date_lbl.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_lbl.Location = new System.Drawing.Point(31, 58);
-            this.date_lbl.Name = "date_lbl";
-            this.date_lbl.Size = new System.Drawing.Size(60, 33);
-            this.date_lbl.TabIndex = 62;
-            this.date_lbl.Text = "Date";
-            // 
             // ManagerMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(747, 549);
+            this.ClientSize = new System.Drawing.Size(560, 446);
             this.Controls.Add(this.AnswerRequestsBTN);
             this.Controls.Add(this.uperpanel);
             this.Controls.Add(this.showsutdents);
@@ -210,6 +220,7 @@
             this.Controls.Add(this.SendMessage);
             this.Controls.Add(this.deletec_btn);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ManagerMain";
             this.Text = "ManagerMain";
             this.Load += new System.EventHandler(this.ManagerMain_Load);

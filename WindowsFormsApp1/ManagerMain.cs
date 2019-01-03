@@ -84,7 +84,7 @@ namespace WindowsFormsApp1
         private void ManageeMessage_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ManagerMessage f10 = new ManagerMessage();
+            ManagerViewMessage f10 = new ManagerViewMessage();
             f10.Show();
         }
 

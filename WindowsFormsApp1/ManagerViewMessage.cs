@@ -11,9 +11,9 @@ using System.IO;
 
 namespace WindowsFormsApp1
 {
-    public partial class ManagerMessage : Form
+    public partial class ManagerViewMessage : Form
     {
-        public ManagerMessage()
+        public ManagerViewMessage()
         {
             InitializeComponent();
             messageLBL.Text = "";
