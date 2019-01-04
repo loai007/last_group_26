@@ -49,7 +49,7 @@
             // 
             this.backBTN.Font = new System.Drawing.Font("Sitka Display", 10.2F);
             this.backBTN.Location = new System.Drawing.Point(507, 2);
-            this.backBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.backBTN.Margin = new System.Windows.Forms.Padding(2);
             this.backBTN.Name = "backBTN";
             this.backBTN.Size = new System.Drawing.Size(91, 37);
             this.backBTN.TabIndex = 0;
@@ -61,7 +61,7 @@
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(17, 109);
-            this.dataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowTemplate.Height = 24;
             this.dataGridView.Size = new System.Drawing.Size(201, 247);
@@ -78,7 +78,6 @@
             this.fromLBL.Size = new System.Drawing.Size(37, 18);
             this.fromLBL.TabIndex = 2;
             this.fromLBL.Text = "label1";
-            this.fromLBL.Visible = false;
             // 
             // toLBL
             // 
@@ -90,7 +89,6 @@
             this.toLBL.Size = new System.Drawing.Size(38, 18);
             this.toLBL.TabIndex = 3;
             this.toLBL.Text = "label2";
-            this.toLBL.Visible = false;
             // 
             // requestLBL
             // 
@@ -103,7 +101,6 @@
             this.requestLBL.Size = new System.Drawing.Size(38, 18);
             this.requestLBL.TabIndex = 4;
             this.requestLBL.Text = "label3";
-            this.requestLBL.Visible = false;
             // 
             // statusLBL
             // 
@@ -115,7 +112,6 @@
             this.statusLBL.Size = new System.Drawing.Size(37, 18);
             this.statusLBL.TabIndex = 5;
             this.statusLBL.Text = "label1";
-            this.statusLBL.Visible = false;
             // 
             // label1
             // 
@@ -168,7 +164,7 @@
             this.uperpanel.Controls.Add(this.backBTN);
             this.uperpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.uperpanel.Location = new System.Drawing.Point(0, 0);
-            this.uperpanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uperpanel.Margin = new System.Windows.Forms.Padding(2);
             this.uperpanel.Name = "uperpanel";
             this.uperpanel.Size = new System.Drawing.Size(600, 82);
             this.uperpanel.TabIndex = 58;
@@ -210,9 +206,10 @@
             this.Controls.Add(this.toLBL);
             this.Controls.Add(this.fromLBL);
             this.Controls.Add(this.dataGridView);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "studentViewRequests";
             this.Text = "studentViewRequests";
+            this.Load += new System.EventHandler(this.studentViewRequests_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.uperpanel.ResumeLayout(false);
             this.uperpanel.PerformLayout();
