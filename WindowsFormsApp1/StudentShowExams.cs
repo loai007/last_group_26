@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
 
         private void Show_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         
@@ -44,9 +44,16 @@ namespace WindowsFormsApp1
                 string[] courseDetails = line.Split(' ');
                 if (userDetails[0] == courseDetails[0])
                 {
-                    linecount++;
-                    dt.Rows.Add(courseDetails);
 
+                    linecount++;
+                    if (isDate(courseDetails) == null)
+                        dt.Rows.Add(courseDetails);
+                    else
+                    {
+                        dt.Rows.Add(isDate(courseDetails).Split(' '));
+                        
+
+                    }
                 }
                 //Read the next line
                 line = sr.ReadLine();
@@ -57,6 +64,15 @@ namespace WindowsFormsApp1
             ShowExams.DataSource = dt;
 
         }
+        private string isDate(string[] coursedetails)
+        {
+            string[] line = getData("course.txt", coursedetails[1]);
+            if (line.Length == 6)
+                return null;
+
+            return coursedetails[0] + ' ' +coursedetails[1] + ' ' +coursedetails[2] + ' ' +coursedetails[3] + ' ' + line[6] + ' ' + line[7];
+        }
+
         private string[] getData(string path, string key = null)
         {
             StreamReader sr = new StreamReader(path);
@@ -67,7 +83,11 @@ namespace WindowsFormsApp1
                 details = line.Split(' ');
                 foreach (string c in details)
                     if (c == key)
+                    {
+                        sr.Close();
+                        return details;
                         break;
+                    }
                 line = sr.ReadLine();
             }
             sr.Close();
@@ -75,7 +95,7 @@ namespace WindowsFormsApp1
         }
         private void InitializeGridView(DataTable dt)
         {
-            string[] columnnames = { "Student ID", "Course name", "Day", "Hours" };
+            string[] columnnames = { "Student ID", "Course name", "Day", "Hours", "Exam Date", "Exam Time" };
             foreach (string c in columnnames)
                 dt.Columns.Add(c);
         }
@@ -83,6 +103,11 @@ namespace WindowsFormsApp1
         private void ShowExams_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void StudentShowExams_Load(object sender, EventArgs e)
+        {
+            showData(getData("user.txt"), "coursestudent.txt");
         }
     }
 }

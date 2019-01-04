@@ -144,6 +144,12 @@
     <Compile Include="ManagerAddC.Designer.cs">
       <DependentUpon>ManagerAddC.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerAddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerAddStudent.Designer.cs">
+      <DependentUpon>ManagerAddStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManagerAnswerRequests.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerAddC.resx">
       <DependentUpon>ManagerAddC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerAddStudent.resx">
+      <DependentUpon>ManagerAddStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerAnswerRequests.resx">
       <DependentUpon>ManagerAnswerRequests.cs</DependentUpon>

@@ -78,6 +78,7 @@
             this.fromLBL.Size = new System.Drawing.Size(37, 18);
             this.fromLBL.TabIndex = 2;
             this.fromLBL.Text = "label1";
+            this.fromLBL.Visible = false;
             // 
             // toLBL
             // 
@@ -89,6 +90,7 @@
             this.toLBL.Size = new System.Drawing.Size(38, 18);
             this.toLBL.TabIndex = 3;
             this.toLBL.Text = "label2";
+            this.toLBL.Visible = false;
             // 
             // requestLBL
             // 
@@ -101,6 +103,7 @@
             this.requestLBL.Size = new System.Drawing.Size(38, 18);
             this.requestLBL.TabIndex = 4;
             this.requestLBL.Text = "label3";
+            this.requestLBL.Visible = false;
             // 
             // statusLBL
             // 
@@ -112,6 +115,7 @@
             this.statusLBL.Size = new System.Drawing.Size(37, 18);
             this.statusLBL.TabIndex = 5;
             this.statusLBL.Text = "label1";
+            this.statusLBL.Visible = false;
             // 
             // label1
             // 

@@ -136,5 +136,12 @@ namespace WindowsFormsApp1
             managername_lbl.Text = "Welcome" + " " + getData("user.txt");
             date_lbl.Text = DateTime.Now.ToShortDateString();
         }
+
+        private void addstudent_btn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManagerAddStudent iam = new ManagerAddStudent();
+            iam.Show();
+        }
     }
 }
