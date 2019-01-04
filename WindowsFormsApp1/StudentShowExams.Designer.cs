@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.Back = new System.Windows.Forms.Button();
-            this.Show = new System.Windows.Forms.Button();
             this.ShowExams = new System.Windows.Forms.DataGridView();
             this.uperpanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,7 +40,7 @@
             // 
             this.Back.Font = new System.Drawing.Font("Sitka Display", 10.2F);
             this.Back.Location = new System.Drawing.Point(624, 2);
-            this.Back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Back.Margin = new System.Windows.Forms.Padding(2);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(121, 46);
             this.Back.TabIndex = 0;
@@ -49,27 +48,15 @@
             this.Back.UseVisualStyleBackColor = true;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
-            // Show
-            // 
-            this.Show.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Show.Location = new System.Drawing.Point(315, 416);
-            this.Show.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Show.Name = "Show";
-            this.Show.Size = new System.Drawing.Size(85, 41);
-            this.Show.TabIndex = 2;
-            this.Show.Text = "Show";
-            this.Show.UseVisualStyleBackColor = true;
-            this.Show.Click += new System.EventHandler(this.Show_Click);
-            // 
             // ShowExams
             // 
             this.ShowExams.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ShowExams.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ShowExams.Location = new System.Drawing.Point(112, 144);
-            this.ShowExams.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ShowExams.Location = new System.Drawing.Point(66, 224);
+            this.ShowExams.Margin = new System.Windows.Forms.Padding(2);
             this.ShowExams.Name = "ShowExams";
             this.ShowExams.RowTemplate.Height = 33;
-            this.ShowExams.Size = new System.Drawing.Size(484, 236);
+            this.ShowExams.Size = new System.Drawing.Size(611, 236);
             this.ShowExams.TabIndex = 3;
             this.ShowExams.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ShowExams_CellContentClick);
             // 
@@ -103,10 +90,10 @@
             this.ClientSize = new System.Drawing.Size(747, 549);
             this.Controls.Add(this.uperpanel);
             this.Controls.Add(this.ShowExams);
-            this.Controls.Add(this.Show);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StudentShowExams";
             this.Text = "StudentShowExams";
+            this.Load += new System.EventHandler(this.StudentShowExams_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ShowExams)).EndInit();
             this.uperpanel.ResumeLayout(false);
             this.uperpanel.PerformLayout();
@@ -117,7 +104,6 @@
         #endregion
 
         private System.Windows.Forms.Button Back;
-        private System.Windows.Forms.Button Show;
         private System.Windows.Forms.DataGridView ShowExams;
         private System.Windows.Forms.Panel uperpanel;
         private System.Windows.Forms.Label label2;
