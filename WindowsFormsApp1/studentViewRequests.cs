@@ -113,6 +113,10 @@ namespace WindowsFormsApp1
             toLBL.Text = myId;
             requestLBL.Text =request[selectedIndex];
             statusLBL.Text =status[selectedIndex];
+            fromLBL.Visible = true;
+            toLBL.Visible = true;
+            statusLBL.Visible = true;
+            requestLBL.Visible = true;
         }
 
         private void backBTN_Click(object sender, EventArgs e)
