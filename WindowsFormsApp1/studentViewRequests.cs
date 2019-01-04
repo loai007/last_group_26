@@ -15,6 +15,10 @@ namespace WindowsFormsApp1
         public studentViewRequests()
         {
             InitializeComponent();
+            fromLBL.Text = "";
+            toLBL.Text = "";
+            requestLBL.Text = "";
+            statusLBL.Text = "";
             myId = getData("user.txt")[0];
             myRequestsCoutAndexport();
             showRequestsDGV();
@@ -42,6 +46,8 @@ namespace WindowsFormsApp1
         }
         int count = 0;
         string myId;
+        private int selectedIndex = -1;
+        private bool messages = false;
         string[] fromId;
         string[] request;
         string[] status;
@@ -53,34 +59,43 @@ namespace WindowsFormsApp1
             string line = sr.ReadLine();
             while (line != null)
             {
-                if (line.Split(' ')[0] == myId)
+                string[] details = line.Split(' ');
+
+                if (details[0] == myId)
+                {
                     count++;
+                    messages = true;
+
+                }
+
 
                 line = sr.ReadLine();
+
             }
             bool flag = false;
+
             fromId = new string[count];
             request = new string[count];
             status = new string[count];
             sr.Close();
             sr = new StreamReader("requests.txt");
             line = sr.ReadLine();
-            int i = 0,del;
-            while (line != null && count != 0)
+            int i = 0, del;
+            while (line != null && messages)
             {
                 string[] details = line.Split(' ');
                 if (details[0] == "EOMessage")//"EOMessage"
                 {
                     if (flag)
                     {
-                    status[i] = details[1];
+                        status[i] = details[1];
                         i++;
                     }
                     flag = false;
                 }
 
                 else if (flag)
-                    request[i] +=  line+ "\r\n";
+                    request[i] += line + "\r\n";
 
                 else if (details[0] == myId)
                 {
@@ -95,7 +110,10 @@ namespace WindowsFormsApp1
             }
             sr.Close();
 
+
+
         }
+
         private void showRequestsDGV()
         {
             DataTable dt = new DataTable();
@@ -103,16 +121,21 @@ namespace WindowsFormsApp1
             foreach (string c in columnnames)
                 dt.Columns.Add(c);
             foreach (string c in fromId)
-                dt.Rows.Add(c);
+                if (c != null)
+                    dt.Rows.Add(c);
             dataGridView.DataSource = dt;
         }
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int selectedIndex = dataGridView.CurrentRow.Index;
-            fromLBL.Text= fromId[selectedIndex];
-            toLBL.Text = myId;
-            requestLBL.Text =request[selectedIndex];
-            statusLBL.Text =status[selectedIndex];
+            selectedIndex = dataGridView.CurrentRow.Index;
+            if (messages && selectedIndex < count)
+            {
+                fromLBL.Text = fromId[selectedIndex];
+                toLBL.Text = myId;
+                requestLBL.Text = request[selectedIndex];
+                statusLBL.Text = status[selectedIndex];
+            }
+            else errorLBL.Text = "No Requests";
         }
 
         private void backBTN_Click(object sender, EventArgs e)
