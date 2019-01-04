@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WindowsFormsApp1;
 
@@ -8,9 +9,11 @@ namespace UnitTestProject1
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        
+        public void testUserDetails_Fail()
         {
-            Form1 asshole = new Form1();
+         //   Form1 lol = new Form1();
+           // Assert.ThrowsException<ArgumentException>( () => lol.checkUsernamePassword("ffgh", "any thing"));
         }
-    }
+    } 
 }
