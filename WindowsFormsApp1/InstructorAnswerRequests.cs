@@ -16,14 +16,7 @@ namespace WindowsFormsApp1
         public InstructorAnswerRequests()
         {
             InitializeComponent();
-            errorLBL.Text = "";
-            fromLBL.Text = "";
-            toLBL.Text = "";
-            requestLBL.Text = "";
-            statusLBL.Text = "";
-            myId = getData("user.txt")[0];
-            myRequestsCoutAndexport();
-            showRequestsDGV();
+            
         }
         private string[] getData(string path, string key = null)
         {
@@ -214,6 +207,18 @@ namespace WindowsFormsApp1
                 string holeRequest = fromLBL.Text + " " + toLBL.Text + " " + requestLBL.Text + "EOMessage " + statusLBL.Text;
                 ChangeStatusForRequest(holeRequest, "Denied");
             }
+        }
+
+        private void InstructorAnswerRequests_Load(object sender, EventArgs e)
+        {
+            errorLBL.Text = "";
+            fromLBL.Text = "";
+            toLBL.Text = "";
+            requestLBL.Text = "";
+            statusLBL.Text = "";
+            myId = getData("user.txt")[0];
+            myRequestsCoutAndexport();
+            showRequestsDGV();
         }
     }
 }

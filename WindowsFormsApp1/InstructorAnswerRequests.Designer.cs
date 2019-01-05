@@ -165,7 +165,7 @@
             this.errorLBL.TabIndex = 16;
             this.errorLBL.Text = "request:";
             // 
-            // InstructorViewRequests
+            // InstructorAnswerRequests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -183,8 +183,9 @@
             this.Controls.Add(this.DenyBTN);
             this.Controls.Add(this.approveBTN);
             this.Controls.Add(this.backBTN);
-            this.Name = "InstructorViewRequests";
+            this.Name = "InstructorAnswerRequests";
             this.Text = "InstructorViewRequests";
+            this.Load += new System.EventHandler(this.InstructorAnswerRequests_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
