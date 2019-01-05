@@ -128,9 +128,18 @@ namespace WindowsFormsApp1
             sr.Close();
             return null;
         }
+        public string GetUserName(string welcomeName)
+        {
+            if (string.IsNullOrWhiteSpace(welcomeName))
+            {
+                throw new ArgumentException("No Name Found", "FileEmpty");
+            }
+            return welcomeName;
+        }
         private void studentMain_Load(object sender, EventArgs e)
         {
-            studentname_lbl.Text = "Welcome" + " " + getData("user.txt");
+            
+            studentname_lbl.Text = "Welcome" + " " + GetUserName(getData("user.txt"));
             date_lbl.Text = DateTime.Now.ToShortDateString();
         }
     }

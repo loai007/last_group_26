@@ -97,7 +97,9 @@ namespace WindowsFormsApp1
             if (string.IsNullOrWhiteSpace(un))
             {
                 throw new ArgumentException("Wrong User Name","UserName");
+
             }
+            
             if (string.IsNullOrWhiteSpace(ps))
             {
                 throw new ArgumentException("Wrong Passwod", "PassWord");

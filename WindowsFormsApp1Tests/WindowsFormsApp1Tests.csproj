@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Form1Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="studentMainTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
