@@ -59,7 +59,7 @@
             // 
             // Deletecourse_btn
             // 
-            this.Deletecourse_btn.Font = new System.Drawing.Font("Sitka Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Deletecourse_btn.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Deletecourse_btn.Location = new System.Drawing.Point(370, 449);
             this.Deletecourse_btn.Name = "Deletecourse_btn";
             this.Deletecourse_btn.Size = new System.Drawing.Size(96, 44);

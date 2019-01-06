@@ -80,10 +80,10 @@
             // 
             // show_btn
             // 
-            this.show_btn.Font = new System.Drawing.Font("Sitka Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.show_btn.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.show_btn.Location = new System.Drawing.Point(332, 438);
             this.show_btn.Name = "show_btn";
-            this.show_btn.Size = new System.Drawing.Size(98, 30);
+            this.show_btn.Size = new System.Drawing.Size(103, 33);
             this.show_btn.TabIndex = 4;
             this.show_btn.Text = "Show";
             this.show_btn.UseVisualStyleBackColor = true;
