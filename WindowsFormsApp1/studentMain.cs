@@ -28,19 +28,21 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            //EmptyUserFile();
+            EmptyUserFile("");
 
             Form1 f1 = new Form1();
             f1.Show();
         }
-        private void EmptyUserFile()
+        public bool isLineEmpty(string line)
         {
-
+            return string.IsNullOrEmpty(line);
+        }
+            public void EmptyUserFile(string line)
+        {
+            isLineEmpty(line);
             StreamWriter sw = new StreamWriter("user.txt");
-            string line = "";
             sw.WriteLine(line);
             sw.Close();
-
         }
         private void button2_Click(object sender, EventArgs e)
         {

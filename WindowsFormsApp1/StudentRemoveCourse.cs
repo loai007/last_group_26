@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         public StudentRemoveCourse()
         {
             InitializeComponent();
-            showData(getData("user.txt"), "coursestudent.txt");
+            
         }
         private int deleteRow = -1;
         private void label1_Click(object sender, EventArgs e)
@@ -80,10 +80,10 @@ namespace WindowsFormsApp1
                 label2.Text = "Deleted";
                 sw.Close();
             }
-            
-            
 
-            showData(getData("user.txt"), "coursestudent.txt");
+
+
+            courses_dgv.DataSource =  showData(getData("user.txt"), "coursestudent.txt");
 
         }
 
@@ -96,9 +96,9 @@ namespace WindowsFormsApp1
 
         private void StudentRemoveCourse_Load(object sender, EventArgs e)
         {
-
+            showData(getData("user.txt"), "coursestudent.txt");
         }
-        private void showData(string[] userDetails, string path)
+        private DataTable showData(string[] userDetails, string path)
         {
             StreamReader sr = new StreamReader(path);
             string line = sr.ReadLine();
@@ -120,9 +120,16 @@ namespace WindowsFormsApp1
 
             //close the file
             sr.Close();
-            courses_dgv.DataSource = dt;
+            Datatableisempty(dt.Rows.ToString());
+            return dt;
 
         }
+        public void Datatableisempty(string dt)
+        {
+            if (dt == null)
+                throw new ArgumentException("DataTabel not initialize","EmptyTable");
+        }
+
         private string[] getData(string path, string key = null)
         {
             StreamReader sr = new StreamReader(path);

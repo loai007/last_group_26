@@ -13,11 +13,13 @@ namespace WindowsFormsApp1.Tests
     {
         [TestMethod()]
         [ExpectedException(typeof(ArgumentException))]
-        public void checkUsernamePasswordTest()
+        public void SignInTest()
         {
+            var newform1 = new Form1();
+
             string unWrong = "", unRight = "any";
             string psWrong = "", psRight = "any";
-            var newform1 = new Form1();
+
             newform1.checkUsernamePassword(unWrong, psRight);
             newform1.checkUsernamePassword(unWrong, psWrong);
             newform1.checkUsernamePassword(unRight, psWrong);
@@ -33,9 +35,11 @@ namespace WindowsFormsApp1.Tests
             newform1.creatdoc(emptyline, rightPath);
         }
 
+        
+
     }
     [TestClass()]
-    public class RequestsTest
+    public class StudentAddCourseTest
     {
         [TestMethod()]
         [ExpectedException(typeof(ArgumentException))]
@@ -71,30 +75,117 @@ namespace WindowsFormsApp1.Tests
         }
 
         [TestMethod()]
-        public void GetUserNameTest_shouldWork()
+        public void userNameCorrect()
         {
             var GetName = new studentMain();
             string objA = "my name";
             string objB = GetName.GetUserName("my name");
             Assert.AreEqual(objA, objB);
         }
+        [TestMethod()]
+        public void LogOutTest()
+        {
+
+            var GetName = new studentMain();
+
+            bool expeted = true;
+
+            bool actual=GetName.isLineEmpty("");
+
+            Assert.AreEqual(expeted ,actual);
+        }
+
     }
     [TestClass()]
     public class IstructorShowCourseTest
     {
         [TestMethod()]
-        [ExpectedException(typeof(ArgumentException))]
-        public void GetUserNameTest_trowExiption()
+        public void DayPrintCorrect()
         {
             InstructorShowCourse day = new InstructorShowCourse();
 
             string expicted = "Sunday";
+            string expicted1 = "";
 
-            string actual=day.dayofweek(1);
+            string actual = day.dayofweek(1);
+            string actual1 = day.dayofweek(0);
 
             Assert.AreEqual(expicted, actual);
+            Assert.AreEqual(expicted1, actual1);
         }
 
-       
+
+    }
+    [TestClass()]
+    public class IstructorMainTest
+    {
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentException))]
+        public void LogOutTest()
+        {
+            InstructorMain obj = new InstructorMain();
+
+            obj.fileIsWhiteSpace("");
+        }
+
+
+    }
+    [TestClass()]
+    public class StudentRemoveCourseTest
+    {
+        [TestMethod()]
+        [ExpectedException(typeof(ArgumentException))]
+        public void DataTableIsInsulized()
+        {
+            StudentRemoveCourse obj = new StudentRemoveCourse();
+           obj. Datatableisempty(null);
+        }
+
+
+    }
+    [TestClass()]
+    public class ManagerMainTest
+    {
+        [TestMethod()]
+        public void LogOutTest()
+        {
+            ManagerMain obj = new ManagerMain();
+
+            bool actual = obj.LogOutChick("");
+
+            Assert.IsTrue(actual);
+        }
+
+
+    }
+    [TestClass()]
+    public class ManagerAddCourseTest
+    {
+        [TestMethod()]
+        public void AddCourseDataTest()
+        {
+            ManagerAddCourse obj = new ManagerAddCourse();
+
+            bool actual = obj.CheckInputs("");
+
+            Assert.IsFalse(actual);
+        }
+
+
+    }
+
+
+    [TestClass()]
+    public class ManagerDeleteCourseTest
+    {
+        [TestMethod()]
+        public void falsetest()
+        {
+           
+
+            Assert.IsFalse(false);
+        }
+
+
     }
 }

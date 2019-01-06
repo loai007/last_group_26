@@ -92,7 +92,8 @@ namespace WindowsFormsApp1
         private void InitializeGridView(DataTable dt)
         {
             string[] columnnames = { "Course name", "Points", "Instructor name", "Day", "Hours" , "Department" ,"Exam Date","Exam Time"};
-            foreach(string c in columnnames)
+            
+            foreach (string c in columnnames)
                 dt.Columns.Add(c);
         }
         public void writeToFile(string path,string line)
