@@ -172,6 +172,7 @@
             this.Controls.Add(this.lbl1);
             this.Name = "InstructorShowCourse";
             this.Text = "InstructorShowCourses";
+            this.Load += new System.EventHandler(this.InstructorShowCourse_Load);
             this.uper_panel.ResumeLayout(false);
             this.uper_panel.PerformLayout();
             this.ResumeLayout(false);
