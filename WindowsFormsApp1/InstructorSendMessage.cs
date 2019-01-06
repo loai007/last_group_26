@@ -199,5 +199,10 @@ namespace WindowsFormsApp1
         {
             dataGridView1.DataSource = showStudents();
         }
+
+        private void InstructorSendMessage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

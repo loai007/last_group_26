@@ -56,20 +56,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(244, 354);
+            this.label1.Font = new System.Drawing.Font("Sitka Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(189, 354);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 24);
+            this.label1.Size = new System.Drawing.Size(110, 28);
             this.label1.TabIndex = 1;
             this.label1.Text = "Student ID :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(244, 398);
+            this.label3.Font = new System.Drawing.Font("Sitka Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(189, 398);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 24);
+            this.label3.Size = new System.Drawing.Size(127, 28);
             this.label3.TabIndex = 3;
             this.label3.Text = "Course Mark :";
             // 
@@ -77,7 +77,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Sitka Display", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(210, 34);
+            this.label2.Location = new System.Drawing.Point(189, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(393, 58);
             this.label2.TabIndex = 4;
@@ -85,14 +85,14 @@
             // 
             // nameTb
             // 
-            this.nameTb.Location = new System.Drawing.Point(391, 356);
+            this.nameTb.Location = new System.Drawing.Point(336, 356);
             this.nameTb.Name = "nameTb";
             this.nameTb.Size = new System.Drawing.Size(100, 22);
             this.nameTb.TabIndex = 5;
             // 
             // markTb
             // 
-            this.markTb.Location = new System.Drawing.Point(391, 400);
+            this.markTb.Location = new System.Drawing.Point(336, 400);
             this.markTb.Name = "markTb";
             this.markTb.Size = new System.Drawing.Size(100, 22);
             this.markTb.TabIndex = 6;
@@ -100,7 +100,7 @@
             // UpdateMarkBtn
             // 
             this.UpdateMarkBtn.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateMarkBtn.Location = new System.Drawing.Point(534, 366);
+            this.UpdateMarkBtn.Location = new System.Drawing.Point(479, 366);
             this.UpdateMarkBtn.Name = "UpdateMarkBtn";
             this.UpdateMarkBtn.Size = new System.Drawing.Size(115, 44);
             this.UpdateMarkBtn.TabIndex = 7;
@@ -112,7 +112,7 @@
             // 
             this.dataGridViewMarks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewMarks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMarks.Location = new System.Drawing.Point(51, 163);
+            this.dataGridViewMarks.Location = new System.Drawing.Point(24, 162);
             this.dataGridViewMarks.Name = "dataGridViewMarks";
             this.dataGridViewMarks.RowTemplate.Height = 24;
             this.dataGridViewMarks.Size = new System.Drawing.Size(687, 150);
@@ -121,7 +121,7 @@
             // messagelbl
             // 
             this.messagelbl.AutoSize = true;
-            this.messagelbl.Location = new System.Drawing.Point(388, 442);
+            this.messagelbl.Location = new System.Drawing.Point(333, 442);
             this.messagelbl.Name = "messagelbl";
             this.messagelbl.Size = new System.Drawing.Size(0, 17);
             this.messagelbl.TabIndex = 9;

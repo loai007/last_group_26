@@ -46,10 +46,10 @@
             // 
             // sst
             // 
-            this.sst.Location = new System.Drawing.Point(26, 119);
-            this.sst.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sst.Location = new System.Drawing.Point(35, 146);
+            this.sst.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sst.Name = "sst";
-            this.sst.Size = new System.Drawing.Size(75, 39);
+            this.sst.Size = new System.Drawing.Size(100, 48);
             this.sst.TabIndex = 0;
             this.sst.Text = "Schedule";
             this.sst.UseVisualStyleBackColor = true;
@@ -58,10 +58,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Sitka Display", 10.2F);
-            this.button1.Location = new System.Drawing.Point(476, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(635, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 37);
+            this.button1.Size = new System.Drawing.Size(109, 46);
             this.button1.TabIndex = 51;
             this.button1.Text = "Log out";
             this.button1.UseVisualStyleBackColor = true;
@@ -69,10 +69,10 @@
             // 
             // AddCourse
             // 
-            this.AddCourse.Location = new System.Drawing.Point(136, 119);
-            this.AddCourse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddCourse.Location = new System.Drawing.Point(181, 146);
+            this.AddCourse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddCourse.Name = "AddCourse";
-            this.AddCourse.Size = new System.Drawing.Size(75, 39);
+            this.AddCourse.Size = new System.Drawing.Size(100, 48);
             this.AddCourse.TabIndex = 53;
             this.AddCourse.Text = "Add Course";
             this.AddCourse.UseVisualStyleBackColor = true;
@@ -80,10 +80,10 @@
             // 
             // RemoveCorse
             // 
-            this.RemoveCorse.Location = new System.Drawing.Point(250, 119);
-            this.RemoveCorse.Margin = new System.Windows.Forms.Padding(2);
+            this.RemoveCorse.Location = new System.Drawing.Point(333, 146);
+            this.RemoveCorse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RemoveCorse.Name = "RemoveCorse";
-            this.RemoveCorse.Size = new System.Drawing.Size(75, 39);
+            this.RemoveCorse.Size = new System.Drawing.Size(100, 48);
             this.RemoveCorse.TabIndex = 54;
             this.RemoveCorse.Text = "Remove Course";
             this.RemoveCorse.UseVisualStyleBackColor = true;
@@ -91,10 +91,10 @@
             // 
             // ViewGreadsbtn
             // 
-            this.ViewGreadsbtn.Location = new System.Drawing.Point(363, 119);
-            this.ViewGreadsbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ViewGreadsbtn.Location = new System.Drawing.Point(484, 146);
+            this.ViewGreadsbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ViewGreadsbtn.Name = "ViewGreadsbtn";
-            this.ViewGreadsbtn.Size = new System.Drawing.Size(75, 39);
+            this.ViewGreadsbtn.Size = new System.Drawing.Size(100, 48);
             this.ViewGreadsbtn.TabIndex = 55;
             this.ViewGreadsbtn.Text = "ViewGread";
             this.ViewGreadsbtn.UseVisualStyleBackColor = true;
@@ -102,10 +102,10 @@
             // 
             // Exams
             // 
-            this.Exams.Location = new System.Drawing.Point(466, 119);
-            this.Exams.Margin = new System.Windows.Forms.Padding(2);
+            this.Exams.Location = new System.Drawing.Point(621, 146);
+            this.Exams.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Exams.Name = "Exams";
-            this.Exams.Size = new System.Drawing.Size(75, 39);
+            this.Exams.Size = new System.Drawing.Size(100, 48);
             this.Exams.TabIndex = 56;
             this.Exams.Text = "Exams";
             this.Exams.UseVisualStyleBackColor = true;
@@ -113,10 +113,10 @@
             // 
             // viewMessagesBTN
             // 
-            this.viewMessagesBTN.Location = new System.Drawing.Point(415, 224);
-            this.viewMessagesBTN.Margin = new System.Windows.Forms.Padding(2);
+            this.viewMessagesBTN.Location = new System.Drawing.Point(564, 276);
+            this.viewMessagesBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.viewMessagesBTN.Name = "viewMessagesBTN";
-            this.viewMessagesBTN.Size = new System.Drawing.Size(75, 39);
+            this.viewMessagesBTN.Size = new System.Drawing.Size(117, 52);
             this.viewMessagesBTN.TabIndex = 57;
             this.viewMessagesBTN.Text = "View Messages";
             this.viewMessagesBTN.UseVisualStyleBackColor = true;
@@ -124,10 +124,10 @@
             // 
             // sendMessagesBTN
             // 
-            this.sendMessagesBTN.Location = new System.Drawing.Point(311, 224);
-            this.sendMessagesBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sendMessagesBTN.Location = new System.Drawing.Point(407, 276);
+            this.sendMessagesBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sendMessagesBTN.Name = "sendMessagesBTN";
-            this.sendMessagesBTN.Size = new System.Drawing.Size(62, 42);
+            this.sendMessagesBTN.Size = new System.Drawing.Size(108, 52);
             this.sendMessagesBTN.TabIndex = 58;
             this.sendMessagesBTN.Text = "Send Messages";
             this.sendMessagesBTN.UseVisualStyleBackColor = true;
@@ -135,10 +135,10 @@
             // 
             // SendRequestBTN
             // 
-            this.SendRequestBTN.Location = new System.Drawing.Point(197, 224);
-            this.SendRequestBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SendRequestBTN.Location = new System.Drawing.Point(257, 276);
+            this.SendRequestBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SendRequestBTN.Name = "SendRequestBTN";
-            this.SendRequestBTN.Size = new System.Drawing.Size(56, 42);
+            this.SendRequestBTN.Size = new System.Drawing.Size(99, 52);
             this.SendRequestBTN.TabIndex = 59;
             this.SendRequestBTN.Text = "Send Request";
             this.SendRequestBTN.UseVisualStyleBackColor = true;
@@ -146,10 +146,10 @@
             // 
             // viewRequestsBTN
             // 
-            this.viewRequestsBTN.Location = new System.Drawing.Point(64, 224);
-            this.viewRequestsBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.viewRequestsBTN.Location = new System.Drawing.Point(76, 276);
+            this.viewRequestsBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.viewRequestsBTN.Name = "viewRequestsBTN";
-            this.viewRequestsBTN.Size = new System.Drawing.Size(94, 42);
+            this.viewRequestsBTN.Size = new System.Drawing.Size(125, 52);
             this.viewRequestsBTN.TabIndex = 60;
             this.viewRequestsBTN.Text = "View Requests Status";
             this.viewRequestsBTN.UseVisualStyleBackColor = true;
@@ -159,10 +159,9 @@
             // 
             this.studentname_lbl.AutoSize = true;
             this.studentname_lbl.Font = new System.Drawing.Font("Sitka Display", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentname_lbl.Location = new System.Drawing.Point(154, 34);
-            this.studentname_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.studentname_lbl.Location = new System.Drawing.Point(205, 42);
             this.studentname_lbl.Name = "studentname_lbl";
-            this.studentname_lbl.Size = new System.Drawing.Size(85, 43);
+            this.studentname_lbl.Size = new System.Drawing.Size(108, 55);
             this.studentname_lbl.TabIndex = 61;
             this.studentname_lbl.Text = "label1";
             // 
@@ -174,28 +173,27 @@
             this.uperpanel.Controls.Add(this.button1);
             this.uperpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.uperpanel.Location = new System.Drawing.Point(0, 0);
-            this.uperpanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uperpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uperpanel.Name = "uperpanel";
-            this.uperpanel.Size = new System.Drawing.Size(561, 82);
+            this.uperpanel.Size = new System.Drawing.Size(748, 101);
             this.uperpanel.TabIndex = 63;
             // 
             // date_lbl
             // 
             this.date_lbl.AutoSize = true;
             this.date_lbl.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_lbl.Location = new System.Drawing.Point(23, 47);
-            this.date_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.date_lbl.Location = new System.Drawing.Point(31, 58);
             this.date_lbl.Name = "date_lbl";
-            this.date_lbl.Size = new System.Drawing.Size(49, 28);
+            this.date_lbl.Size = new System.Drawing.Size(62, 35);
             this.date_lbl.TabIndex = 62;
             this.date_lbl.Text = "Date";
             // 
             // studentMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(561, 446);
+            this.ClientSize = new System.Drawing.Size(748, 549);
             this.Controls.Add(this.uperpanel);
             this.Controls.Add(this.viewRequestsBTN);
             this.Controls.Add(this.SendRequestBTN);
@@ -206,7 +204,7 @@
             this.Controls.Add(this.RemoveCorse);
             this.Controls.Add(this.AddCourse);
             this.Controls.Add(this.sst);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "studentMain";
             this.Text = "studentMain";
             this.Load += new System.EventHandler(this.studentMain_Load);

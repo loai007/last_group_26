@@ -97,6 +97,7 @@
             // 
             // courses_dgv
             // 
+            this.courses_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.courses_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.courses_dgv.Location = new System.Drawing.Point(90, 145);
             this.courses_dgv.Name = "courses_dgv";
