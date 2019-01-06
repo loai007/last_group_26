@@ -102,6 +102,7 @@
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Sitka Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(124, 161);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 28);
@@ -142,7 +143,7 @@
             this.date_lbl.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date_lbl.Location = new System.Drawing.Point(616, 122);
             this.date_lbl.Name = "date_lbl";
-            this.date_lbl.Size = new System.Drawing.Size(60, 33);
+            this.date_lbl.Size = new System.Drawing.Size(62, 35);
             this.date_lbl.TabIndex = 2;
             this.date_lbl.Text = "Date";
             // 
