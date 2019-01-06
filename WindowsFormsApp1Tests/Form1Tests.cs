@@ -21,7 +21,6 @@ namespace WindowsFormsApp1.Tests
             newform1.checkUsernamePassword(unWrong, psRight);
             newform1.checkUsernamePassword(unWrong, psWrong);
             newform1.checkUsernamePassword(unRight, psWrong);
-            //Assert.Fail();
         }
 
         [TestMethod()]
@@ -33,5 +32,16 @@ namespace WindowsFormsApp1.Tests
             string  rightPath = "user.txt", emptyline ="";
             newform1.creatdoc(emptyline, rightPath);
         }
+
+    }
+    [TestClass()]
+    public class RequestsTest
+    {
+        [TestMethod()]
+        public void checkUsernamePasswordTest()
+        {
+            // Requests actual = new Requesrs();
+        }
+
     }
 }
