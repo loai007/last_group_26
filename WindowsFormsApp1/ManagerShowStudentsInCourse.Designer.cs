@@ -117,9 +117,9 @@
             this.label9.Font = new System.Drawing.Font("Sitka Display", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(228, 32);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(314, 58);
+            this.label9.Size = new System.Drawing.Size(326, 58);
             this.label9.TabIndex = 4;
-            this.label9.Text = "Studens In Course";
+            this.label9.Text = "Students In Course";
             // 
             // ManagerShowStudentsInCourse
             // 

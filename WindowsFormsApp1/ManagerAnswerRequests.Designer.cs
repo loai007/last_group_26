@@ -205,11 +205,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Sitka Display", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(152, 33);
+            this.label7.Location = new System.Drawing.Point(228, 37);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(439, 58);
+            this.label7.Size = new System.Drawing.Size(293, 58);
             this.label7.TabIndex = 4;
-            this.label7.Text = "Upload Course Exam Date";
+            this.label7.Text = "Answer Requests";
             // 
             // ManagerAnswerRequests
             // 
