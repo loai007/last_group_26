@@ -41,13 +41,14 @@
             this.studentname_lbl = new System.Windows.Forms.Label();
             this.uperpanel = new System.Windows.Forms.Panel();
             this.date_lbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.uperpanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // sst
             // 
             this.sst.Location = new System.Drawing.Point(26, 119);
-            this.sst.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sst.Margin = new System.Windows.Forms.Padding(2);
             this.sst.Name = "sst";
             this.sst.Size = new System.Drawing.Size(75, 39);
             this.sst.TabIndex = 0;
@@ -59,7 +60,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Sitka Display", 10.2F);
             this.button1.Location = new System.Drawing.Point(476, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(82, 37);
             this.button1.TabIndex = 51;
@@ -70,7 +71,7 @@
             // AddCourse
             // 
             this.AddCourse.Location = new System.Drawing.Point(136, 119);
-            this.AddCourse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddCourse.Margin = new System.Windows.Forms.Padding(2);
             this.AddCourse.Name = "AddCourse";
             this.AddCourse.Size = new System.Drawing.Size(75, 39);
             this.AddCourse.TabIndex = 53;
@@ -92,7 +93,7 @@
             // ViewGreadsbtn
             // 
             this.ViewGreadsbtn.Location = new System.Drawing.Point(363, 119);
-            this.ViewGreadsbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ViewGreadsbtn.Margin = new System.Windows.Forms.Padding(2);
             this.ViewGreadsbtn.Name = "ViewGreadsbtn";
             this.ViewGreadsbtn.Size = new System.Drawing.Size(75, 39);
             this.ViewGreadsbtn.TabIndex = 55;
@@ -125,7 +126,7 @@
             // sendMessagesBTN
             // 
             this.sendMessagesBTN.Location = new System.Drawing.Point(311, 224);
-            this.sendMessagesBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sendMessagesBTN.Margin = new System.Windows.Forms.Padding(2);
             this.sendMessagesBTN.Name = "sendMessagesBTN";
             this.sendMessagesBTN.Size = new System.Drawing.Size(62, 42);
             this.sendMessagesBTN.TabIndex = 58;
@@ -136,7 +137,7 @@
             // SendRequestBTN
             // 
             this.SendRequestBTN.Location = new System.Drawing.Point(197, 224);
-            this.SendRequestBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SendRequestBTN.Margin = new System.Windows.Forms.Padding(2);
             this.SendRequestBTN.Name = "SendRequestBTN";
             this.SendRequestBTN.Size = new System.Drawing.Size(56, 42);
             this.SendRequestBTN.TabIndex = 59;
@@ -147,7 +148,7 @@
             // viewRequestsBTN
             // 
             this.viewRequestsBTN.Location = new System.Drawing.Point(64, 224);
-            this.viewRequestsBTN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.viewRequestsBTN.Margin = new System.Windows.Forms.Padding(2);
             this.viewRequestsBTN.Name = "viewRequestsBTN";
             this.viewRequestsBTN.Size = new System.Drawing.Size(94, 42);
             this.viewRequestsBTN.TabIndex = 60;
@@ -174,7 +175,7 @@
             this.uperpanel.Controls.Add(this.button1);
             this.uperpanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.uperpanel.Location = new System.Drawing.Point(0, 0);
-            this.uperpanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uperpanel.Margin = new System.Windows.Forms.Padding(2);
             this.uperpanel.Name = "uperpanel";
             this.uperpanel.Size = new System.Drawing.Size(561, 82);
             this.uperpanel.TabIndex = 63;
@@ -190,12 +191,22 @@
             this.date_lbl.TabIndex = 62;
             this.date_lbl.Text = "Date";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(395, 209);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 13);
+            this.label1.TabIndex = 64;
+            this.label1.Text = "not working correctly";
+            // 
             // studentMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(561, 446);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.uperpanel);
             this.Controls.Add(this.viewRequestsBTN);
             this.Controls.Add(this.SendRequestBTN);
@@ -206,13 +217,14 @@
             this.Controls.Add(this.RemoveCorse);
             this.Controls.Add(this.AddCourse);
             this.Controls.Add(this.sst);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "studentMain";
             this.Text = "studentMain";
             this.Load += new System.EventHandler(this.studentMain_Load);
             this.uperpanel.ResumeLayout(false);
             this.uperpanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -231,5 +243,6 @@
         private System.Windows.Forms.Label studentname_lbl;
         private System.Windows.Forms.Panel uperpanel;
         private System.Windows.Forms.Label date_lbl;
+        private System.Windows.Forms.Label label1;
     }
 }

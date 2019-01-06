@@ -164,5 +164,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void dataGridViewCourses_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            textBoxAddCourse.Text = dataGridViewCourses.CurrentRow.Cells[0].Value.ToString();
+        }
     }
 }

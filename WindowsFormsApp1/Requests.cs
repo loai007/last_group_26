@@ -15,17 +15,9 @@ namespace WindowsFormsApp1
         {
             UserDetails = getData("user.txt");
             myId = UserDetails[0];
-            ///ToDO
-            /// dataGridView.DataSource = dt;
-            /// myRequestsCout();
-            /// myRequestsexport();\ ChangeStatusForRequest(holeRequest, newStatus);
-            /// errorLBL.ForeColor = System.Drawing.Color.Black;
-            /// errorLBL.Text = "Request " + newStatus;
-
         }
         public int count = 0;
         public bool messages = false;
-        //public int selectedIndex = -1;
         public string myId;
         public string[] fromId;
         public string[] request;
@@ -58,13 +50,11 @@ namespace WindowsFormsApp1
             string[] details;
             while (line != null)
             {
-                 details = line.Split(' ');
+                details = line.Split(' ');
                 if (details.Length >= 2)
                 {
                     if (details[1] == myId)
                     {
-                        //flagbinding = true;
-
                         while (line != null && details[0] != "EOMessage")
                         {
                             details = line.Split(' ');
@@ -77,12 +67,9 @@ namespace WindowsFormsApp1
                         }
                     }
                 }
-                
-                    line = sr.ReadLine();
-
+                line = sr.ReadLine();
             }
             sr.Close();
-
         }
         public void myRequestsCout()
         {
@@ -91,12 +78,10 @@ namespace WindowsFormsApp1
             while (line != null)
             {
                 string[] details = line.Split(' ');
-
                 if (details[0] == myId)
                 {
                     count++;
                     messages = true;
-
                 }
                 line = sr.ReadLine();
             }
@@ -104,8 +89,8 @@ namespace WindowsFormsApp1
 
 
         }
-        public void RequestsExport() {
-
+        public void RequestsExport()
+        {
             fromId = new string[count + 1];
             request = new string[count + 1];
             status = new string[count + 1];

@@ -51,14 +51,10 @@ namespace WindowsFormsApp1
                     massageStart = true;
                     toLBL.Text = details[0];
                     fromLBL.Text = details[1];
-                    for (int zb = 2; zb < details.Length; zb++)
-                        messageLBL.Text += details[zb] + ' ';
+                    for (int b = 2; b < details.Length; b++)
+                        messageLBL.Text += details[b] + ' ';
                 }
-
                 line = sr.ReadLine();
-
-
-
             }
             sr.Close();
             return Message;
