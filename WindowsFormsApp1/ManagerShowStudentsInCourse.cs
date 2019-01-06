@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             erore_lbl.Visible = false;
+            showData(getData("user.txt"));
         }
 
         private void showData(string[] userDetails)

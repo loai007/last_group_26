@@ -16,168 +16,188 @@ namespace WindowsFormsApp1
         public InstructorAnswerRequests()
         {
             InitializeComponent();
-            
+            myId = getData("user.txt")[0];
         }
         private int selectedIndex=-1;
-        private Requests reqObj = new Requests();
-        //private string[] getData(string path, string key = null)
-        //{
-        //    StreamReader sr = new StreamReader(path);
-        //    string line = sr.ReadLine();
-        //    if (line == null)
-        //        return null;
-        //    string[] details = line.Split(' ');
-        //    while (line != null && key != null)
-        //    {
-        //        details = line.Split(' ');
-        //        foreach (string c in details)
-        //            if (c == key)
-        //                break;
-        //        line = sr.ReadLine();
-        //    }
-        //    sr.Close();
-        //    return details;
-        //}
-        //private int count = 0;
-        //private bool messages = false;
-        //private string myId;
-        //private string[] fromId;
-        //private string[] request;
-        //private string[] status;
+        public int count = 0;
+        public bool messages = false;
+        public string myId;
+        public string[] fromId;
+        public string[] request;
+        public string[] status;
+        public string[] UserDetails;
+        public string[] getData(string path, string key = null)
+        {
+            StreamReader sr = new StreamReader(path);
+            string line = sr.ReadLine();
+            if (line == null)
+                return null;
+            string[] details = line.Split(' ');
+            while (line != null && key != null)
+            {
+                details = line.Split(' ');
+                foreach (string c in details)
+                    if (c == key)
+                        break;
+                line = sr.ReadLine();
+            }
+            sr.Close();
+            return details;
+        }
+        public void RequestsCout()
+        {
+            StreamReader sr = new StreamReader("requests.txt");
+            string line = sr.ReadLine();
+            messages = false;
+            string[] details;
+            while (line != null)
+            {
+                details = line.Split(' ');
+                if (details.Length >= 2)
+                {
+                    if (details[1] == myId)
+                    {
+                        //flagbinding = true;
 
+                        while (line != null && details[0] != "EOMessage")
+                        {
+                            details = line.Split(' ');
+                            line = sr.ReadLine();
+                        }
+                        if (details[1] == "binding")
+                        {
+                            count++;
+                            messages = true;
+                        }
+                    }
+                }
 
-        //private void myRequestsCoutAndexport()
-        //{
-        //    StreamReader sr = new StreamReader("requests.txt");
-        //    string line = sr.ReadLine();
-        //    string[] details;
-        //    while (line != null)
-        //    {
-        //        details = line.Split(' ');
-        //        if (details.Length >= 2)
-        //        {
-        //            if (details[1] == myId)
-        //            {
-        //                while (line != null && details[0] != "EOMessage")
-        //                {
-        //                    details = line.Split(' ');
-        //                    line = sr.ReadLine();
-        //                }
-        //                if (details[1] == "binding")
-        //                {
-        //                    count++;
-        //                    messages = true;
-        //                }
-        //            }
-        //        }
-        //        else
-        //            line = sr.ReadLine();
+                line = sr.ReadLine();
 
-        //    }
+            }
+            sr.Close();
 
+        }
+        public void RequestsExport()
+        {
 
-            //    details = line.Split(' ');
-            //    fromId = new string[count];
-            //    request = new string[count];
-            //    status = new string[count];
-            //    sr.Close();
-            //    sr = new StreamReader("requests.txt");
-            //    line = sr.ReadLine();
-            //    int i = 0,del;
-            //    while (line != null && messages)
-            //    {
-            //        if (details.Length >= 2)
-            //            if (details[1] == myId)
-            //            {
-            //                request[i] = "";
-            //                fromId[i] = details[0];
-            //                del = details[0].Length + details[1].Length + 2;
-            //                request[i] += line.Remove(0, del);
-            //                request[i] += "\r\n";
+            fromId = new string[count + 1];
+            request = new string[count + 1];
+            status = new string[count + 1];
 
-            //                //secoud part where the masseage is
-            //                line = sr.ReadLine();
-            //                details = line.Split(' ');
-            //                while (line != null)
-            //                {
-            //                    details = line.Split(' ');
-            //                    if (details[0] == "EOMessage") break;
-            //                    request[i] += line + "\r\n";
-            //                    line = sr.ReadLine();
-            //                }
-            //                //lastpart where the EOMessage
-            //                if (details[1] == "binding")
-            //                {
-            //                    status[i] = details[1];
-            //                    i++;
-            //                }
-            //                else fromId[i] = null;
-            //            }
-            //        line = sr.ReadLine();
+            var sr = new StreamReader("requests.txt");
+            string line = sr.ReadLine();
+            int i = 0, del;
+            while (line != null && messages)
+            {
+                //first part of every message/request 
+                string[] details = line.Split(' ');
+                if (details.Length >= 2)
+                    if (details[1] == myId)
+                    {
+                        request[i] = "";
+                        fromId[i] = details[0];
+                        del = details[0].Length + details[1].Length + 2;
+                        request[i] += line.Remove(0, del);
+                        request[i] += "\r\n";
 
-            //    }
-            //    sr.Close();
+                        //secoud part where the masseage is
+                        line = sr.ReadLine();
+                        details = line.Split(' ');
+                        while (line != null)
+                        {
+                            details = line.Split(' ');
+                            if (details[0] == "EOMessage") break;
+                            request[i] += line + "\r\n";
+                            line = sr.ReadLine();
+                        }
+                        //lastpart where the EOMessage
+                        if (details[1] == "binding")
+                        {
+                            status[i] = details[1];
+                            i++;
+                        }
+                        else fromId[i] = null;
+                    }
+                line = sr.ReadLine();
+            }
+            sr.Close();
 
-            //}
-            //private void showRequestsDGV()
-            //{
-            //    DataTable dt = new DataTable();
-            //    string[] columnnames = { "Request from" };
-            //    foreach (string c in columnnames)
-            //        dt.Columns.Add(c);
-            //    foreach (string c in fromId)
-            //        if (c!=null)
-            //        dt.Rows.Add(c);
-            //    dataGridView.DataSource = dt;
-            //}
-            //private void ChangeStatusForRequest(string holeRequest, string newStatus)
-            //{
-            //    bool found = true;
-            //    string[] Lines = File.ReadAllLines("requests.txt");
-            //    string requestFinder = "";
-            //    File.Delete("requests.txt");// Deleting the file
-            //    using (StreamWriter sw = File.AppendText("requests.txt"))
+        }
+        public bool doesntExist(string path, string key1)
+        {
+            StreamReader sr = new StreamReader(path);
 
-            //        for (int i = 0; i < Lines.Length; i++)
+            string line = sr.ReadLine();
+            while (line != null)
+            {
 
-            //            if (found)
-            //            {
-            //                sw.WriteLine(Lines[i]);
-            //                requestFinder = Lines[i] + "\r\n";
-            //                found = false;
+                string[] details = line.Split(' ');
+                if (details[0] == key1)
+                {
+                    sr.Close();
+                    return false;
+                }
+                line = sr.ReadLine();
 
-            //            }
-            //            else
-            //            {
+            }
+            sr.Close();
+            return true;
+        }
+        public void ChangeStatusForRequest(string holeRequest, string newStatus)
+        {
+            bool found = true;
+            string[] Lines = File.ReadAllLines("requests.txt");
+            string requestFinder = "";
+            File.Delete("requests.txt");// Deleting the file
+            using (StreamWriter sw = File.AppendText("requests.txt"))
 
-            //                if (Lines[i].Split(' ')[0] == "EOMessage")
-            //                {
-            //                    if (requestFinder + "EOMessage binding" == holeRequest)
-            //                        sw.WriteLine("EOMessage " + newStatus);
-            //                    else
-            //                        sw.WriteLine(Lines[i]);
-            //                    found = true;
-            //                }
-            //                else sw.WriteLine(Lines[i]);
-            //                requestFinder += Lines[i] + "\r\n";
-            //            }
+                for (int i = 0; i < Lines.Length; i++)
+                {
 
+                    if (found)
+                    {
+                        sw.WriteLine(Lines[i]);
+                        requestFinder = Lines[i] + "\r\n";
+                        found = false;
 
-            //    errorLBL.ForeColor = System.Drawing.Color.Black;
-            //    errorLBL.Text = "Request "+ newStatus;
+                    }
+                    else
+                    {
 
-
-
-            //}
-            private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+                        if (Lines[i].Split(' ')[0] == "EOMessage")
+                        {
+                            if (requestFinder + "EOMessage binding" == holeRequest)
+                                sw.WriteLine("EOMessage " + newStatus);
+                            else
+                                sw.WriteLine(Lines[i]);
+                            found = true;
+                        }
+                        else sw.WriteLine(Lines[i]);
+                        requestFinder += Lines[i] + "\r\n";
+                    }
+                }
+        }
+        public DataTable showRequestsDGV()
+        {
+            DataTable dt = new DataTable();
+            string[] columnnames = { "Request from" };
+            foreach (string c in columnnames)
+                dt.Columns.Add(c);
+            foreach (string c in fromId)
+                if (c != null)
+                    dt.Rows.Add(c);
+            return dt;
+        }
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
              selectedIndex = dataGridView.CurrentRow.Index;
-            if (reqObj.count != 0)
+            if (count != 0)
             {
-                fromLBL.Text = reqObj.fromId[selectedIndex];
-                toLBL.Text = reqObj.myId;
-                requestLBL.Text = reqObj.request[selectedIndex];
-                statusLBL.Text = reqObj.status[selectedIndex];
+                fromLBL.Text = fromId[selectedIndex];
+                toLBL.Text = myId;
+                requestLBL.Text = request[selectedIndex];
+                statusLBL.Text = status[selectedIndex];
             }
             else errorLBL.Text = "No Requests";
         }
@@ -193,9 +213,9 @@ namespace WindowsFormsApp1
         {
             if (selectedIndex > -1)
             {
-                reqObj.status[selectedIndex] = "Approved";
+                status[selectedIndex] = "Approved";
                 string holeRequest = fromLBL.Text + " " + toLBL.Text + " " + requestLBL.Text + "EOMessage " + statusLBL.Text;
-                reqObj.ChangeStatusForRequest(holeRequest, "Approved");
+                ChangeStatusForRequest(holeRequest, "Approved");
                 errorLBL.ForeColor = System.Drawing.Color.Black;
                 errorLBL.Text = "Request Approved";
             }
@@ -206,9 +226,9 @@ namespace WindowsFormsApp1
         {
             if (selectedIndex > -1)
             {
-                reqObj.status[selectedIndex] = "Denied";
+                status[selectedIndex] = "Denied";
                 string holeRequest = fromLBL.Text + " " + toLBL.Text + " " + requestLBL.Text + "EOMessage " + statusLBL.Text;
-                reqObj.ChangeStatusForRequest(holeRequest, "Denied");
+                ChangeStatusForRequest(holeRequest, "Denied");
                 errorLBL.ForeColor = System.Drawing.Color.Black;
                 errorLBL.Text = "Request Denied";
             }
@@ -221,9 +241,9 @@ namespace WindowsFormsApp1
             toLBL.Text = "";
             requestLBL.Text = "";
             statusLBL.Text = "";
-            reqObj.RequestsCout();
-            reqObj.RequestsExport();
-            dataGridView.DataSource= reqObj.showRequestsDGV();
+            RequestsCout();
+            RequestsExport();
+            dataGridView.DataSource= showRequestsDGV();
         }
     }
 }

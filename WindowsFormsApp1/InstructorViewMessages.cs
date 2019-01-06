@@ -17,12 +17,19 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             myId = getData("user.txt")[0];
-            myMessagesCoutAndExport();
+            myMessagesCout();
+            myMessagesExport();
             showMessagesDGV();
             fromLBL.Text = "";
             toLBL.Text = "";
             messageLBL.Text = "";
         }
+        public int count = 0;
+        public bool messages = false;
+        public string myId;
+        public string[] fromId;
+        public string[] MessageTxt;
+        public string[] UserDetails;
         private void showMessagesDGV()
         {
             DataTable dt = new DataTable();
@@ -51,71 +58,80 @@ namespace WindowsFormsApp1
             sr.Close();
             return details;
         }
-        int count = 0;
-        string myId;
-        string[] fromId;
-        string[] messageTxt;
         
-        private void myMessagesCoutAndExport()
+        public void myMessagesCout()
         {
-
-
             StreamReader sr = new StreamReader("messages.txt");
             string line = sr.ReadLine();
             while (line != null)
             {
                 string[] details = line.Split(' ');
-                if (details[0] == myId)
-                    count++;
 
+                if (details[0] == myId)
+                {
+                    count++;
+                    messages = true;
+
+                }
                 line = sr.ReadLine();
             }
+            sr.Close();
+
+
+        }
+        public void myMessagesExport()
+        {
             bool flag = false;
             fromId = new string[count];
-            messageTxt = new string[count];
-           
-            sr.Close();
-            sr = new StreamReader("messages.txt");
-            line = sr.ReadLine();
-            int i = 0;
-            while (line != null && count != 0)
+            MessageTxt = new string[count];
+            StreamReader sr = new StreamReader("messages.txt");
+            string line = sr.ReadLine();
+            int i = 0, del;
+            while (line != null && messages)
             {
                 string[] details = line.Split(' ');
                 if (details[0] == "EOMessage")//"EOMessage"
                 {
-                    if (flag) i++;
+                    if (flag)
+                        i++;
                     flag = false;
-                    
                 }
-
                 else if (flag)
-                {
-                    for (int c = 0; c < details.Length; c++)
-                        messageTxt[i] += "\r\n" + details[c];
-                }
-
+                    MessageTxt[i] += line + "\r\n";
                 else if (details[0] == myId)
                 {
                     fromId[i] = details[1];
-                    for (int c = 2; c < details.Length; c++)
-                    {
-                        messageTxt[i] += "\r\n" + details[c];
-                    }
+                    del = details[0].Length + details[1].Length + 2;
+                    MessageTxt[i] += line.Remove(0, del);
+                    MessageTxt[i] += "\r\n";
                     flag = true;
                 }
 
                 line = sr.ReadLine();
             }
             sr.Close();
-
         }
+
+        public DataTable showRequestsDGV()
+        {
+            DataTable dt = new DataTable();
+            string[] columnnames = { "Message from" };
+            foreach (string c in columnnames)
+                dt.Columns.Add(c);
+            foreach (string c in fromId)
+                if (c != null)
+                    dt.Rows.Add(c);
+            return dt;
+        }
+
+        
 
         private void dataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int selectedIndex = dataGridView.CurrentRow.Index;
             fromLBL.Text = fromId[selectedIndex];
             toLBL.Text = myId;
-            messageLBL.Text = messageTxt[selectedIndex];
+            messageLBL.Text = MessageTxt[selectedIndex];
         }
 
         private void backBTN_Click(object sender, EventArgs e)

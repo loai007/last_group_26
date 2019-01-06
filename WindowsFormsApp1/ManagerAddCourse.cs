@@ -11,9 +11,9 @@ using System.Windows.Forms;
 //update
 namespace WindowsFormsApp1
 {
-    public partial class ManagerAddC : Form
+    public partial class ManagerAddCourse : Form
     {
-        public ManagerAddC()
+        public ManagerAddCourse()
         {
             InitializeComponent();
         }
@@ -63,40 +63,35 @@ namespace WindowsFormsApp1
             sr.Close();
             return true; 
         }
+        public bool CheckInputs(string data)
+        {
+            return (!(string.IsNullOrWhiteSpace(data)));
+        }
         private void addbut_Click(object sender, EventArgs e)
         {
+            string day = daybox.Text
+            , points = points_txt.Text
+            , time = timebox.Text
+            , cname = cnamebox.Text
+            , phn = txtphn.Text
+            , dep = depbox.Text
+            , last = lastnbox.Text
+            , name = namebox.Text
+            , pass = passbox.Text
+            ,id = idbox.Text;
             int flag = 1;
-            string id = idbox.Text;
-            if (id=="")
+            if (CheckInputs(id)
+            && CheckInputs(pass)
+            && CheckInputs(name)
+            && CheckInputs(last)
+            && CheckInputs(dep)
+            && CheckInputs(phn)
+            && CheckInputs(cname)
+            && CheckInputs(day)
+            && CheckInputs(time)
+            && CheckInputs(points))
                 flag = 0;
-            string pass = passbox.Text;
-            if (pass == "")
-                flag = 0;
-            string name = namebox.Text;
-            if (name == "")
-                flag = 0;
-            string last = lastnbox.Text;
-            if (last == "")
-                flag = 0;
-            string dep = depbox.Text;
-            if (dep == "")
-                flag = 0;
-            string phn = txtphn.Text;
-            if (phn == "")
-                flag = 0;
-            string cname = cnamebox.Text;
-            if (cname == "")
-                flag = 0;
-            string day = daybox.Text;
-            if (day == "")
-                flag = 0;
-            string time = timebox.Text;
-            if (time == "")
-                flag = 0;
-            string points = points_txt.Text;
-            if (points == "")
-                flag = 0;
-
+            
 
             char s = ' ';
             if (flag != 0 && ifID(id)==true)

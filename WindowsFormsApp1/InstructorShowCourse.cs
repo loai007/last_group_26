@@ -57,7 +57,7 @@ namespace WindowsFormsApp1
             tohour += 2;
             hour_lbl.Text = cs_details[7] + ":00" +" - "+ tohour.ToString() + ":00";
 
-
+            sr.Close();
 
         }
         private void Back_btn_Click(object sender, EventArgs e)

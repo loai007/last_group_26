@@ -27,16 +27,26 @@ namespace WindowsFormsApp1
             string line = sr.ReadLine();
             //DataGridView dt = new DataGridView();
             DataTable dt = new DataTable();
+            string[] temp = new string[8];
             InitializeGridView(dt);//does as the name say
             //Continue to read until you reach end of file
             while (line != null)
             {
                 string[] courseDetails = line.Split(' ');
-
+               
                 if (userDetails[5] == courseDetails[5])
                 {
+                        int i = 0;
+                    if (courseDetails.Length < 7)
+                    {
+                        foreach (string c in courseDetails)
+                            temp[i++] = c;
+                        temp[i++] = "NOT SET";
+                        temp[i++] = "NOT SET";
+                        dt.Rows.Add(temp);
+                    }
 
-                    dt.Rows.Add(getData("course.txt", courseDetails[0]));
+                    else dt.Rows.Add(courseDetails);
 
                 }
                 //Read the next line
@@ -74,7 +84,7 @@ namespace WindowsFormsApp1
         }
         private void InitializeGridView(DataTable dt)
         {
-            string[] columnnames = { "Course Name", "Points", "Instructor First Name", "Day", "Hour", "Department" };
+            string[] columnnames = { "Course Name", "Points", "Instructor First Name", "Day", "Hour", "Department", "Exam Date", "Exam Time" };
             foreach (string c in columnnames)
                 dt.Columns.Add(c);
         }
