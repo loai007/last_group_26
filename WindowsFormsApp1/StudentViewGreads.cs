@@ -22,7 +22,7 @@ namespace WindowsFormsApp1
         }
         private void InitializeGridView(DataTable dt)
         {
-            string[] columnnames = { "student name", "course name", "mark "};
+            string[] columnnames = { "student ID", "course name", "mark "};
             foreach (string c in columnnames)
                 dt.Columns.Add(c);
         }
