@@ -179,7 +179,7 @@ namespace WindowsFormsApp1.Tests
     public class ManagerDeleteCourseTest
     {
         [TestMethod()]
-        public void falsetest()
+        public void falseTest()
         {
            
 
