@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
         public ManagerAnswerRequests()
         {
             InitializeComponent();
-            myId = UserDetails[0];
+            myId = getData("user.txt")[0];
             errorLBL.Text = "";
         }
         private int selectedIndex = -1;

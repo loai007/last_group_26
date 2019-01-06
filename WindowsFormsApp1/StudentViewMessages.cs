@@ -134,9 +134,12 @@ namespace WindowsFormsApp1
         private void dataGridMessage_RowHeaderMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {
             int selectedIndex = dataGridMessage.CurrentRow.Index;
-            fromLBL.Text = fromId[selectedIndex];
-            toLBL.Text = myId;
-            messageLBL.Text = MessageTxt[selectedIndex];
+           if(selectedIndex<count)
+            {
+                fromLBL.Text = fromId[selectedIndex];
+                toLBL.Text = myId;
+                messageLBL.Text = MessageTxt[selectedIndex];
+            }
         }
     }
 }
