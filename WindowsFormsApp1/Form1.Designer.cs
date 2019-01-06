@@ -86,19 +86,21 @@
             // textBoxun
             // 
             this.textBoxun.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxun.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxun.ForeColor = System.Drawing.Color.Black;
             this.textBoxun.Location = new System.Drawing.Point(173, 57);
             this.textBoxun.Name = "textBoxun";
-            this.textBoxun.Size = new System.Drawing.Size(100, 30);
+            this.textBoxun.Size = new System.Drawing.Size(100, 28);
             this.textBoxun.TabIndex = 0;
             this.textBoxun.TextChanged += new System.EventHandler(this.textBoxun_TextChanged);
             this.textBoxun.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxun_KeyDown);
             // 
             // textBoxps
             // 
+            this.textBoxps.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxps.Location = new System.Drawing.Point(173, 100);
             this.textBoxps.Name = "textBoxps";
-            this.textBoxps.Size = new System.Drawing.Size(100, 30);
+            this.textBoxps.Size = new System.Drawing.Size(100, 28);
             this.textBoxps.TabIndex = 1;
             this.textBoxps.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxps_KeyDown);
             // 
