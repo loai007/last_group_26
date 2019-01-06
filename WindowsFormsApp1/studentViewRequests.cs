@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
             toLBL.Text = "";
             requestLBL.Text = "";
             statusLBL.Text = "";
-            myId = UserDetails[0];
+            myId = getData("user.txt")[0];
             myRequestsCout();
             myRequestsExport();
             dataGridView.DataSource= showRequestsDGV();
