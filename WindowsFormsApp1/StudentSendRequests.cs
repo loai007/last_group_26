@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
         public StudentSendRequests()
         {
             InitializeComponent();
-            myId = UserDetails[0];
+            myId = getData("user.txt")[0];
 
             dataGridView.DataSource= showInstructors();
             messageLBL.Text = "";
