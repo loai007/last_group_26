@@ -200,6 +200,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests.cs" />
     <Compile Include="StudentRemoveCourse.cs">
       <SubType>Form</SubType>
     </Compile>
