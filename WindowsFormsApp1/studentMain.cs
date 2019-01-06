@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
 
         private void sst_Click(object sender, EventArgs e)
         {
-            Schedule sc = new Schedule();
+            StudentSchedule sc = new StudentSchedule();
             sc.Show();
             this.Hide();
         }

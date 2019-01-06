@@ -16,14 +16,98 @@ namespace WindowsFormsApp1
         public InstructorSendRequests()
         {
             InitializeComponent();
-           dataGridView.DataSource= ReqObj. showManagers();
+           dataGridView.DataSource=  showManagers();
+            myId = getData("user.txt")[0];
             messageLBL.Text = "";
             fromLBL.Text = "Request From Manager";
         }
-        private Requests ReqObj = new Requests();
         string lockfor = "manager.txt";
         string spamDetection = null;
+        public int count = 0;
+        public bool messages = false;
+        public string myId;
+        public string[] fromId;
+        public string[] request;
+        public string[] status;
+        public string[] UserDetails;
+        public string[] getData(string path, string key = null)
+        {
+            StreamReader sr = new StreamReader(path);
+            string line = sr.ReadLine();
+            if (line == null)
+                return null;
+            string[] details = line.Split(' ');
+            while (line != null && key != null)
+            {
+                details = line.Split(' ');
+                foreach (string c in details)
+                    if (c == key)
+                        break;
+                line = sr.ReadLine();
+            }
+            sr.Close();
+            return details;
+        }
+        public bool doesntExist(string path, string key1)
+        {
+            StreamReader sr = new StreamReader(path);
 
+            string line = sr.ReadLine();
+            while (line != null)
+            {
+
+                string[] details = line.Split(' ');
+                if (details[0] == key1)
+                {
+                    sr.Close();
+                    return false;
+                }
+                line = sr.ReadLine();
+
+            }
+            sr.Close();
+            return true;
+        }
+        public DataTable showManagers()
+        {
+            StreamReader sr = new StreamReader("manager.txt");
+            string line = sr.ReadLine();
+            DataTable dt = new DataTable();
+            //Initialize Grid View
+            string[] columnnames = { "ID", "Name", "Last Name", "Department", "Phone Numer" };
+            foreach (string c in columnnames)
+                dt.Columns.Add(c);
+            while (line != null)
+            {
+                string[] details = line.Split(' ');
+                if (details.Length >= 6)
+                {
+                    string[] showLine = { details[0], details[2], details[3], details[5], details[4] };
+                    dt.Rows.Add(showLine);
+                }
+                else
+                {
+                    sr.Close();
+                    break;
+                }
+                //Read the next line
+                line = sr.ReadLine();
+            }
+
+            //close the file
+            sr.Close();
+            return dt;
+
+        }
+
+        public void addToRequests(string req, string fromId, string toId)
+        {
+            StreamWriter sw = new StreamWriter("requests.txt", true);
+            string status = "binding";
+            string line = fromId + ' ' + toId + ' ' + req + "\r\nEOMessage " + status;
+            sw.WriteLine(line);
+            sw.Close();
+        }
         private void backBTN_Click(object sender, EventArgs e)
         {
             
@@ -111,13 +195,13 @@ namespace WindowsFormsApp1
 
         private void sendBTN_Click(object sender, EventArgs e)
         {
-            if (ReqObj. doesntExist(lockfor, idTB.Text))
+            if ( doesntExist(lockfor, idTB.Text))
                 messageLBL.Text = "Wrong ID ";
             else
 
                 if (spamDetection != messageTB.Text)
             {
-                ReqObj. addToRequests(messageTB.Text, ReqObj.myId, idTB.Text);
+                 addToRequests(messageTB.Text, myId, idTB.Text);
                 messageLBL.Text = "Sent";
                 spamDetection = messageTB.Text;
             }

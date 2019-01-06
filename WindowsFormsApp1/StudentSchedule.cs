@@ -12,9 +12,9 @@ using System.IO;
 
 namespace WindowsFormsApp1
 {
-    public partial class Schedule : Form
+    public partial class StudentSchedule : Form
     {
-        public Schedule()
+        public StudentSchedule()
         {
             InitializeComponent();
             showtable();

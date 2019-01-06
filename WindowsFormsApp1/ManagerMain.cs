@@ -44,7 +44,7 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ManagerAddC mac = new ManagerAddC();
+            ManagerAddCourse mac = new ManagerAddCourse();
             mac.Show();
         }
 

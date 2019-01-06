@@ -20,130 +20,100 @@ namespace WindowsFormsApp1
             messageLBL.Text = "";
             fromLBL.Text = "";
             toLBL.Text = "";
-            int messageCount = MessagesCounter(getData("user.txt")[0]);
-            allMessage = new string[messageCount];
-            Messagesfrom(getData("user.txt")[0]);
-            showData(allMessage);
+            myId = getData("user.txt")[0];
+            myMessagesCout();
+            myMessagesExport();
+            dataGridMessage.DataSource = showMessagesDGV();
         }
-        string[] allMessage;
-       
-
-      
-        private string[] getMessage(string to, string from)
-        {
-            StreamReader sr = new StreamReader("messages.txt");
-            string[] Message = new string[3];
-            string line = sr.ReadLine();
-            bool massageStart = false;
-            while (line != null)
-            {
-                string[] details = line.Split(' ');
-                if (details[0] == "EOMessage")
-                    massageStart = false;
-                else if (massageStart)
-                {
-                    messageLBL.Text += "\r\n";
-                    messageLBL.Text += line;
-                }
-                else if (details[0] == to && details[1] == from)
-                {
-                    messageLBL.Text = "";
-                    massageStart = true;
-                    toLBL.Text = details[0];
-                    fromLBL.Text = details[1];
-                    for (int zb = 2; zb < details.Length; zb++)
-                        messageLBL.Text += details[zb] + ' ';
-                }
-
-                line = sr.ReadLine();
-
-
-
-            }
-            sr.Close();
-            return Message;
-        }
-        private int MessagesCounter(string id)
-        {
-            StreamReader sr = new StreamReader("messages.txt");
-            string line = sr.ReadLine();
-            int count = 0;
-            while (line != null)
-            {
-                string[] details = line.Split(' ');
-                if (id == details[0])
-                    count++;
-
-                line = sr.ReadLine();
-
-            }
-            sr.Close();
-            return count;
-
-        }
-        private int Messagesfrom(string id)
-        {
-            StreamReader sr = new StreamReader("messages.txt");
-            string line = sr.ReadLine();
-
-
-
-            int count = 0;
-            while (line != null)
-            {
-                string[] details = line.Split(' ');
-                if (id == details[0])
-                {
-                    allMessage[count] = details[1];
-                    count++;
-                }
-                line = sr.ReadLine();
-
-            }
-            sr.Close();
-            return count;
-
-        }
+        public int count = 0;
+        public bool messages = false;
+        public string myId;
+        public string[] fromId;
+        public string[] MessageTxt;
+        public string[] UserDetails;
+        
         private string[] getData(string path, string key = null)
         {
             StreamReader sr = new StreamReader(path);
             string line = sr.ReadLine();
+            if (line == null)
+                return null;
             string[] details = line.Split(' ');
             while (line != null && key != null)
             {
                 details = line.Split(' ');
-
                 foreach (string c in details)
                     if (c == key)
-                    {
-                        sr.Close();
-                        return details;
-                    }
+                        break;
                 line = sr.ReadLine();
             }
             sr.Close();
-            if (key == null)
-                return details;
-
-            return null;
+            return details;
         }
-        private void showData(string[] userDetails)
-        {
 
+        public void myMessagesCout()
+        {
+            StreamReader sr = new StreamReader("messages.txt");
+            string line = sr.ReadLine();
+            while (line != null)
+            {
+                string[] details = line.Split(' ');
+
+                if (details[0] == myId)
+                {
+                    count++;
+                    messages = true;
+
+                }
+                line = sr.ReadLine();
+            }
+            sr.Close();
+
+
+        }
+        public void myMessagesExport()
+        {
+            bool flag = false;
+            fromId = new string[count];
+            MessageTxt = new string[count];
+            StreamReader sr = new StreamReader("messages.txt");
+            string line = sr.ReadLine();
+            int i = 0, del;
+            while (line != null && messages)
+            {
+                string[] details = line.Split(' ');
+                if (details[0] == "EOMessage")//"EOMessage"
+                {
+                    if (flag)
+                        i++;
+                    flag = false;
+                }
+                else if (flag)
+                    MessageTxt[i] += line + "\r\n";
+                else if (details[0] == myId)
+                {
+                    fromId[i] = details[1];
+                    del = details[0].Length + details[1].Length + 2;
+                    MessageTxt[i] += line.Remove(0, del);
+                    MessageTxt[i] += "\r\n";
+                    flag = true;
+                }
+
+                line = sr.ReadLine();
+            }
+            sr.Close();
+        }
+
+        public DataTable showMessagesDGV()
+        {
             DataTable dt = new DataTable();
-            InitializeGridView(dt);//does as the name say
-            foreach (string c in userDetails)
-                dt.Rows.Add(c);
-
-            //close the file
-            dataGridMessage.DataSource = dt;
-
-        }
-        private void InitializeGridView(DataTable dt)
-        {
-            string[] columnnames = { "message from" };
+            string[] columnnames = { "Message from" };
             foreach (string c in columnnames)
                 dt.Columns.Add(c);
+            foreach (string c in fromId)
+                if (c != null)
+                    dt.Rows.Add(c);
+            return dt;
         }
         private void Messages_Click(object sender, EventArgs e)
         {
@@ -163,8 +133,10 @@ namespace WindowsFormsApp1
 
         private void dataGridMessage_RowHeaderMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {
-            getMessage(getData("user.txt")[0], dataGridMessage.CurrentRow.Cells[0].Value.ToString());
-
+            int selectedIndex = dataGridMessage.CurrentRow.Index;
+            fromLBL.Text = fromId[selectedIndex];
+            toLBL.Text = myId;
+            messageLBL.Text = MessageTxt[selectedIndex];
         }
     }
 }

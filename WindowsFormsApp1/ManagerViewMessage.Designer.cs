@@ -101,7 +101,7 @@
             this.dataGridMessage.TabIndex = 5;
             this.dataGridMessage.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridMessage_RowHeaderMouseClick);
             // 
-            // ManagerMessage
+            // ManagerViewMessage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -112,8 +112,9 @@
             this.Controls.Add(this.toLBL);
             this.Controls.Add(this.Back);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "ManagerMessage";
+            this.Name = "ManagerViewMessage";
             this.Text = "ManagerMessage";
+            this.Load += new System.EventHandler(this.ManagerViewMessage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.collegeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.collegeDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMessage)).EndInit();

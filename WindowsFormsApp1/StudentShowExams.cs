@@ -86,7 +86,6 @@ namespace WindowsFormsApp1
                     {
                         sr.Close();
                         return details;
-                        break;
                     }
                 line = sr.ReadLine();
             }

@@ -9,7 +9,6 @@ using System.Data.OleDb;
 
 namespace WindowsFormsApp1
 {
-   
     static class Program
     {
         

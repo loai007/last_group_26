@@ -80,5 +80,120 @@ namespace WindowsFormsApp1
             }
             else messageLBL.Text = "Fill in the ID or message";
         }
+        public DataTable showInstructors()
+        {
+            StreamReader sr = new StreamReader("instructor.txt");
+            string line = sr.ReadLine();
+            DataTable dt = new DataTable();
+            //Initialize Grid View
+            string[] columnnames = { "ID", "Name", "Last Name", "Department", "Course", "Phone Numer" };
+            foreach (string c in columnnames)
+                dt.Columns.Add(c);
+            while (line != null)
+            {
+                string[] details = line.Split(' ');
+                if (details.Length >= 9)
+                {
+                    string[] showLine = { details[0], details[2], details[3], details[4], details[5], details[8] };
+                    dt.Rows.Add(showLine);
+                }
+                else
+                {
+                    sr.Close();
+                    break;
+                }
+                //Read the next line
+                line = sr.ReadLine();
+            }
+
+            //close the file
+            sr.Close();
+            return dt;
+
+        }
+
+        public DataTable showManagers()
+        {
+            StreamReader sr = new StreamReader("manager.txt");
+            string line = sr.ReadLine();
+            DataTable dt = new DataTable();
+            //Initialize Grid View
+            string[] columnnames = { "ID", "Name", "Last Name", "Department", "Phone Numer" };
+            foreach (string c in columnnames)
+                dt.Columns.Add(c);
+            while (line != null)
+            {
+                string[] details = line.Split(' ');
+                if (details.Length >= 6)
+                {
+                    string[] showLine = { details[0], details[2], details[3], details[5], details[4] };
+                    dt.Rows.Add(showLine);
+                }
+                else
+                {
+                    sr.Close();
+                    break;
+                }
+                //Read the next line
+                line = sr.ReadLine();
+            }
+
+            //close the file
+            sr.Close();
+            return dt;
+
+        }
+
+        public DataTable showStudents()
+        {
+            StreamReader sr = new StreamReader("student.txt");
+            string line = sr.ReadLine();
+            DataTable dt = new DataTable();
+            //Initialize Grid View
+            string[] columnnames = { "ID", "Name", "Last Name", "Department", "Phone Numer" };
+            foreach (string c in columnnames)
+                dt.Columns.Add(c);
+            while (line != null)
+            {
+                string[] details = line.Split(' ');
+                if (details.Length >= 6)
+                {
+                    string[] showLine = { details[0], details[2], details[3], details[5], details[4] };
+                    dt.Rows.Add(showLine);
+                }
+                else
+                {
+                    sr.Close();
+                    break;
+                }
+                //Read the next line
+                line = sr.ReadLine();
+            }
+
+            //close the file
+            sr.Close();
+            return dt;
+
+        }
+
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+             textBoxun.Text= dataGridView1.CurrentRow.Cells[0].Value.ToString();
+        }
+
+        private void ManagerBTN_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = showManagers();
+        }
+
+        private void InstructorBTN_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource =showInstructors();
+        }
+
+        private void StudentBTN_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = showStudents();
+        }
     }
 }

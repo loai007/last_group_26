@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class ManagerAddC
+    partial class ManagerAddCourse
     {
         /// <summary>
         /// Required designer variable.

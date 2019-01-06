@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Schedule
+    partial class StudentSchedule
     {
         /// <summary>
         /// Required designer variable.
