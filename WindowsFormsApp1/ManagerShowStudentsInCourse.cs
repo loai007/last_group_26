@@ -128,5 +128,11 @@ namespace WindowsFormsApp1
         {
             showData(getData("user.txt"));
         }
+
+        private void ManagerShowStudentsInCourse_Load(object sender, EventArgs e)
+        {
+            
+            erore_lbl.Visible = false;
+        }
     }
 }

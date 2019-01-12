@@ -146,7 +146,7 @@
             // 
             // add_btn
             // 
-            this.add_btn.Location = new System.Drawing.Point(487, 241);
+            this.add_btn.Location = new System.Drawing.Point(418, 241);
             this.add_btn.Name = "add_btn";
             this.add_btn.Size = new System.Drawing.Size(87, 34);
             this.add_btn.TabIndex = 11;
@@ -158,7 +158,7 @@
             // 
             this.error_lbl.AutoSize = true;
             this.error_lbl.Font = new System.Drawing.Font("Sitka Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.error_lbl.Location = new System.Drawing.Point(482, 308);
+            this.error_lbl.Location = new System.Drawing.Point(413, 312);
             this.error_lbl.Name = "error_lbl";
             this.error_lbl.Size = new System.Drawing.Size(55, 28);
             this.error_lbl.TabIndex = 12;

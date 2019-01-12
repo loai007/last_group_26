@@ -52,7 +52,7 @@ namespace WindowsFormsApp1
             else
             {
                 error_lbl.Visible = true;
-                error_lbl.Text = "Error something went wrong 🍑";
+                error_lbl.Text = "Fill in all blanks ";
             }
 
         }
