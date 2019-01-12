@@ -50,7 +50,7 @@
             this.sst.Location = new System.Drawing.Point(21, 175);
             this.sst.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.sst.Name = "sst";
-            this.sst.Size = new System.Drawing.Size(100, 48);
+            this.sst.Size = new System.Drawing.Size(104, 48);
             this.sst.TabIndex = 0;
             this.sst.Text = "Schedule";
             this.sst.UseVisualStyleBackColor = true;
@@ -71,10 +71,10 @@
             // AddCourse
             // 
             this.AddCourse.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddCourse.Location = new System.Drawing.Point(163, 175);
+            this.AddCourse.Location = new System.Drawing.Point(159, 175);
             this.AddCourse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddCourse.Name = "AddCourse";
-            this.AddCourse.Size = new System.Drawing.Size(107, 48);
+            this.AddCourse.Size = new System.Drawing.Size(111, 48);
             this.AddCourse.TabIndex = 53;
             this.AddCourse.Text = "Add Course";
             this.AddCourse.UseVisualStyleBackColor = true;
