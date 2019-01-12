@@ -28,19 +28,21 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            //EmptyUserFile();
+            EmptyUserFile("");
 
             Form1 f1 = new Form1();
             f1.Show();
         }
-        private void EmptyUserFile()
+        public bool isLineEmpty(string line)
         {
-
+            return string.IsNullOrEmpty(line);
+        }
+            public void EmptyUserFile(string line)
+        {
+            isLineEmpty(line);
             StreamWriter sw = new StreamWriter("user.txt");
-            string line = "";
             sw.WriteLine(line);
             sw.Close();
-
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -128,9 +130,18 @@ namespace WindowsFormsApp1
             sr.Close();
             return null;
         }
+        public string GetUserName(string welcomeName)
+        {
+            if (string.IsNullOrWhiteSpace(welcomeName))
+            {
+                throw new ArgumentException("No Name Found", "FileEmpty");
+            }
+            return welcomeName;
+        }
         private void studentMain_Load(object sender, EventArgs e)
         {
-            studentname_lbl.Text = "Welcome" + " " + getData("user.txt");
+            
+            studentname_lbl.Text = "Welcome" + " " + GetUserName(getData("user.txt"));
             date_lbl.Text = DateTime.Now.ToShortDateString();
         }
     }

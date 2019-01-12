@@ -16,8 +16,7 @@ namespace WindowsFormsApp1
         public StudentAddCourse()
         {
             InitializeComponent();
-            massagelbl.Visible = false;
-            showData(getData("user.txt"), "course.txt");
+            
 
         }
 
@@ -25,8 +24,8 @@ namespace WindowsFormsApp1
 
         private void StudentAddCourse_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'collegeDataSet.courses' table. You can move, or remove it, as needed.
-       // this.coursesTableAdapter.Fill(this.collegeDataSet.courses);
+            massagelbl.Visible = false;
+            showData(getData("user.txt"), "course.txt");
 
         }
 
@@ -93,15 +92,26 @@ namespace WindowsFormsApp1
         private void InitializeGridView(DataTable dt)
         {
             string[] columnnames = { "Course name", "Points", "Instructor name", "Day", "Hours" , "Department" ,"Exam Date","Exam Time"};
-            foreach(string c in columnnames)
+            
+            foreach (string c in columnnames)
                 dt.Columns.Add(c);
         }
-        private void writeToFile(string path,string line)
+        public void writeToFile(string path,string line)
         {
+            if (string.IsNullOrWhiteSpace(line))
+            {
+                throw new ArgumentException("Line is Empty", "writetofileError");
+            }
             StreamWriter sw = new StreamWriter(path, true);
             sw.WriteLine(line);
             sw.Close();
         }
+
+        public bool makesureNotEmpty(string[] userDetails, string[] courseDetail)
+        {
+            return (userDetails!=null && courseDetail!=null); 
+        }
+
         private bool addCourseForUser(string[] userDetails,string[] courseDetail)
         {
             char s = ' ';
@@ -168,7 +178,6 @@ namespace WindowsFormsApp1
         private void dataGridViewCourses_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             textBoxAddCourse.Text = dataGridViewCourses.CurrentRow.Cells[0].Value.ToString();
-
         }
     }
 }

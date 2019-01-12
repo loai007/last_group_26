@@ -16,9 +16,9 @@ namespace WindowsFormsApp1
         public InstructorShowCourse()
         {
             InitializeComponent();
-            checkcourse();
+            
         }
-        private string dayofweek(int day)
+        public string dayofweek(int day)
         {
             switch (day)
             {
@@ -70,6 +70,11 @@ namespace WindowsFormsApp1
         private void name_lbl_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void InstructorShowCourse_Load(object sender, EventArgs e)
+        {
+            checkcourse();
         }
     }
 }

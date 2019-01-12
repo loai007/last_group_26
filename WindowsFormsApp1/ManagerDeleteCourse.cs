@@ -16,7 +16,6 @@ namespace WindowsFormsApp1
         public ManagerDeleteCourse()
         {
             InitializeComponent();
-            showData(getData("user.txt"), "course.txt");
         }
 
         private void back_btn_Click(object sender, EventArgs e)
@@ -157,7 +156,8 @@ namespace WindowsFormsApp1
 
         private void ManagerDeleteCourse_Load(object sender, EventArgs e)
         {
-            
+            showData(getData("user.txt"), "course.txt");
+
         }
 
         private void dataGridViewCourses_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)

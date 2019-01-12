@@ -59,19 +59,26 @@ namespace WindowsFormsApp1
 
             this.Hide();
             Form1 f1 = new Form1();
-            EmptyUserFile();
+            EmptyUserFile("");
             f1.Show();
            
         }
 
-        private void EmptyUserFile()
+        private void EmptyUserFile(string line)
         {
+            if (fileIsWhiteSpace(line)==false)
+            {
+                StreamWriter sw = new StreamWriter("user.txt");
+                sw.WriteLine();
+                sw.Close();
+            }
+        }
 
-            StreamWriter sw = new StreamWriter("user.txt");
-            string line = "";
-            sw.WriteLine(line);
-            sw.Close();
-
+        public bool fileIsWhiteSpace(string line)
+        {
+            if (line == "" || line == null)
+                return true;
+            return false;
         }
 
         private void corses_btn_Click(object sender, EventArgs e)

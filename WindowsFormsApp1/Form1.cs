@@ -18,40 +18,48 @@ namespace WindowsFormsApp1
             InitializeComponent();
             ERE.Text = "";
         }
-        static string FullName;
+
+        
+        public static string FullName;
         //un=user name
         //ps=password
         //path=path of the desired file
-        private bool FindUser(string un, string ps, string path)
+        public bool FindUser(string un, string ps, string path)
         {
-                //Pass the file path and file name to the StreamReader constructor
-                StreamReader sr = new StreamReader(path);
-                //Read the first line of text
-                string line = sr.ReadLine();
-                //Continue to read until you reach end of file
-                while (line != null)
-                {
-                    string[] details = line.Split(' ');
+
+            //Pass the file path and file name to the StreamReader constructor
+            StreamReader sr = new StreamReader(path);
+            //Read the first line of text
+            string line = sr.ReadLine();
+            //Continue to read until you reach end of file
+            while (line != null)
+            {
+                string[] details = line.Split(' ');
                 if (details[0] == un)
                     if (details[1] == ps)
                     {
-                        creatdoc(line);
+                        creatdoc(line, "user.txt");
                         FullName = details[2] + " " + details[3];
                         sr.Close();
                         return true;
                     }
                 //Read the next line
-                    line = sr.ReadLine();
-                }
+                line = sr.ReadLine();
+            }
 
-                //close the file
-                sr.Close();
+            //close the file
+            sr.Close();
             return false;
         }
-        private void creatdoc(string line)
+        public void creatdoc(string line,string path)
         {
+          
+            if (string.IsNullOrWhiteSpace(line))
+            {
+                throw new ArgumentException("Line is Empty","creatfileError");
+            }
             //Pass the filepath and filename to the StreamWriter Constructor
-            StreamWriter sw = new StreamWriter("user.txt");
+            StreamWriter sw = new StreamWriter(path);
 
             //Write a line of text
             sw.WriteLine(line);
@@ -69,9 +77,10 @@ namespace WindowsFormsApp1
            
             string un = textBoxun.Text;
             string ps = textBoxps.Text;
-            if (un != "" && ps != "")
+            if (!(string.IsNullOrWhiteSpace(un) && string.IsNullOrWhiteSpace(ps)))
             {
-                
+
+                checkUsernamePassword(un, ps);
                 if (FindUser(un, ps, "student.txt")) {   this.Hide(); st.Show(); }
                 
                else if (FindUser(un, ps, "instructor.txt")) {   this.Hide(); Task.Delay(1000); ins.Show(); }
@@ -83,7 +92,20 @@ namespace WindowsFormsApp1
             else ERE.Text = "Fill in the password and ID";
 
         }
+        public bool checkUsernamePassword(string un, string ps)
+        {
+            if (string.IsNullOrWhiteSpace(un))
+            {
+                throw new ArgumentException("Wrong User Name","UserName");
 
+            }
+            
+            if (string.IsNullOrWhiteSpace(ps))
+            {
+                throw new ArgumentException("Wrong Passwod", "PassWord");
+            }
+            return true;
+        }
         private void textBoxun_TextChanged(object sender, EventArgs e)
         {
 

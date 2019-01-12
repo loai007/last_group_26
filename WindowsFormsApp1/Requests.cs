@@ -15,13 +15,6 @@ namespace WindowsFormsApp1
         {
             UserDetails = getData("user.txt");
             myId = UserDetails[0];
-            ///ToDO
-            /// dataGridView.DataSource = dt;
-            /// myRequestsCout();
-            /// myRequestsexport();\ ChangeStatusForRequest(holeRequest, newStatus);
-            /// errorLBL.ForeColor = System.Drawing.Color.Black;
-            /// errorLBL.Text = "Request " + newStatus;
-
         }
         public int count = 0;
         public bool messages = false;
@@ -49,64 +42,6 @@ namespace WindowsFormsApp1
             return details;
         }
 
-        public void myRequestsCout()
-        {
-            StreamReader sr = new StreamReader("requests.txt");
-            string line = sr.ReadLine();
-            while (line != null)
-            {
-                string[] details = line.Split(' ');
-
-                if (details[0] == myId)
-                {
-                    count++;
-                    messages = true;
-
-                }
-                line = sr.ReadLine();
-            }
-            sr.Close();
-
-
-        }
-        public void myRequestsExport()
-        {
-            bool flag = false;
-            fromId = new string[count];
-            request = new string[count];
-            status = new string[count];
-            StreamReader sr = new StreamReader("requests.txt");
-            string line = sr.ReadLine();
-            int i = 0, del;
-            while (line != null && messages)
-            {
-                string[] details = line.Split(' ');
-                if (details[0] == "EOMessage")//"EOMessage"
-                {
-                    if (flag)
-                    {
-                        status[i] = details[1];
-                        i++;
-                    }
-                    flag = false;
-                }
-
-                else if (flag)
-                    request[i] += line + "\r\n";
-
-                else if (details[0] == myId)
-                {
-                    fromId[i] = details[1];
-                    del = details[0].Length + details[1].Length + 2;
-                    request[i] += line.Remove(0, del);
-                    request[i] += "\r\n";
-                    flag = true;
-                }
-
-                line = sr.ReadLine();
-            }
-            sr.Close();
-        }
         public void RequestsCout()
         {
             StreamReader sr = new StreamReader("requests.txt");
@@ -115,13 +50,11 @@ namespace WindowsFormsApp1
             string[] details;
             while (line != null)
             {
-                 details = line.Split(' ');
+                details = line.Split(' ');
                 if (details.Length >= 2)
                 {
                     if (details[1] == myId)
                     {
-                        //flagbinding = true;
-
                         while (line != null && details[0] != "EOMessage")
                         {
                             details = line.Split(' ');
@@ -134,15 +67,30 @@ namespace WindowsFormsApp1
                         }
                     }
                 }
-                
-                    line = sr.ReadLine();
-
+                line = sr.ReadLine();
+            }
+            sr.Close();
+        }
+        public void myRequestsCout()
+        {
+            StreamReader sr = new StreamReader("requests.txt");
+            string line = sr.ReadLine();
+            while (line != null)
+            {
+                string[] details = line.Split(' ');
+                if (details[0] == myId)
+                {
+                    count++;
+                    messages = true;
+                }
+                line = sr.ReadLine();
             }
             sr.Close();
 
-        }
-        public void RequestsExport() {
 
+        }
+        public void RequestsExport()
+        {
             fromId = new string[count + 1];
             request = new string[count + 1];
             status = new string[count + 1];
@@ -185,6 +133,44 @@ namespace WindowsFormsApp1
             }
             sr.Close();
 
+        }
+        public void myRequestsExport()
+        {
+            bool flag = false;
+            fromId = new string[count];
+            request = new string[count];
+            status = new string[count];
+            StreamReader sr = new StreamReader("requests.txt");
+            string line = sr.ReadLine();
+            int i = 0, del;
+            while (line != null && messages)
+            {
+                string[] details = line.Split(' ');
+                if (details[0] == "EOMessage")//"EOMessage"
+                {
+                    if (flag)
+                    {
+                        status[i] = details[1];
+                        i++;
+                    }
+                    flag = false;
+                }
+
+                else if (flag)
+                    request[i] += line + "\r\n";
+
+                else if (details[0] == myId)
+                {
+                    fromId[i] = details[1];
+                    del = details[0].Length + details[1].Length + 2;
+                    request[i] += line.Remove(0, del);
+                    request[i] += "\r\n";
+                    flag = true;
+                }
+
+                line = sr.ReadLine();
+            }
+            sr.Close();
         }
         public bool doesntExist(string path, string key1)
         {
@@ -283,15 +269,7 @@ namespace WindowsFormsApp1
 
         }
 
-        public void addToRequests(string req, string fromId, string toId)
-        {
-            StreamWriter sw = new StreamWriter("requests.txt", true);
-            string status = "binding";
-            string line = fromId + ' ' + toId + ' ' + req + "\r\nEOMessage " + status;
-            sw.WriteLine(line);
-            sw.Close();
-        }
-
+        ///////////     Change status      //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         public void ChangeStatusForRequest(string holeRequest, string newStatus)
         {
             bool found = true;
@@ -326,8 +304,15 @@ namespace WindowsFormsApp1
                     }
                 }
         }
-        ///////////     Change status      //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ///////////     add Request      //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        public void addToRequests(string req, string fromId, string toId)
+        {
+            StreamWriter sw = new StreamWriter("requests.txt", true);
+            string status = "binding";
+            string line = fromId + ' ' + toId + ' ' + req + "\r\nEOMessage " + status;
+            sw.WriteLine(line);
+            sw.Close();
+        }
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ///////////     Change status      //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ///////////     Change status      //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
