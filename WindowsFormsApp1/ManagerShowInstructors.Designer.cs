@@ -73,7 +73,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Sitka Display", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(170, 40);
+            this.label9.Location = new System.Drawing.Point(155, 40);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(440, 58);
             this.label9.TabIndex = 4;
