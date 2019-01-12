@@ -200,7 +200,7 @@
             // lblero
             // 
             this.lblero.AutoSize = true;
-            this.lblero.Location = new System.Drawing.Point(408, 291);
+            this.lblero.Location = new System.Drawing.Point(439, 428);
             this.lblero.Name = "lblero";
             this.lblero.Size = new System.Drawing.Size(0, 17);
             this.lblero.TabIndex = 18;
@@ -272,7 +272,7 @@
             this.label9.TabIndex = 4;
             this.label9.Text = "Add New Course";
             // 
-            // ManagerAddC
+            // ManagerAddCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -301,7 +301,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "ManagerAddC";
+            this.Name = "ManagerAddCourse";
             this.Text = "ManagerAddC";
             this.uperpanel.ResumeLayout(false);
             this.uperpanel.PerformLayout();

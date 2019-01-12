@@ -126,7 +126,13 @@ namespace WindowsFormsApp1
 
         private void show_btn_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void ManagerShowStudentsInCourse_Load(object sender, EventArgs e)
+        {
             showData(getData("user.txt"));
+            erore_lbl.Visible = false;
         }
     }
 }

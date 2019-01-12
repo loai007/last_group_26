@@ -105,7 +105,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                lblero.Text = "Error something went wrong 🍑";
+                lblero.Text = "Fill in all blanks ";
             }
         }
         

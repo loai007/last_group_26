@@ -135,6 +135,7 @@
             this.Controls.Add(this.showstudents_grd);
             this.Name = "ManagerShowStudentsInCourse";
             this.Text = "ManagerShowStudentsInCourse";
+            this.Load += new System.EventHandler(this.ManagerShowStudentsInCourse_Load);
             ((System.ComponentModel.ISupportInitialize)(this.showstudents_grd)).EndInit();
             this.uperpanel.ResumeLayout(false);
             this.uperpanel.PerformLayout();
