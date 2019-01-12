@@ -66,17 +66,19 @@ namespace WindowsFormsApp1
 
         private void EmptyUserFile(string line)
         {
-            fileIsWhiteSpace(line);
-            StreamWriter sw = new StreamWriter("user.txt");
-            sw.WriteLine();
-            sw.Close();
-
+            if (fileIsWhiteSpace(line)==false)
+            {
+                StreamWriter sw = new StreamWriter("user.txt");
+                sw.WriteLine();
+                sw.Close();
+            }
         }
 
-        public void fileIsWhiteSpace(string line)
+        public bool fileIsWhiteSpace(string line)
         {
-            if(line==""||line==null)
-            throw new ArgumentException("Line Not Empty","L");
+            if (line == "" || line == null)
+                return true;
+            return false;
         }
 
         private void corses_btn_Click(object sender, EventArgs e)

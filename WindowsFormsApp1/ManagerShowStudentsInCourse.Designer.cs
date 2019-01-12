@@ -43,7 +43,7 @@
             // back_btn
             // 
             this.back_btn.Font = new System.Drawing.Font("Sitka Display", 10.2F);
-            this.back_btn.Location = new System.Drawing.Point(676, 3);
+            this.back_btn.Location = new System.Drawing.Point(623, 3);
             this.back_btn.Name = "back_btn";
             this.back_btn.Size = new System.Drawing.Size(121, 46);
             this.back_btn.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             this.showstudents_grd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.showstudents_grd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.showstudents_grd.Location = new System.Drawing.Point(60, 118);
+            this.showstudents_grd.Location = new System.Drawing.Point(39, 154);
             this.showstudents_grd.Name = "showstudents_grd";
             this.showstudents_grd.RowTemplate.Height = 24;
             this.showstudents_grd.Size = new System.Drawing.Size(659, 183);
@@ -63,7 +63,7 @@
             // 
             // coursename_txtb
             // 
-            this.coursename_txtb.Location = new System.Drawing.Point(310, 357);
+            this.coursename_txtb.Location = new System.Drawing.Point(320, 397);
             this.coursename_txtb.Name = "coursename_txtb";
             this.coursename_txtb.Size = new System.Drawing.Size(126, 22);
             this.coursename_txtb.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(174, 354);
+            this.label1.Location = new System.Drawing.Point(184, 394);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(115, 24);
             this.label1.TabIndex = 3;
@@ -80,10 +80,10 @@
             // 
             // show_btn
             // 
-            this.show_btn.Font = new System.Drawing.Font("Sitka Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.show_btn.Location = new System.Drawing.Point(322, 398);
+            this.show_btn.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.show_btn.Location = new System.Drawing.Point(332, 438);
             this.show_btn.Name = "show_btn";
-            this.show_btn.Size = new System.Drawing.Size(98, 30);
+            this.show_btn.Size = new System.Drawing.Size(103, 33);
             this.show_btn.TabIndex = 4;
             this.show_btn.Text = "Show";
             this.show_btn.UseVisualStyleBackColor = true;
@@ -93,7 +93,7 @@
             // 
             this.erore_lbl.AutoSize = true;
             this.erore_lbl.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.erore_lbl.Location = new System.Drawing.Point(345, 317);
+            this.erore_lbl.Location = new System.Drawing.Point(355, 357);
             this.erore_lbl.Name = "erore_lbl";
             this.erore_lbl.Size = new System.Drawing.Size(49, 24);
             this.erore_lbl.TabIndex = 5;
@@ -108,7 +108,7 @@
             this.uperpanel.Location = new System.Drawing.Point(0, 0);
             this.uperpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uperpanel.Name = "uperpanel";
-            this.uperpanel.Size = new System.Drawing.Size(800, 101);
+            this.uperpanel.Size = new System.Drawing.Size(747, 101);
             this.uperpanel.TabIndex = 64;
             // 
             // label9
@@ -117,16 +117,16 @@
             this.label9.Font = new System.Drawing.Font("Sitka Display", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(228, 32);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(314, 58);
+            this.label9.Size = new System.Drawing.Size(326, 58);
             this.label9.TabIndex = 4;
-            this.label9.Text = "Studens In Course";
+            this.label9.Text = "Students In Course";
             // 
             // ManagerShowStudentsInCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(747, 549);
             this.Controls.Add(this.uperpanel);
             this.Controls.Add(this.erore_lbl);
             this.Controls.Add(this.show_btn);

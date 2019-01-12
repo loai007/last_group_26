@@ -119,7 +119,7 @@
             // 
             this.lbl5.AutoSize = true;
             this.lbl5.Font = new System.Drawing.Font("Sitka Display", 13.8F);
-            this.lbl5.Location = new System.Drawing.Point(280, 178);
+            this.lbl5.Location = new System.Drawing.Point(291, 178);
             this.lbl5.Name = "lbl5";
             this.lbl5.Size = new System.Drawing.Size(26, 35);
             this.lbl5.TabIndex = 34;
@@ -131,7 +131,7 @@
             // 
             this.lbl6.AutoSize = true;
             this.lbl6.Font = new System.Drawing.Font("Sitka Display", 13.8F);
-            this.lbl6.Location = new System.Drawing.Point(280, 284);
+            this.lbl6.Location = new System.Drawing.Point(291, 285);
             this.lbl6.Name = "lbl6";
             this.lbl6.Size = new System.Drawing.Size(27, 35);
             this.lbl6.TabIndex = 35;
@@ -143,7 +143,7 @@
             // 
             this.lbl7.AutoSize = true;
             this.lbl7.Font = new System.Drawing.Font("Sitka Display", 13.8F);
-            this.lbl7.Location = new System.Drawing.Point(283, 389);
+            this.lbl7.Location = new System.Drawing.Point(291, 386);
             this.lbl7.Name = "lbl7";
             this.lbl7.Size = new System.Drawing.Size(26, 35);
             this.lbl7.TabIndex = 36;
@@ -155,7 +155,7 @@
             // 
             this.lbl8.AutoSize = true;
             this.lbl8.Font = new System.Drawing.Font("Sitka Display", 13.8F);
-            this.lbl8.Location = new System.Drawing.Point(280, 482);
+            this.lbl8.Location = new System.Drawing.Point(291, 482);
             this.lbl8.Name = "lbl8";
             this.lbl8.Size = new System.Drawing.Size(28, 35);
             this.lbl8.TabIndex = 37;
@@ -167,7 +167,7 @@
             // 
             this.lbl9.AutoSize = true;
             this.lbl9.Font = new System.Drawing.Font("Sitka Display", 13.8F);
-            this.lbl9.Location = new System.Drawing.Point(419, 178);
+            this.lbl9.Location = new System.Drawing.Point(428, 178);
             this.lbl9.Name = "lbl9";
             this.lbl9.Size = new System.Drawing.Size(27, 35);
             this.lbl9.TabIndex = 38;
@@ -179,7 +179,7 @@
             // 
             this.lbl10.AutoSize = true;
             this.lbl10.Font = new System.Drawing.Font("Sitka Display", 13.8F);
-            this.lbl10.Location = new System.Drawing.Point(419, 283);
+            this.lbl10.Location = new System.Drawing.Point(418, 285);
             this.lbl10.Name = "lbl10";
             this.lbl10.Size = new System.Drawing.Size(37, 35);
             this.lbl10.TabIndex = 39;
@@ -191,7 +191,7 @@
             // 
             this.lbl11.AutoSize = true;
             this.lbl11.Font = new System.Drawing.Font("Sitka Display", 13.8F);
-            this.lbl11.Location = new System.Drawing.Point(419, 388);
+            this.lbl11.Location = new System.Drawing.Point(422, 386);
             this.lbl11.Name = "lbl11";
             this.lbl11.Size = new System.Drawing.Size(33, 35);
             this.lbl11.TabIndex = 40;
@@ -203,7 +203,7 @@
             // 
             this.lbl12.AutoSize = true;
             this.lbl12.Font = new System.Drawing.Font("Sitka Display", 13.8F);
-            this.lbl12.Location = new System.Drawing.Point(419, 482);
+            this.lbl12.Location = new System.Drawing.Point(418, 482);
             this.lbl12.Name = "lbl12";
             this.lbl12.Size = new System.Drawing.Size(36, 35);
             this.lbl12.TabIndex = 41;
@@ -447,7 +447,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(406, 40);
+            this.label3.Location = new System.Drawing.Point(401, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 35);
             this.label3.TabIndex = 52;
@@ -463,7 +463,7 @@
             this.label4.TabIndex = 53;
             this.label4.Text = "Wednesday";
             // 
-            // Schedule
+            // StudentSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -494,7 +494,7 @@
             this.Controls.Add(this.lbl2);
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.lbl4);
-            this.Name = "Schedule";
+            this.Name = "StudentSchedule";
             this.Text = "Schedule";
             this.Load += new System.EventHandler(this.Schedule_Load);
             this.panel2.ResumeLayout(false);

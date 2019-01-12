@@ -120,12 +120,14 @@ namespace WindowsFormsApp1.Tests
     public class IstructorMainTest
     {
         [TestMethod()]
-        [ExpectedException(typeof(ArgumentException))]
+        
         public void LogOutTest()
         {
             InstructorMain obj = new InstructorMain();
 
-            obj.fileIsWhiteSpace("");
+            bool actual=obj.fileIsWhiteSpace("");
+
+            Assert.IsTrue(actual);
         }
 
 

@@ -93,5 +93,10 @@ namespace WindowsFormsApp1
             ManagerMain f4 = new ManagerMain();
             f4.Show();
         }
+
+        private void ManagerAddStudent_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

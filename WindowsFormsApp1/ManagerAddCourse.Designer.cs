@@ -59,70 +59,77 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Sitka Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(45, 155);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 17);
+            this.label1.Size = new System.Drawing.Size(127, 28);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Instructor Id";
+            this.label1.Text = "Instructor Id :";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Sitka Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(45, 192);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 17);
+            this.label2.Size = new System.Drawing.Size(198, 28);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Instructor Passoword";
+            this.label2.Text = "Instructor Passoword :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 232);
+            this.label3.Font = new System.Drawing.Font("Sitka Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(45, 231);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 17);
+            this.label3.Size = new System.Drawing.Size(158, 28);
             this.label3.TabIndex = 2;
-            this.label3.Text = " Instructor Name";
+            this.label3.Text = "Instructor Name :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(45, 269);
+            this.label4.Font = new System.Drawing.Font("Sitka Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(45, 270);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 17);
+            this.label4.Size = new System.Drawing.Size(190, 28);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Instructor Lastname";
+            this.label4.Text = "Instructor Lastname :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(45, 315);
+            this.label5.Font = new System.Drawing.Font("Sitka Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(45, 314);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(145, 17);
+            this.label5.Size = new System.Drawing.Size(209, 28);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Instructor Department";
+            this.label5.Text = "Instructor Department :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(375, 226);
+            this.label6.Font = new System.Drawing.Font("Sitka Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(417, 158);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 17);
+            this.label6.Size = new System.Drawing.Size(131, 28);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Course Name";
+            this.label6.Text = "Course Name :";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(375, 264);
+            this.label7.Font = new System.Drawing.Font("Sitka Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(417, 196);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 17);
+            this.label7.Size = new System.Drawing.Size(114, 28);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Course Day";
+            this.label7.Text = "Course Day :";
             // 
             // idbox
             // 
-            this.idbox.Location = new System.Drawing.Point(205, 150);
+            this.idbox.Location = new System.Drawing.Point(261, 160);
             this.idbox.Name = "idbox";
             this.idbox.Size = new System.Drawing.Size(100, 22);
             this.idbox.TabIndex = 50;
@@ -130,42 +137,42 @@
             // 
             // passbox
             // 
-            this.passbox.Location = new System.Drawing.Point(205, 187);
+            this.passbox.Location = new System.Drawing.Point(261, 197);
             this.passbox.Name = "passbox";
             this.passbox.Size = new System.Drawing.Size(100, 22);
             this.passbox.TabIndex = 51;
             // 
             // namebox
             // 
-            this.namebox.Location = new System.Drawing.Point(205, 227);
+            this.namebox.Location = new System.Drawing.Point(261, 237);
             this.namebox.Name = "namebox";
             this.namebox.Size = new System.Drawing.Size(100, 22);
             this.namebox.TabIndex = 52;
             // 
             // lastnbox
             // 
-            this.lastnbox.Location = new System.Drawing.Point(205, 266);
+            this.lastnbox.Location = new System.Drawing.Point(261, 276);
             this.lastnbox.Name = "lastnbox";
             this.lastnbox.Size = new System.Drawing.Size(100, 22);
             this.lastnbox.TabIndex = 53;
             // 
             // depbox
             // 
-            this.depbox.Location = new System.Drawing.Point(205, 310);
+            this.depbox.Location = new System.Drawing.Point(261, 320);
             this.depbox.Name = "depbox";
             this.depbox.Size = new System.Drawing.Size(100, 22);
             this.depbox.TabIndex = 54;
             // 
             // cnamebox
             // 
-            this.cnamebox.Location = new System.Drawing.Point(532, 222);
+            this.cnamebox.Location = new System.Drawing.Point(599, 164);
             this.cnamebox.Name = "cnamebox";
             this.cnamebox.Size = new System.Drawing.Size(100, 22);
             this.cnamebox.TabIndex = 56;
             // 
             // daybox
             // 
-            this.daybox.Location = new System.Drawing.Point(532, 260);
+            this.daybox.Location = new System.Drawing.Point(599, 202);
             this.daybox.Name = "daybox";
             this.daybox.Size = new System.Drawing.Size(100, 22);
             this.daybox.TabIndex = 57;
@@ -173,7 +180,7 @@
             // addbut
             // 
             this.addbut.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addbut.Location = new System.Drawing.Point(293, 411);
+            this.addbut.Location = new System.Drawing.Point(261, 411);
             this.addbut.Name = "addbut";
             this.addbut.Size = new System.Drawing.Size(121, 46);
             this.addbut.TabIndex = 60;
@@ -183,7 +190,7 @@
             // 
             // timebox
             // 
-            this.timebox.Location = new System.Drawing.Point(532, 303);
+            this.timebox.Location = new System.Drawing.Point(599, 245);
             this.timebox.Name = "timebox";
             this.timebox.Size = new System.Drawing.Size(100, 22);
             this.timebox.TabIndex = 58;
@@ -191,16 +198,17 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(381, 307);
+            this.label8.Font = new System.Drawing.Font("Sitka Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(417, 240);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(88, 17);
+            this.label8.Size = new System.Drawing.Size(125, 28);
             this.label8.TabIndex = 17;
-            this.label8.Text = "Course Time";
+            this.label8.Text = "Course Time :";
             // 
             // lblero
             // 
             this.lblero.AutoSize = true;
-            this.lblero.Location = new System.Drawing.Point(439, 428);
+            this.lblero.Location = new System.Drawing.Point(401, 440);
             this.lblero.Name = "lblero";
             this.lblero.Size = new System.Drawing.Size(0, 17);
             this.lblero.TabIndex = 18;
@@ -218,8 +226,8 @@
             // 
             // txtphn
             // 
-            this.txtphn.Location = new System.Drawing.Point(205, 348);
-            this.txtphn.Margin = new System.Windows.Forms.Padding(2);
+            this.txtphn.Location = new System.Drawing.Point(261, 358);
+            this.txtphn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtphn.Name = "txtphn";
             this.txtphn.Size = new System.Drawing.Size(100, 22);
             this.txtphn.TabIndex = 55;
@@ -227,25 +235,27 @@
             // lblphn
             // 
             this.lblphn.AutoSize = true;
-            this.lblphn.Location = new System.Drawing.Point(54, 351);
+            this.lblphn.Font = new System.Drawing.Font("Sitka Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblphn.Location = new System.Drawing.Point(45, 353);
             this.lblphn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblphn.Name = "lblphn";
-            this.lblphn.Size = new System.Drawing.Size(103, 17);
+            this.lblphn.Size = new System.Drawing.Size(144, 28);
             this.lblphn.TabIndex = 21;
-            this.lblphn.Text = "Phone Number";
+            this.lblphn.Text = "Phone Number :";
             // 
             // points_lbl
             // 
             this.points_lbl.AutoSize = true;
-            this.points_lbl.Location = new System.Drawing.Point(375, 351);
+            this.points_lbl.Font = new System.Drawing.Font("Sitka Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.points_lbl.Location = new System.Drawing.Point(417, 283);
             this.points_lbl.Name = "points_lbl";
-            this.points_lbl.Size = new System.Drawing.Size(125, 17);
+            this.points_lbl.Size = new System.Drawing.Size(166, 28);
             this.points_lbl.TabIndex = 22;
             this.points_lbl.Text = "Number of Points :";
             // 
             // points_txt
             // 
-            this.points_txt.Location = new System.Drawing.Point(532, 346);
+            this.points_txt.Location = new System.Drawing.Point(599, 288);
             this.points_txt.Name = "points_txt";
             this.points_txt.Size = new System.Drawing.Size(100, 22);
             this.points_txt.TabIndex = 59;
