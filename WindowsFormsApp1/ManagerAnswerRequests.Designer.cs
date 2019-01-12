@@ -159,9 +159,9 @@
             // DenyBTN
             // 
             this.DenyBTN.Font = new System.Drawing.Font("Sitka Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DenyBTN.Location = new System.Drawing.Point(641, 373);
+            this.DenyBTN.Location = new System.Drawing.Point(633, 373);
             this.DenyBTN.Name = "DenyBTN";
-            this.DenyBTN.Size = new System.Drawing.Size(79, 37);
+            this.DenyBTN.Size = new System.Drawing.Size(87, 37);
             this.DenyBTN.TabIndex = 19;
             this.DenyBTN.Text = "Deny";
             this.DenyBTN.UseVisualStyleBackColor = true;
@@ -172,7 +172,7 @@
             this.approveBTN.Font = new System.Drawing.Font("Sitka Display", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.approveBTN.Location = new System.Drawing.Point(529, 373);
             this.approveBTN.Name = "approveBTN";
-            this.approveBTN.Size = new System.Drawing.Size(79, 37);
+            this.approveBTN.Size = new System.Drawing.Size(80, 37);
             this.approveBTN.TabIndex = 18;
             this.approveBTN.Text = "Approve";
             this.approveBTN.UseVisualStyleBackColor = true;
@@ -205,11 +205,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Sitka Display", 24F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(152, 33);
+            this.label7.Location = new System.Drawing.Point(228, 37);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(439, 58);
+            this.label7.Size = new System.Drawing.Size(293, 58);
             this.label7.TabIndex = 4;
-            this.label7.Text = "Upload Course Exam Date";
+            this.label7.Text = "Answer Requests";
             // 
             // ManagerAnswerRequests
             // 

@@ -65,46 +65,51 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 72);
+            this.label1.Font = new System.Drawing.Font("Sitka Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(73, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 17);
+            this.label1.Size = new System.Drawing.Size(36, 28);
             this.label1.TabIndex = 0;
-            this.label1.Text = "  ID:";
+            this.label1.Text = "ID:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(59, 100);
+            this.label2.Font = new System.Drawing.Font("Sitka Display", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(59, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 17);
+            this.label2.Size = new System.Drawing.Size(95, 28);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password:";
             // 
             // textBoxun
             // 
             this.textBoxun.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxun.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxun.ForeColor = System.Drawing.Color.Black;
-            this.textBoxun.Location = new System.Drawing.Point(173, 67);
+            this.textBoxun.Location = new System.Drawing.Point(173, 57);
             this.textBoxun.Name = "textBoxun";
-            this.textBoxun.Size = new System.Drawing.Size(100, 22);
+            this.textBoxun.Size = new System.Drawing.Size(100, 28);
             this.textBoxun.TabIndex = 0;
             this.textBoxun.TextChanged += new System.EventHandler(this.textBoxun_TextChanged);
             this.textBoxun.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxun_KeyDown);
             // 
             // textBoxps
             // 
+            this.textBoxps.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxps.Location = new System.Drawing.Point(173, 100);
             this.textBoxps.Name = "textBoxps";
-            this.textBoxps.Size = new System.Drawing.Size(100, 22);
+            this.textBoxps.Size = new System.Drawing.Size(100, 28);
             this.textBoxps.TabIndex = 1;
             this.textBoxps.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxps_KeyDown);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(124, 161);
+            this.button1.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(128, 154);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 28);
+            this.button1.Size = new System.Drawing.Size(100, 41);
             this.button1.TabIndex = 2;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = true;
@@ -113,9 +118,9 @@
             // ERE
             // 
             this.ERE.AutoSize = true;
-            this.ERE.Location = new System.Drawing.Point(75, 228);
+            this.ERE.Location = new System.Drawing.Point(59, 225);
             this.ERE.Name = "ERE";
-            this.ERE.Size = new System.Drawing.Size(184, 17);
+            this.ERE.Size = new System.Drawing.Size(276, 28);
             this.ERE.TabIndex = 7;
             this.ERE.Text = "~~~~~~~~~~~~~~~~~~~~~~";
             this.ERE.UseMnemonic = false;
@@ -128,12 +133,13 @@
             this.groupBox1.Controls.Add(this.textBoxps);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Sitka Display", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(194, 187);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(358, 284);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "user details";
+            this.groupBox1.Text = "User Details";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // date_lbl
@@ -142,7 +148,7 @@
             this.date_lbl.Font = new System.Drawing.Font("Sitka Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date_lbl.Location = new System.Drawing.Point(616, 122);
             this.date_lbl.Name = "date_lbl";
-            this.date_lbl.Size = new System.Drawing.Size(60, 33);
+            this.date_lbl.Size = new System.Drawing.Size(62, 35);
             this.date_lbl.TabIndex = 2;
             this.date_lbl.Text = "Date";
             // 

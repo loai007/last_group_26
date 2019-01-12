@@ -194,7 +194,8 @@
             // 
             // AnswerRequestsBTN
             // 
-            this.AnswerRequestsBTN.Location = new System.Drawing.Point(293, 406);
+            this.AnswerRequestsBTN.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnswerRequestsBTN.Location = new System.Drawing.Point(138, 406);
             this.AnswerRequestsBTN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AnswerRequestsBTN.Name = "AnswerRequestsBTN";
             this.AnswerRequestsBTN.Size = new System.Drawing.Size(140, 68);
@@ -205,7 +206,8 @@
             // 
             // addstudent_btn
             // 
-            this.addstudent_btn.Location = new System.Drawing.Point(533, 406);
+            this.addstudent_btn.Font = new System.Drawing.Font("Sitka Display", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addstudent_btn.Location = new System.Drawing.Point(461, 406);
             this.addstudent_btn.Name = "addstudent_btn";
             this.addstudent_btn.Size = new System.Drawing.Size(140, 64);
             this.addstudent_btn.TabIndex = 62;
