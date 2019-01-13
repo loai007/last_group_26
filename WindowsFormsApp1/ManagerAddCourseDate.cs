@@ -42,41 +42,55 @@ namespace WindowsFormsApp1
 
             return null;
         }
-        private void addDateForCourse(string date, string time, string courseName)
+        private bool iscourse(string course_name)
         {
             StreamReader sr = new StreamReader("course.txt");
-            string line1 = sr.ReadLine();
-            if (line1 == null)
+
+
+            string line = sr.ReadLine();
+            string[] details;// = line.Split(' ');
+            while (string.IsNullOrWhiteSpace(line) != true)
             {
-                messagelbl.ForeColor = System.Drawing.Color.Red;
-                messagelbl.Text = "File Empty";
+                details = line.Split(' ');
+                if (course_name == details[0])
+                {
+                    sr.Close();
+                    return true;
+                }
+                line = sr.ReadLine();
 
             }
-            string[] details = line1.Split(' ');
-            string[] cs_details = line1.Split();
             sr.Close();
+            return false;
 
-            string[] Lines = File.ReadAllLines("course.txt");
-            File.Delete("course.txt");// Deleting the file
-            using (StreamWriter sw = File.AppendText("course.txt"))
+        }
 
-                foreach (string line in Lines)
-                {
-                    string[] splitedLine = line.Split();
-                    if (splitedLine[0] == courseName)
-                    {
-                        string newLine =  splitedLine[0] + ' ' + splitedLine[1] +' ' + splitedLine[2]+' ' + splitedLine[3]+' ' + splitedLine[4]+' ' + splitedLine[5]+' ' + date +' ' + time ;
-                        sw.WriteLine(newLine);
-                    }
-                    else
-                    {
-                        sw.WriteLine(line);
-                    }
-                }
+        private void addDateForCourse(string date, string time, string courseName)
+        {
             
-            messagelbl.ForeColor = System.Drawing.Color.Black;
-            messagelbl.Text = "Course exam time added";
+            if (string.IsNullOrWhiteSpace(courseName) == false &&  iscourse(courseName) == true)
+            {
+                string[] Lines = File.ReadAllLines("course.txt");
+                File.Delete("course.txt");// Deleting the file
+                using (StreamWriter sw = File.AppendText("course.txt"))
 
+                    foreach (string line in Lines)
+                    {
+                        string[] splitedLine = line.Split();
+                        if (splitedLine[0] == courseName)
+                        {
+                            string newLine = splitedLine[0] + ' ' + splitedLine[1] + ' ' + splitedLine[2] + ' ' + splitedLine[3] + ' ' + splitedLine[4] + ' ' + splitedLine[5] + ' ' + date + ' ' + time;
+                            sw.WriteLine(newLine);
+                        }
+                        else
+                        {
+                            sw.WriteLine(line);
+                        }
+                    }
+
+                messagelbl.ForeColor = System.Drawing.Color.Black;
+                messagelbl.Text = "Course exam time added";
+            }
 
         }
         

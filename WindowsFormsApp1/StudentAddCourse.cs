@@ -49,11 +49,12 @@ namespace WindowsFormsApp1
             DataTable dt = new DataTable();
             InitializeGridView(dt);//does as the name say
             //Continue to read until you reach end of file
-            while (line != null)
+            while (!(string.IsNullOrWhiteSpace( line)))
             {
                 string[] courseDetails = line.Split(' ');
                 if (userDetails[5] == courseDetails[5])
                 {
+                    if (doesntExist("coursestudent.txt", userDetails[0], courseDetails[0]))
 
                         dt.Rows.Add(courseDetails);
 
@@ -115,7 +116,7 @@ namespace WindowsFormsApp1
         private bool addCourseForUser(string[] userDetails,string[] courseDetail)
         {
             char s = ' ';
-            if (courseDetail == null)
+            if (string.IsNullOrWhiteSpace(courseDetail[0]))
                 return false;
             if (doesntExist("coursestudent.txt", userDetails[0], courseDetail[0]))
             {
@@ -125,6 +126,8 @@ namespace WindowsFormsApp1
             else return false;
             return true;
         }
+        //if (doesntExist("coursestudent.txt", userDetails[0], courseDetails[0]))
+
         private bool doesntExist(string path,string key1, string key2)
         {
             StreamReader sr = new StreamReader(path);

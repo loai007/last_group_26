@@ -57,7 +57,12 @@ namespace WindowsFormsApp1
         {
             StreamReader sr = new StreamReader(path);
             string line = sr.ReadLine();
-            string[] details = line.Split(' ');
+            if (key == null)
+            {
+                sr.Close();
+                return line.Split(' ');
+            }
+                string[] details;
             while (line != null && key != null)
             {
                 details = line.Split(' ');
@@ -71,8 +76,7 @@ namespace WindowsFormsApp1
                 line = sr.ReadLine();
             }
             sr.Close();
-            if (key == null)
-                return details;
+            
 
             return null;
         }
@@ -87,51 +91,33 @@ namespace WindowsFormsApp1
         private bool iscourse(string course_name)
         {
             StreamReader sr = new StreamReader("course.txt");
+            
 
-            string line = sr.ReadLine();
-            string[] details = line.Split(' ');
-            while (line != null)
-            {
-                if (course_name == details[0])
-                {
-                    sr.Close();
-                    return false;
-                }
-                line = sr.ReadLine();
-                if (line != "" && line != null)
+                string line = sr.ReadLine();
+                string[] details;// = line.Split(' ');
+                while  (string.IsNullOrWhiteSpace(line) != true)
                 {
                     details = line.Split(' ');
-                }
+                    if (course_name == details[0])
+                    {
+                        sr.Close();
+                        return true;
+                    }
+                    line = sr.ReadLine();
 
-            }
-            sr.Close();
-            return true;
+                }
+                sr.Close();
+                return false;
+            
         }
 
-        private void Deletecourse_btn_Click(object sender, EventArgs e)
+        private void Deletecourse(string course_name)
         {
-            StreamReader sr = new StreamReader("course.txt");
-            string line1 = sr.ReadLine();
-            if (line1 == null)
+            if (iscourse(course_name)==false && string.IsNullOrWhiteSpace(course_name)==false)
             {
-                wrongname_lbl.ForeColor = System.Drawing.Color.Red;
-                wrongname_lbl.Text = "File Empty";
-
-            }
-            string[] details = line1.Split(' ');
-            string[] cs_details = line1.Split();
-            sr.Close();
-            string course_name = coursename_txt.Text;
-
-            if (!(iscourse(course_name)))
-            {
-
                 string[] Lines = File.ReadAllLines("course.txt");
-
                 File.Delete("course.txt");// Deleting the file
                 using (StreamWriter sw = File.AppendText("course.txt"))
-
-
                     foreach (string line in Lines)
                     {
                         if (line.IndexOf(course_name) >= 0)
@@ -144,6 +130,7 @@ namespace WindowsFormsApp1
                             sw.WriteLine(line);
                         }
                     }
+                DeleteIstructor(getData("instructor.txt", coursename_txt.Text)[0]);
                 wrongname_lbl.ForeColor = System.Drawing.Color.Black;
                 wrongname_lbl.Text = "Deleted";
             }
@@ -152,6 +139,61 @@ namespace WindowsFormsApp1
                 wrongname_lbl.ForeColor = System.Drawing.Color.Red;
                 wrongname_lbl.Text = "Wrong course name";
             }
+        }
+        private bool ifID(string id, string path)
+        {
+            StreamReader sr = new StreamReader(path);
+
+            string line = sr.ReadLine();
+            string[] details;// = line.Split(' ');
+            while (string.IsNullOrWhiteSpace(line) == true)
+            {
+                details = line.Split(' ');
+                if (id == details[0])
+                {
+                    sr.Close();
+                    return true;
+                }
+                line = sr.ReadLine();
+
+            }
+            sr.Close();
+            return false;
+        }
+        private void DeleteIstructor(string ins_id)
+        {
+            if ((ifID(ins_id, "instructor.txt")))
+            {
+                string[] Lines = File.ReadAllLines("instructor.txt");
+                File.Delete("instructor.txt");// Deleting the file
+                using (StreamWriter sw = File.AppendText("instructor.txt"))
+                    foreach (string line in Lines)
+                    {
+                        if (line.IndexOf(ins_id) >= 0)
+                        {
+                            //Skip the line
+                            continue;
+                        }
+                        else
+                        {
+                            sw.WriteLine(line);
+                        }
+                    }
+                
+                wrongname_lbl.ForeColor = System.Drawing.Color.Black;
+                wrongname_lbl.Text = "Deleted";
+            }
+            else
+            {
+                wrongname_lbl.ForeColor = System.Drawing.Color.Red;
+                wrongname_lbl.Text = "Wrong course name";
+            }
+        }
+        private void Deletecourse_btn_Click(object sender, EventArgs e)
+        {
+            Deletecourse(coursename_txt.Text);
+            
+            
         }
 
         private void ManagerDeleteCourse_Load(object sender, EventArgs e)

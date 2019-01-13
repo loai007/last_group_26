@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+        string lookfor = "manager.txt";        
         public DataTable showInstructors()
         {
             StreamReader sr = new StreamReader("instructor.txt");
@@ -112,9 +113,10 @@ namespace WindowsFormsApp1
             return dt;
 
         }
+
         private void ManagerSendMessage_Load(object sender, EventArgs e)
         {
-
+           dataGridView1.DataSource= showManagers();
         }
 
         private void Back_Click(object sender, EventArgs e)
@@ -123,24 +125,22 @@ namespace WindowsFormsApp1
             ManagerMain f = new ManagerMain();
             f.Show();
         }
+
         private bool ifID(string id,string path)
         {
             StreamReader sr = new StreamReader(path);
 
             string line = sr.ReadLine();
-            string[] details = line.Split(' ');
+            string[] details;
             while (line != null)
             {
+                details = line.Split(' ');
                 if (id == details[0])
                 {
                     sr.Close();
                     return true;
                 }
                 line = sr.ReadLine();
-                if (line != "" && line != null)
-                {
-                    details = line.Split(' ');
-                }
 
             }
             sr.Close();
@@ -149,11 +149,12 @@ namespace WindowsFormsApp1
         private void Send_Click(object sender, EventArgs e)
         {
            string id= StudentId.Text;
-            if (ifID(id, "student.txt") != true && ifID(id, "instructor.txt") != true && ifID(id, "manager.txt") != true)
-                idFind.Text = "id not exist";
+
+            if (ifID(id, lookfor) != true)
+                SendStudent.Text = "id doesn't exist "; 
             else
             {
-                if (Message.Text != "")
+                if (string.IsNullOrWhiteSpace(Message.Text) == false)
                 {
                     char s = ' ';
 
@@ -163,7 +164,7 @@ namespace WindowsFormsApp1
                     string idM = details[0];
                     mi.Close();
 
-                    string message = id + s + idM + s + Message.Text+ "\r\nEOMessage";
+                    string message = id + s + idM + s + Message.Text + "\r\nEOMessage";
                     StreamWriter mw = new StreamWriter("messages.txt", true);
                     mw.WriteLine(message);
                     mw.Close();
@@ -171,7 +172,6 @@ namespace WindowsFormsApp1
                 }
                 else
                     SendStudent.Text = "empty message";
-
             }
 
         }
@@ -188,16 +188,19 @@ namespace WindowsFormsApp1
 
         private void ManagerBTN_Click(object sender, EventArgs e)
         {
+            lookfor = "manager.txt";
             dataGridView1.DataSource = showManagers();
         }
 
         private void InstructorBTN_Click(object sender, EventArgs e)
         {
+            lookfor = "instructor.txt";
             dataGridView1.DataSource = showInstructors();
         }
 
             private void StudentBTN_Click(object sender, EventArgs e)
         {
+            lookfor = "student.txt";
             dataGridView1.DataSource = showStudents();
         }
     }
