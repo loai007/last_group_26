@@ -65,10 +65,10 @@ namespace WindowsFormsApp1
 
         }
 
-        private void addDateForCourse(string date, string time, string courseName)
+        private bool addDateForCourse(string date, string time, string courseName)
         {
-            
-            if (string.IsNullOrWhiteSpace(courseName) == false &&  iscourse(courseName) == true)
+            bool flag = false;
+            if (string.IsNullOrWhiteSpace(courseName) == false && iscourse(courseName) == true)
             {
                 string[] Lines = File.ReadAllLines("course.txt");
                 File.Delete("course.txt");// Deleting the file
@@ -81,6 +81,7 @@ namespace WindowsFormsApp1
                         {
                             string newLine = splitedLine[0] + ' ' + splitedLine[1] + ' ' + splitedLine[2] + ' ' + splitedLine[3] + ' ' + splitedLine[4] + ' ' + splitedLine[5] + ' ' + date + ' ' + time;
                             sw.WriteLine(newLine);
+                            flag = true;
                         }
                         else
                         {
@@ -88,10 +89,18 @@ namespace WindowsFormsApp1
                         }
                     }
 
+            }
+            if (flag)
+            {
                 messagelbl.ForeColor = System.Drawing.Color.Black;
                 messagelbl.Text = "Course exam time added";
             }
-
+            else
+            {
+                messagelbl.ForeColor = System.Drawing.Color.Red;
+                messagelbl.Text = "Course Not Found";
+            }
+            return flag;
         }
         
      
@@ -102,29 +111,39 @@ namespace WindowsFormsApp1
             string[] sTime = time.Split(':');
             if (SDate.Length == 3 && sTime.Length == 2)
             {
-                D = (SDate[0][0] - '0') * 10 + SDate[0][1] - '0';
-                M = (SDate[1][0] - '0') * 10 + SDate[1][1] - '0';
-                Y = (SDate[2][0] - '0') * 1000 + (SDate[2][1] - '0') * 100 + (SDate[2][2] - '0') * 10 + SDate[2][3] - '0';
-                
-                H = (sTime[0][0]  - '0') * 10 + sTime[0][1] - '0';
-                MM = (sTime[1][0] - '0') * 10 + sTime[1][1] - '0'; ;
-                if (((D > 0 && D <= 30) && (M > 0 && M <= 12) && (Y > 0)))
-                    if ((H > 0 && H < 24))
-                    return true;
+                if (SDate[0].Length == 2 && SDate[1].Length == 2 && SDate[2].Length == 4)
+                {
+                    if (sTime[0].Length == 2 && sTime[1].Length == 2)
+                    {
+                        D = (SDate[0][0] - '0') * 10 + SDate[0][1] - '0';
+                        M = (SDate[1][0] - '0') * 10 + SDate[1][1] - '0';
+                        Y = (SDate[2][0] - '0') * 1000 + (SDate[2][1] - '0') * 100 + (SDate[2][2] - '0') * 10 + SDate[2][3] - '0';
 
+                        H = (sTime[0][0] - '0') * 10 + sTime[0][1] - '0';
+                        MM = (sTime[1][0] - '0') * 10 + sTime[1][1] - '0'; ;
+                        if (((D > 0 && D <= 30) && (M > 0 && M <= 12) && (Y > 0)))
+                            if ((H > 0 && H < 24))
+                                return true;
+                    }
+                }
             }
             return false;
         }
-        private void addBTN_Click(object sender, EventArgs e)
+        public  void addBTNClick(string date, string time,string CourseName)
         {
-            if (formedDate(dateTB.Text, timeTB.Text))
+            
+            if (formedDate(date, time))
             {
-                addDateForCourse(dateTB.Text, timeTB.Text, courseNameTB.Text);
-                messagelbl.Text = "Date Added";
+                addDateForCourse(date, time, CourseName);
+               
             }
             else
-                messagelbl.Text = "Wronf format";
-
+                messagelbl.Text= "Wronf format";
+        }
+        private void addBTN_Click(object sender, EventArgs e)
+        {
+            string date = dateTB.Text, time = timeTB.Text,CourseName= courseNameTB.Text;
+            addBTNClick(date, time, CourseName);
 
         }
 
