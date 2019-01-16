@@ -41,13 +41,21 @@ namespace WindowsFormsApp1
                 flag = 0;
             
             char s = ' ';
-            if (flag != 0 && ifID(id) == true)
+            if (flag != 0)
             {
-                string line = (id + s + pass + s + name + s + last + s + phn + s + dep);
+                if (ifID(id) == true)
+                {
+                    string line = (id + s + pass + s + name + s + last + s + phn + s + dep);
 
-                writeToStudentFile(line);
-                error_lbl.Visible = true;
-                error_lbl.Text = "added ☺";
+                    writeToStudentFile(line);
+                    error_lbl.Visible = true;
+                    error_lbl.Text = "added ☺";
+                }
+                else
+                {
+                    error_lbl.Visible = true;
+                    error_lbl.Text = "id Exist";
+                }
             }
             else
             {
@@ -68,19 +76,17 @@ namespace WindowsFormsApp1
             StreamReader sr = new StreamReader("student.txt");
 
             string line = sr.ReadLine();
-            string[] details = line.Split(' ');
+            
             while (line != null)
             {
+                string[] details = line.Split(' ');
                 if (i == details[0])
                 {
                     sr.Close();
                     return false;
                 }
                 line = sr.ReadLine();
-                if (line != "" && line != null)
-                {
-                    details = line.Split(' ');
-                }
+                
 
             }
             sr.Close();
