@@ -64,21 +64,16 @@ namespace WindowsFormsApp1
         }
         public bool CheckInputs(string data)
         {
-            return (!(string.IsNullOrWhiteSpace(data)));
+            return ((string.IsNullOrWhiteSpace(data)));
         }
-        private void addbut_Click(object sender, EventArgs e)
+        public void addbuttonClick(string day , string points , string time, string cname 
+            , string phn , string dep , string last , string name , string pass, string id )
         {
-            string day = daybox.Text , points = points_txt.Text
-            , time = timebox.Text , cname = cnamebox.Text
-            , phn = txtphn.Text, dep = depbox.Text
-            , last = lastnbox.Text , name = namebox.Text
-            , pass = passbox.Text ,id = idbox.Text;
             int flag = 1;
-
-            if (CheckInputs(id) || CheckInputs(pass) || CheckInputs(name)
-            || CheckInputs(last) || CheckInputs(dep) || CheckInputs(phn) 
-            || CheckInputs(cname) || CheckInputs(day)|| CheckInputs(time)
-            || CheckInputs(points))
+            if ((CheckInputs(id) || CheckInputs(pass) || CheckInputs(name)
+            || CheckInputs(last) || CheckInputs(dep) || CheckInputs(phn)
+            || CheckInputs(cname) || CheckInputs(day) || CheckInputs(time)
+            || CheckInputs(points)))
             {
                 flag = 0;
                 lblero.Text = "Fill in all the spaces";
@@ -88,10 +83,10 @@ namespace WindowsFormsApp1
             if (flag != 0 && ifID(id) == true)
             {
                 char s = ' ';
-                string line; 
+                string line;
                 if (doesntExist("instructor.txt", id, cname))
                 {
-                    line = (id + s + pass + s + name + s + last + s + dep + s + cname + s + day + s + time + s + phn); 
+                    line = (id + s + pass + s + name + s + last + s + dep + s + cname + s + day + s + time + s + phn);
                     writeToManagerFile(line);
                     line = (cname + s + points + s + name + s + day + s + time + s + dep);
                     writeToCourseFile(line);
@@ -103,6 +98,24 @@ namespace WindowsFormsApp1
                 lblero.Text = "Course or instructor exist ";
             }
         }
+        private void addbut_Click(object sender, EventArgs e)
+        {
+
+            //            addbuttonClick("2", "5", "3", "cpp"
+            //            , "00000000", "computers", "kh", "sa", "333", "333");
+            //lblero.Text = "Couse Added AUTOMATICLY ";
+
+            string day = daybox.Text, points = points_txt.Text
+            , time = timebox.Text, cname = cnamebox.Text
+            , phn = txtphn.Text, dep = depbox.Text
+            , last = lastnbox.Text, name = namebox.Text
+            , pass = passbox.Text, id = idbox.Text;
+            addbuttonClick(day, points, time, cname
+            , phn, dep, last, name, pass, id);
+
+
+
+        }
         //if (doesntExist("coursestudent.txt", userDetails[0], courseDetails[0]))
 
         private bool doesntExist(string path, string key1, string key2)
@@ -110,7 +123,7 @@ namespace WindowsFormsApp1
             StreamReader sr = new StreamReader(path);
 
             string line = sr.ReadLine();
-            while (string.IsNullOrWhiteSpace( line))
+            while (!string.IsNullOrWhiteSpace( line))
             {
                 string[] details = line.Split(' ');
                 if (details[0] == key1 && details[5] == key2)
