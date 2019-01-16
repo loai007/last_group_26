@@ -18,6 +18,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
             
         }
+        string[] user;
         private int deleteRow = -1;
         private void label1_Click(object sender, EventArgs e)
         {
@@ -45,11 +46,8 @@ namespace WindowsFormsApp1
 
         private void RemoveCourse_Click(object sender, EventArgs e)
         {
-            StreamReader stc = new StreamReader("user.txt");
-            string line = stc.ReadLine();
-            string[] details = line.Split(' ');
-            stc.Close();
-            if (doesntExist("coursestudent.txt", details[0], textcourse.Text) == true)
+            
+            if (doesntExist("coursestudent.txt", user[0], textcourse.Text) == true)
             {
                 label2.ForeColor = System.Drawing.Color.Red;
                 label2.Text = "Course not found ";
@@ -59,14 +57,11 @@ namespace WindowsFormsApp1
                 string[] Lines = File.ReadAllLines("coursestudent.txt");
                 //start righting from the start
                 StreamWriter sw = new StreamWriter("coursestudent.txt");
-
-
-
                 foreach (string part in Lines)
                 {
 
                     string[] splitLine = part.Split(' ');
-                    if (splitLine[0] == details[0] && splitLine[1] == textcourse.Text)
+                    if (splitLine[0] == user[0] && splitLine[1] == textcourse.Text)
                     {
                         //Skip the line
                         continue;
@@ -83,8 +78,8 @@ namespace WindowsFormsApp1
 
 
 
-            courses_dgv.DataSource =  showData(getData("user.txt"), "coursestudent.txt");
-
+            courses_dgv.DataSource =  showData(user, "coursestudent.txt");
+            textcourse.Text = "";
         }
 
         private void back_Click(object sender, EventArgs e)
@@ -96,7 +91,8 @@ namespace WindowsFormsApp1
 
         private void StudentRemoveCourse_Load(object sender, EventArgs e)
         {
-            showData(getData("user.txt"), "coursestudent.txt");
+            user = getData( "user.txt");
+            courses_dgv.DataSource = showData(user, "coursestudent.txt");
         }
         private DataTable showData(string[] userDetails, string path)
         {
@@ -134,7 +130,9 @@ namespace WindowsFormsApp1
         {
             StreamReader sr = new StreamReader(path);
             string line = sr.ReadLine();
-            string[] details = line.Split(' ');
+            string[] details=null;
+            if (!string.IsNullOrWhiteSpace(line))
+             details = line.Split(' ');
             while (line != null && key != null)
             {
                 details = line.Split(' ');
@@ -151,6 +149,11 @@ namespace WindowsFormsApp1
             string[] columnnames = { "Student ID","Course name", "Day", "Hours"};
             foreach (string c in columnnames)
                 dt.Columns.Add(c);
+        }
+
+        private void courses_dgv_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            textcourse.Text = courses_dgv.CurrentRow.Cells[1].Value.ToString();
         }
     }
 }

@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auto data forms\MainAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auto data forms\MainAuto.Designer.cs">
+      <DependentUpon>MainAuto.cs</DependentUpon>
+    </Compile>
     <Compile Include="collegeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -262,6 +268,9 @@
     <Compile Include="studentViewRequests.Designer.cs">
       <DependentUpon>studentViewRequests.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Auto data forms\MainAuto.resx">
+      <DependentUpon>MainAuto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

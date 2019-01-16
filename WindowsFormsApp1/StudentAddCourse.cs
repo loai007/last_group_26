@@ -116,7 +116,7 @@ namespace WindowsFormsApp1
         private bool addCourseForUser(string[] userDetails,string[] courseDetail)
         {
             char s = ' ';
-            if (string.IsNullOrWhiteSpace(courseDetail[0]))
+            if (courseDetail==null || courseDetail.Length==0|| string.IsNullOrWhiteSpace(courseDetail[0]))
                 return false;
             if (doesntExist("coursestudent.txt", userDetails[0], courseDetail[0]))
             {
@@ -180,7 +180,17 @@ namespace WindowsFormsApp1
 
         private void dataGridViewCourses_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            textBoxAddCourse.Text = dataGridViewCourses.CurrentRow.Cells[0].Value.ToString();
+            string courseName= dataGridViewCourses.CurrentRow.Cells[0].Value.ToString();
+            if (!string.IsNullOrWhiteSpace(courseName))
+            {
+                textBoxAddCourse.Text = courseName;
+            }
+            else
+            {
+                massagelbl.Visible = true;
+                massagelbl.ForeColor = System.Drawing.Color.Black;
+                massagelbl.Text = "Choose valed A Course";
+            }
         }
     }
 }
