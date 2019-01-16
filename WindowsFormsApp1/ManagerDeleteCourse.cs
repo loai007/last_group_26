@@ -113,7 +113,7 @@ namespace WindowsFormsApp1
 
         private void Deletecourse(string course_name)
         {
-            if (iscourse(course_name)==false && string.IsNullOrWhiteSpace(course_name)==false)
+            if (iscourse(course_name) && string.IsNullOrWhiteSpace(course_name)==false)
             {
                 string[] Lines = File.ReadAllLines("course.txt");
                 File.Delete("course.txt");// Deleting the file
@@ -146,7 +146,7 @@ namespace WindowsFormsApp1
 
             string line = sr.ReadLine();
             string[] details;// = line.Split(' ');
-            while (string.IsNullOrWhiteSpace(line) == true)
+            while (string.IsNullOrWhiteSpace(line) == false)
             {
                 details = line.Split(' ');
                 if (id == details[0])
@@ -162,8 +162,7 @@ namespace WindowsFormsApp1
         }
         private void DeleteIstructor(string ins_id)
         {
-            if ((ifID(ins_id, "instructor.txt")))
-            {
+            
                 string[] Lines = File.ReadAllLines("instructor.txt");
                 File.Delete("instructor.txt");// Deleting the file
                 using (StreamWriter sw = File.AppendText("instructor.txt"))
@@ -182,18 +181,29 @@ namespace WindowsFormsApp1
                 
                 wrongname_lbl.ForeColor = System.Drawing.Color.Black;
                 wrongname_lbl.Text = "Deleted";
+            
+            
+        }
+        private void Deletecourse_btn_Click(object sender, EventArgs e)
+        {
+            if (iscourse(coursename_txt.Text))
+            {
+                if ((ifID(getData("instructor.txt", coursename_txt.Text)[0], "instructor.txt")))
+                {
+                    Deletecourse(coursename_txt.Text);
+                    showData(getData("user.txt"), "course.txt");
+                }
+                else
+                {
+                    wrongname_lbl.ForeColor = System.Drawing.Color.Red;
+                    wrongname_lbl.Text = "Instructor Doesnt Exist";
+                }
             }
             else
             {
                 wrongname_lbl.ForeColor = System.Drawing.Color.Red;
                 wrongname_lbl.Text = "Wrong course name";
             }
-        }
-        private void Deletecourse_btn_Click(object sender, EventArgs e)
-        {
-            Deletecourse(coursename_txt.Text);
-            
-            
         }
 
         private void ManagerDeleteCourse_Load(object sender, EventArgs e)

@@ -146,25 +146,16 @@ namespace WindowsFormsApp1
             sr.Close();
             return false;
         }
-        private void Send_Click(object sender, EventArgs e)
+        public void click(string myID,string id,string Msg,string lookf)
         {
-           string id= StudentId.Text;
-
-            if (ifID(id, lookfor) != true)
-                SendStudent.Text = "id doesn't exist "; 
+            if (ifID(id, lookf) != true || ifID(myID, "user.txt") != true)
+                SendStudent.Text = "id doesn't exist ";
             else
             {
-                if (string.IsNullOrWhiteSpace(Message.Text) == false)
+                if (string.IsNullOrWhiteSpace(Msg) == false)
                 {
                     char s = ' ';
-
-                    StreamReader mi = new StreamReader("user.txt");
-                    string line = mi.ReadLine();
-                    string[] details = line.Split(' ');
-                    string idM = details[0];
-                    mi.Close();
-
-                    string message = id + s + idM + s + Message.Text + "\r\nEOMessage";
+                    string message = id + s + myID + s + Msg + "\r\nEOMessage";
                     StreamWriter mw = new StreamWriter("messages.txt", true);
                     mw.WriteLine(message);
                     mw.Close();
@@ -173,6 +164,19 @@ namespace WindowsFormsApp1
                 else
                     SendStudent.Text = "empty message";
             }
+        }
+private void Send_Click(object sender, EventArgs e)
+        {
+            
+            StreamReader mi = new StreamReader("user.txt");
+            string line = mi.ReadLine();
+            string[] details = line.Split(' ');
+            string myID = details[0];
+            mi.Close();
+
+            string id = StudentId.Text;
+            string Msg = Message.Text;
+            click(myID,id, Msg, lookfor);
 
         }
 
