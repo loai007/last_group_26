@@ -339,7 +339,7 @@
         private System.Windows.Forms.Button addbut;
         private System.Windows.Forms.TextBox timebox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lblero;
+        public System.Windows.Forms.Label lblero;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtphn;
         private System.Windows.Forms.Label lblphn;
