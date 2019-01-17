@@ -101,22 +101,25 @@ namespace WindowsFormsApp1
         private void addbut_Click(object sender, EventArgs e)
         {
 
-            //            addbuttonClick("2", "5", "3", "cpp"
-            //            , "00000000", "computers", "kh", "sa", "333", "333");
-            //lblero.Text = "Couse Added AUTOMATICLY ";
-
+            int timein = 0, dayin = 0;
             string day = daybox.Text, points = points_txt.Text
             , time = timebox.Text, cname = cnamebox.Text
             , phn = txtphn.Text, dep = depbox.Text
             , last = lastnbox.Text, name = namebox.Text
             , pass = passbox.Text, id = idbox.Text;
-            addbuttonClick(day, points, time, cname
-            , phn, dep, last, name, pass, id);
-
+            if (time.Length == 2)
+                timein = time[0] - '0' + time[1] - '0';
+            if (time.Length == 1)
+                timein = time[0] - '0';
+            if (day.Length == 1)
+                dayin = day[0] - '0';
+            if (timein >= 8 && timein <= 14 && dayin >= 1 && dayin <= 5)
+                addbuttonClick(day, points, time, cname, phn, dep, last, name, pass, id);
+            else
+                lblero.Text = "change day time";
 
 
         }
-        //if (doesntExist("coursestudent.txt", userDetails[0], courseDetails[0]))
 
         private bool doesntExist(string path, string key1, string key2)
         {

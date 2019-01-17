@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         public ManagerShowStudentsInCourse()
         {
             InitializeComponent();
-            erore_lbl.Visible = false;
+            erore_lbl.Text = "Enter a course name";
             showData(getData("user.txt"));
         }
 

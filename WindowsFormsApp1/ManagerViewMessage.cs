@@ -123,17 +123,7 @@ namespace WindowsFormsApp1
                     dt.Rows.Add(c);
             return dt;
         }
-        private void Messages_Click(object sender, EventArgs e)
-        {
 
-            
-        }
-        private void Back_Click(object sender, EventArgs e)
-        {
-            ManagerMain fff = new ManagerMain();
-            this.Hide();
-            fff.Show();
-        }
 
         private void dataGridMessage_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -145,7 +135,17 @@ namespace WindowsFormsApp1
                 messageLBL.Text = MessageTxt[selectedIndex];
             }
         }
+        private void Messages_Click(object sender, EventArgs e)
+        {
 
+            
+        }
+        private void Back_Click(object sender, EventArgs e)
+        {
+            ManagerMain fff = new ManagerMain();
+            this.Hide();
+            fff.Show();
+        }
         private void ManagerViewMessage_Load(object sender, EventArgs e)
         {
             

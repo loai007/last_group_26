@@ -23,6 +23,7 @@ namespace WindowsFormsApp1
             fromLBL.Text = "";
             toLBL.Text = "";
             messageLBL.Text = "";
+            
         }
         public int count = 0;
         public bool messages = false;
@@ -58,7 +59,7 @@ namespace WindowsFormsApp1
             sr.Close();
             return details;
         }
-        
+
         public void myMessagesCout()
         {
             StreamReader sr = new StreamReader("messages.txt");
@@ -124,14 +125,21 @@ namespace WindowsFormsApp1
             return dt;
         }
 
-        
+
 
         private void dataGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int selectedIndex = dataGridView.CurrentRow.Index;
-            fromLBL.Text = fromId[selectedIndex];
-            toLBL.Text = myId;
-            messageLBL.Text = MessageTxt[selectedIndex];
+            if (selectedIndex < count)
+            {
+                fromLBL.Text = fromId[selectedIndex];
+                toLBL.Text = myId;
+                messageLBL.Text = MessageTxt[selectedIndex];
+            }
+            //int selectedIndex = dataGridView.CurrentRow.Index;
+            //fromLBL.Text = fromId[selectedIndex];
+            //toLBL.Text = myId;
+            //messageLBL.Text = MessageTxt[selectedIndex];
         }
 
         private void backBTN_Click(object sender, EventArgs e)
